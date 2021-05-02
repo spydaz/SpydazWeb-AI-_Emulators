@@ -1,0 +1,1 @@
+search_result['1110']=["frlrfSDKSTACK_VMZX81_CPUClassEXECUTETopic.html","ZX81_CPU.EXECUTE Method","Executes the next instruction in the Program\r\nEach Instruction is fed individually to the decoder :\r\nThe Execute cycle Checks the Current State to determine\r\nif to fetch the next instruction to be dec..."];

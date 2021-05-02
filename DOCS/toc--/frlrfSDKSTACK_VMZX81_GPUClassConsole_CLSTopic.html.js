@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['971',"SDK.STACK_VM Namespace","frlrfSDKSTACK_VM.html"],['1035',"ZX81_GPU Class","frlrfSDKSTACK_VMZX81_GPUClassTopic.html"],['1037',"Methods","frlrfSDKSTACK_VMZX81_GPUClassTopic_methods--.html"],['1039',"Console_CLS Method","frlrfSDKSTACK_VMZX81_GPUClassConsole_CLSTopic.html"]];

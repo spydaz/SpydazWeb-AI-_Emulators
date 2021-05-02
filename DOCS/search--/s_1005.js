@@ -1,0 +1,1 @@
+search_result['1005']=["frlrfSDKLexerClassViewNextTopic.html","Lexer.ViewNext Method","Checks token without moving the cursor"];

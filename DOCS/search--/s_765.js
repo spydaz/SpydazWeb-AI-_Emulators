@@ -1,0 +1,1 @@
+search_result['765']=["frlrfBasicProgrammingAPPExtClassExtractLastCharTopic.html","Ext.ExtractLastChar Method",""];

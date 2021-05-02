@@ -1,0 +1,1 @@
+c['1037']=[['1038',"ConsolePrint Method","frlrfSDKSTACK_VMZX81_GPUClassConsolePrintTopic.html",0],['1039',"Console_CLS Method","frlrfSDKSTACK_VMZX81_GPUClassConsole_CLSTopic.html",0]];

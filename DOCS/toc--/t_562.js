@@ -1,0 +1,1 @@
+c['562']=[['563',"GetReturnAddress Method","frlrfAI_ZX81STACK_VMStackMemoryFrameClassGetReturnAddressTopic.html",0],['564',"GetVar Method","frlrfAI_ZX81STACK_VMStackMemoryFrameClassGetVarTopic.html",0],['565',"SetVar Method","frlrfAI_ZX81STACK_VMStackMemoryFrameClassSetVarTopic.html",0]];

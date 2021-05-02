@@ -1,0 +1,1 @@
+search_result['208']=["frlrfAI_ZX81CompilerClassLexerClassctorTopic.html","ClassLexer Constructor","This class is to create lexical items from gramar rules\r\nTHe MAIN Funcyion LEXER creates the Tokens Returning a set of tokens from the given CODE BLOCK\r\nThe tokens can be passed to a transpiler to Cre..."];

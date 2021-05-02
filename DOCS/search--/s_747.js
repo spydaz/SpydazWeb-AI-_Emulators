@@ -1,0 +1,1 @@
+search_result['747']=["frlrfBasicProgrammingAPPEvaluatorClassIsStringTopic.html","Evaluator.IsString Method","Checks if Expr is string returning the string"];

@@ -1,0 +1,1 @@
+search_result['624']=["frlrfAI_ZX81STACK_VMZX81_CPUStackMemoryFrameClassGetVarTopic.html","StackMemoryFrame.GetVar Method",""];

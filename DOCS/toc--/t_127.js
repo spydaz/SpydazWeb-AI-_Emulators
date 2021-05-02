@@ -1,0 +1,1 @@
+c['127']=[['128',"ExtractFirstChar Method","frlrfAI_VMx86STACK_VMExtClassExtractFirstCharTopic.html",0],['129',"ExtractLastChar Method","frlrfAI_VMx86STACK_VMExtClassExtractLastCharTopic.html",0],['130',"SplitAtNewLine Method","frlrfAI_VMx86STACK_VMExtClassSplitAtNewLineTopic.html",0]];

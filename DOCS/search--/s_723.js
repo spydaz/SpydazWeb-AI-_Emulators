@@ -1,0 +1,1 @@
+search_result['723']=["frlrfBasicProgrammingAPPEnvironmentalMemoryClassDefineTopic.html","EnvironmentalMemory.Define Method","Defines variable in environemnt if not previoulsy exisiting"];

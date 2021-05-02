@@ -1,0 +1,1 @@
+search_result['237']=["frlrfAI_ZX81CompilerClassParserClassTopic.html","ClassParser Class","The Parse / Generator is used to manage statements created by the Tokenizer / Lexer\r\nthe Lexical statments are used to generate Abstract tokens\r\nWhich are associated to Specific Expressions\r\nWhich can..."];

@@ -1,0 +1,1 @@
+search_result['1035']=["frlrfSDKParserClass_literalNodeTopic.html","Parser._literalNode Method","-Literals\r\nSyntax:\r\n\r\n    -Numeric Literal\r\n    -String Literal\r\n    -Comments\r\n    -Nullable"];

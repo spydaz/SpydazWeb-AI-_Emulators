@@ -1,0 +1,1 @@
+search_result['1126']=["frlrfSDKSTACK_VMZX81_CPUClassRUNTopic.html","ZX81_CPU.RUN Method","Begins eexecution of the instructions held in program data"];

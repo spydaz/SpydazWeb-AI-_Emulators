@@ -1,0 +1,1 @@
+search_result['185']=["frlrfAI_ZX81CompilerBinaryExpressionClassTopic.html","BinaryExpression Class","The Binary Expression is a function,\r\nthe execution of the node structure is performed by the get data functions\r\nThis class must be inherited and its Get Data function Implemented With its custom\r\nUs..."];

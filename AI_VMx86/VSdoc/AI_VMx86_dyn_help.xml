@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="AI_VMx86" Title="AI_VMx86 Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000084.html" LinkGroup="AI_VMx86">AI_VMx86 Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86 Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000083.html" LinkGroup="AI_VMx86">AI_VMx86 Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000000.html" LinkGroup="AI_VMx86">AI_VMx86.STACK_VM Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000011.html" LinkGroup="AI_VMx86">AbstractSyntaxToken Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.AddVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000080.html" LinkGroup="AI_VMx86">AddVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.FormDisplayConsole.CLS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000019.html" LinkGroup="AI_VMx86">CLS Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.CheckVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000081.html" LinkGroup="AI_VMx86">CheckVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.GrammarRule.ComponentStrings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000A.html" LinkGroup="AI_VMx86">ComponentStrings Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_GPU.ConsolePrint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000075.html" LinkGroup="AI_VMx86">ConsolePrint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_GPU.Console_CLS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000076.html" LinkGroup="AI_VMx86">Console_CLS Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.CurrentVars" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007C.html" LinkGroup="AI_VMx86">CurrentVars Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.DECODE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003A.html" LinkGroup="AI_VMx86">DECODE Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.FormDisplayConsole.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001B_overloads--.html" LinkGroup="AI_VMx86">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.VM_MachineUI.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001E_overloads--.html" LinkGroup="AI_VMx86">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.EXECUTE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000039.html" LinkGroup="AI_VMx86">EXECUTE Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.VM_MachineUI.ExecuteCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001D.html" LinkGroup="AI_VMx86">ExecuteCode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000004.html" LinkGroup="AI_VMx86">Ext Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.ExtractFirstChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000007.html" LinkGroup="AI_VMx86">ExtractFirstChar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.ExtractLastChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000006.html" LinkGroup="AI_VMx86">ExtractLastChar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.FormDisplayConsole" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000017.html" LinkGroup="AI_VMx86">FormDisplayConsole Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.GPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002A.html" LinkGroup="AI_VMx86">GPU Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.GetCurrentFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003B.html" LinkGroup="AI_VMx86">GetCurrentFrame Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.GetReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000026.html" LinkGroup="AI_VMx86">GetReturnAddress Method {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.GetReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000045.html" LinkGroup="AI_VMx86">GetReturnAddress Method {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.GetStackData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003C.html" LinkGroup="AI_VMx86">GetStackData Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000027.html" LinkGroup="AI_VMx86">GetVar Method {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000046.html" LinkGroup="AI_VMx86">GetVar Method {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000082.html" LinkGroup="AI_VMx86">GetVar Method {AI_VMx86.STACK_VM.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.Get_Current_Stack_Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002D.html" LinkGroup="AI_VMx86">Get_Current_Stack_Data Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.Get_Current_Stack_Item" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002F.html" LinkGroup="AI_VMx86">Get_Current_Stack_Item Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.Get_Instruction_Pointer_Position" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002C.html" LinkGroup="AI_VMx86">Get_Instruction_Pointer_Position Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.GrammarRule" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000008.html" LinkGroup="AI_VMx86">GrammarRule Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.GrammarRule.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000C.html" LinkGroup="AI_VMx86">GrammarRule Constructor {AI_VMx86.STACK_VM.Ext.GrammarRule}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.FormDisplayConsole.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001A.html" LinkGroup="AI_VMx86">Input Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.IsHalted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000037.html" LinkGroup="AI_VMx86">IsHalted Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.IsWait" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000038.html" LinkGroup="AI_VMx86">IsWait Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.LoadProgram" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000035_overloads--.html" LinkGroup="AI_VMx86">LoadProgram Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.LoadProgram" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000034_overloads--.html" LinkGroup="AI_VMx86">LoadProgram Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000013.html" LinkGroup="AI_VMx86">Name Field {AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.Token.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000F.html" LinkGroup="AI_VMx86">Name Field {AI_VMx86.STACK_VM.Ext.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.PROCESS_NAME" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000030.html" LinkGroup="AI_VMx86">PROCESS_NAME Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.Peek" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003D.html" LinkGroup="AI_VMx86">Peek Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.FormDisplayConsole.Print" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000018.html" LinkGroup="AI_VMx86">Print Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.RUN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000036.html" LinkGroup="AI_VMx86">RUN Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.VM_ERR.RaiseErr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000004B.html" LinkGroup="AI_VMx86">RaiseErr Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.RemoveVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000048.html" LinkGroup="AI_VMx86">RemoveVar Method {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.RemoveVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007F.html" LinkGroup="AI_VMx86">RemoveVar Method {AI_VMx86.STACK_VM.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.ReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000023.html" LinkGroup="AI_VMx86">ReturnAddress Field {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.ReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000042.html" LinkGroup="AI_VMx86">ReturnAddress Field {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.X86API.RunMachineCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000002.html" LinkGroup="AI_VMx86">RunMachineCode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.RunningState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002B.html" LinkGroup="AI_VMx86">RunningState Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.SetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000028.html" LinkGroup="AI_VMx86">SetVar Method {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.SetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000047.html" LinkGroup="AI_VMx86">SetVar Method {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.SplitAtNewLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000005.html" LinkGroup="AI_VMx86">SplitAtNewLine Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003E.html" LinkGroup="AI_VMx86">StackMemoryFrame Class {AI_VMx86.STACK_VM.ZX81_CPU}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001F.html" LinkGroup="AI_VMx86">StackMemoryFrame Class {AI_VMx86.STACK_VM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000025.html" LinkGroup="AI_VMx86">StackMemoryFrame Constructor {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000044.html" LinkGroup="AI_VMx86">StackMemoryFrame Constructor {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.GrammarRule.TagString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000B.html" LinkGroup="AI_VMx86">TagString Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken.ToJson" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000012.html" LinkGroup="AI_VMx86">ToJson Method {AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.GrammarRule.ToJson" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000009.html" LinkGroup="AI_VMx86">ToJson Method {AI_VMx86.STACK_VM.Ext.GrammarRule}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.Token.ToJson" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000E.html" LinkGroup="AI_VMx86">ToJson Method {AI_VMx86.STACK_VM.Ext.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.Token" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000000D.html" LinkGroup="AI_VMx86">Token Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.X86API.Tree" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000003.html" LinkGroup="AI_VMx86">Tree Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.UpdateVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007E.html" LinkGroup="AI_VMx86">UpdateVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.VM_ERR" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000049.html" LinkGroup="AI_VMx86">VM_ERR Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.VM_ERR.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000004A.html" LinkGroup="AI_VMx86">VM_ERR Constructor {AI_VMx86.STACK_VM.ZX81_CPU.VM_ERR}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.VM_MachineUI" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000001C.html" LinkGroup="AI_VMx86">VM_MachineUI Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.VM_x86_Cmds" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000004C.html" LinkGroup="AI_VMx86">VM_x86_Cmds Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000014.html" LinkGroup="AI_VMx86">Value Field {AI_VMx86.STACK_VM.Ext.AbstractSyntaxToken}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.Ext.Token.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000010.html" LinkGroup="AI_VMx86">Value Field {AI_VMx86.STACK_VM.Ext.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.Var.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000021.html" LinkGroup="AI_VMx86">Value Field {AI_VMx86.STACK_VM.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Var.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000040.html" LinkGroup="AI_VMx86">Value Field {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.Var" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000020.html" LinkGroup="AI_VMx86">Var Structure {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Var" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000003F.html" LinkGroup="AI_VMx86">Var Structure {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.Var.VarNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000022.html" LinkGroup="AI_VMx86">VarNumber Field {AI_VMx86.STACK_VM.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Var.VarNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000041.html" LinkGroup="AI_VMx86">VarNumber Field {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.Variable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000078.html" LinkGroup="AI_VMx86">Variable Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.StackMemoryFrame.Variables" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000024.html" LinkGroup="AI_VMx86">Variables Field {AI_VMx86.STACK_VM.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame.Variables" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000043.html" LinkGroup="AI_VMx86">Variables Field {AI_VMx86.STACK_VM.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.View_C_P_U" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000002E.html" LinkGroup="AI_VMx86">View_C_P_U Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.View_R_A_M" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000031.html" LinkGroup="AI_VMx86">View_R_A_M Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.X86API" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000001.html" LinkGroup="AI_VMx86">X86API Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000032_overloads--.html" LinkGroup="AI_VMx86">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000033_overloads--.html" LinkGroup="AI_VMx86">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_CPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000029.html" LinkGroup="AI_VMx86">ZX81_CPU Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_GPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000073.html" LinkGroup="AI_VMx86">ZX81_GPU Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_GPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000074.html" LinkGroup="AI_VMx86">ZX81_GPU Constructor {AI_VMx86.STACK_VM.ZX81_GPU}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000077.html" LinkGroup="AI_VMx86">ZX81_RAM Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007D.html" LinkGroup="AI_VMx86">ZX81_RAM Constructor {AI_VMx86.STACK_VM.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.Variable.iName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_0000000000000079.html" LinkGroup="AI_VMx86">iName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.Variable.iType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007B.html" LinkGroup="AI_VMx86">iType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AI_VMx86.STACK_VM.ZX81_RAM.Variable.iValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:AI_VMx86.chm::/topic_000000000000007A.html" LinkGroup="AI_VMx86">iValue Field</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

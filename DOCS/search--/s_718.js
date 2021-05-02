@@ -1,0 +1,1 @@
+search_result['718']=["frlrfBasicProgrammingAPPEnvironmentalMemoryClassAssignValueTopic.html","EnvironmentalMemory.AssignValue Method","Assigns a value to the variable"];

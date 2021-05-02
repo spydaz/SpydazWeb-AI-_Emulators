@@ -1,0 +1,1 @@
+c['606']=[['607',"LoadProgram(ref List\u003cObject\u003e) Method","frlrfAI_ZX81STACK_VMZX81_CPUClassLoadProgramTopic2.html",0],['608',"LoadProgram(ref List\u003cString\u003e) Method","frlrfAI_ZX81STACK_VMZX81_CPUClassLoadProgramTopic.html",0]];

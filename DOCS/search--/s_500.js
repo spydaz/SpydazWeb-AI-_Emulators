@@ -1,0 +1,1 @@
+search_result['500']=["frlrfAI_ZX81GRAMMARSPL_GrammarClassGetStartCodeBlockRuleTopic.html","PL_Grammar.GetStartCodeBlockRule Method",""];

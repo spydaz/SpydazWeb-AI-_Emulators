@@ -1,0 +1,1 @@
+search_result['604']=["frlrfAI_ZX81STACK_VMZX81_CPUClassIsHaltedTopic.html","ZX81_CPU.IsHalted Property","Checks the status of the cpu"];

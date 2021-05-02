@@ -1,0 +1,1 @@
+search_result['230']=["frlrfAI_ZX81CompilerClassParserClassGetParseAST_TreeTopic.html","ClassParser.GetParseAST_Tree Method","Returns Abstract Syntax tree If Fails then syntax is incorrect not matching any known function"];

@@ -1,0 +1,1 @@
+search_result['169']=["frlrfAI_VMx86VM_MachineUIClassDisposeTopic.html","VM_MachineUI.Dispose Method","Disposes of the resources (other than memory) used by the Form."];

@@ -1,0 +1,1 @@
+search_result['1011']=["frlrfSDKParserClassParseTopic2_overloads--.html","Parser.Parse Method","Main Parser Function\r\nParses whole Script into a AST tree ;\r\nWhich can be used later for evaluation to be run on a vm\r\nor to generate code for a different language (interpretor)\r\nor (evaluator - Compi..."];

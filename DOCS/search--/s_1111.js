@@ -1,0 +1,1 @@
+search_result['1111']=["frlrfSDKSTACK_VMZX81_CPUClassGetCurrentFrameTopic.html","ZX81_CPU.GetCurrentFrame Method","RAM is a STACK MEMORY - Here we can take a look at the stack item"];

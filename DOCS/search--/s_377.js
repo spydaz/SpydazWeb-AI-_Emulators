@@ -1,0 +1,1 @@
+search_result['377']=["frlrfAI_ZX81FormDisplayConsoleClassDisposeTopic.html","FormDisplayConsole.Dispose Method","Disposes of the resources (other than memory) used by the Form."];

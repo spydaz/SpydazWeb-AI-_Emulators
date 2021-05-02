@@ -1,0 +1,1 @@
+search_result['1112']=["frlrfSDKSTACK_VMZX81_CPUClassGetStackDataTopic.html","ZX81_CPU.GetStackData Method","Outputs stack data for verbose output"];

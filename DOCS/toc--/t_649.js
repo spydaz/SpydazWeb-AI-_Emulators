@@ -1,0 +1,1 @@
+c['649']=[['650',"AssignValue Method","frlrfBasicProgrammingAPPEnvironmentalMemoryClassAssignValueTopic.html",0],['651',"Define Method","frlrfBasicProgrammingAPPEnvironmentalMemoryClassDefineTopic.html",0],['652',"GetVar Method","frlrfBasicProgrammingAPPEnvironmentalMemoryClassGetVarTopic.html",0]];

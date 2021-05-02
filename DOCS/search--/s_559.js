@@ -1,0 +1,1 @@
+search_result['559']=["frlrfAI_ZX81ModuleKnowledgeStructuresTokenClassDetectedTypeTopic.html","Token.DetectedType Property","Used to denote which token type was detected\r\nOnce The Token rule has been set the type should be populated"];

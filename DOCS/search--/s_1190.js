@@ -1,0 +1,1 @@
+search_result['1190']=["frlrfSDKSTACK_VMZX81_RAMVariableClassTopic.html","Variable Structure",""];

@@ -1,0 +1,1 @@
+search_result['719']=["frlrfBasicProgrammingAPPEnvironmentalMemoryClassctorTopic.html","EnvironmentalMemory(EnvironmentalMemory) Constructor","A global memeory is contained within environemt for referencing"];

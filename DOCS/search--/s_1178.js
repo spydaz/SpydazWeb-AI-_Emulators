@@ -1,0 +1,1 @@
+search_result['1178']=["frlrfSDKSTACK_VMZX81_RAMClassGetVarTopic.html","ZX81_RAM.GetVar Method",""];

@@ -1,0 +1,1 @@
+c['627']=[['628',"AddProgram(ref List\u003cAbstractSyntax\u003e) Method","frlrfAI_ZX81STACK_VMZX81_VMClassAddProgramTopic.html",0],['629',"AddProgram(ref AbstractSyntax) Method","frlrfAI_ZX81STACK_VMZX81_VMClassAddProgramTopic2.html",0]];

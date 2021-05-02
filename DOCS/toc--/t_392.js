@@ -1,0 +1,1 @@
+c['392']=[['393',"Evaluate Method","frlrfAI_ZX81ConcreteExpressionsIfFunctionClassEvaluateTopic.html",0],['396',"GetValue Method","frlrfAI_ZX81ConcreteExpressionsIfFunctionClassGetValueTopic.html",0]];

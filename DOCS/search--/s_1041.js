@@ -1,0 +1,1 @@
+search_result['1041']=["frlrfSDKParserClass_ProgramNodeTopic.html","Parser._ProgramNode Method","Main Entry Point.\r\nSyntax:\r\n\r\nProgram:\r\n-Literals"];

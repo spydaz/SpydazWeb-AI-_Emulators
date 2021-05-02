@@ -1,0 +1,1 @@
+c['139']=[['140',"AddVar Method","frlrfAI_ZX81ZX81_RAMClassAddVarTopic.html",0],['141',"CheckVar Method","frlrfAI_ZX81ZX81_RAMClassCheckVarTopic.html",0],['142',"GetVar Method","frlrfAI_ZX81ZX81_RAMClassGetVarTopic.html",0],['143',"RemoveVar Method","frlrfAI_ZX81ZX81_RAMClassRemoveVarTopic.html",0],['144',"UpdateVar Method","frlrfAI_ZX81ZX81_RAMClassUpdateVarTopic.html",0]];

@@ -1,0 +1,1 @@
+search_result['672']=["frlrfAI_ZX81STACK_VMZX81_VMClassRAMTopic.html","ZX81_VM.RAM Property","To be used to store variables from functions/Expressions etc\r\neach string should be looked up in memeory"];

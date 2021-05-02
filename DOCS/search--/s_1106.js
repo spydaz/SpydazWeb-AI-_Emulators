@@ -1,0 +1,1 @@
+search_result['1106']=["frlrfSDKSTACK_VMZX81_CPUClassctorTopic2.html","ZX81_CPU(String, List\u0026lt;String\u0026gt;) Constructor","Load Program and Executes Code on CPU"];

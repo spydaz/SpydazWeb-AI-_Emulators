@@ -1,0 +1,1 @@
+search_result['602']=["frlrfAI_ZX81STACK_VMZX81_CPUClassGet_Instruction_Pointer_PositionTopic.html","ZX81_CPU.Get_Instruction_Pointer_Position Property",""];

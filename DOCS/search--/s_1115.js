@@ -1,0 +1,1 @@
+search_result['1115']=["frlrfSDKSTACK_VMZX81_CPUClassGet_Instruction_Pointer_PositionTopic.html","ZX81_CPU.Get_Instruction_Pointer_Position Property",""];

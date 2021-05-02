@@ -1,0 +1,1 @@
+c['225']=[['226',"ExtractFirstChar Method","frlrfAI_ZX81ModuleKnowledgeStructuresClassExtractFirstCharTopic.html",0],['227',"ExtractLastChar Method","frlrfAI_ZX81ModuleKnowledgeStructuresClassExtractLastCharTopic.html",0],['228',"Tokenizer Method","frlrfAI_ZX81ModuleKnowledgeStructuresClassTokenizerTopic.html",0]];

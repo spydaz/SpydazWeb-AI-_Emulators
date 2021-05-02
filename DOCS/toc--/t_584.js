@@ -1,0 +1,1 @@
+c['584']=[['585',"VM_ERR Constructor","frlrfAI_ZX81STACK_VMZX81_CPUVM_ERRClassctorTopic.html",0],['586',"Methods","frlrfAI_ZX81STACK_VMZX81_CPUVM_ERRClassTopic_methods--.html",1]];

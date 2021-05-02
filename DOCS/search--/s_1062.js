@@ -1,0 +1,1 @@
+search_result['1062']=["frlrfSDKSTACK_VMExtClassExtractFirstCharTopic.html","Ext.ExtractFirstChar Method",""];

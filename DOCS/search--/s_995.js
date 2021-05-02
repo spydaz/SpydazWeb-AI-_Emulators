@@ -1,0 +1,1 @@
+search_result['995']=["frlrfSDKLexerClassGetSliceTopic.html","Lexer.GetSlice Method","Returns from index to end of file (Universal function)"];

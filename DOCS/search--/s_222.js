@@ -1,0 +1,1 @@
+search_result['222']=["frlrfAI_ZX81CompilerClassLexerClassTopic.html","ClassLexer Class","Used to decode language based upon a Grammar Terms are detected and assigned.\r\nTokens are Produced on execution of the Class;\r\nthese can be transpiled and converted into Expression Nodes\r\nto be assemb..."];

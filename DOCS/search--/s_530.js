@@ -1,0 +1,1 @@
+search_result['530']=["frlrfAI_ZX81ModuleKnowledgeStructuresClassTokenizerTopic.html","ModuleKnowledgeStructures.Tokenizer Method","Returns Characters in String as list"];

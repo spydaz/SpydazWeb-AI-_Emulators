@@ -1,0 +1,1 @@
+search_result['212']=["frlrfAI_ZX81CompilerClassLexerClassDetectOperationBlockTopic.html","ClassLexer.DetectOperationBlock Method","Attempts to detect operators in the token list"];

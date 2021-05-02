@@ -1,0 +1,1 @@
+search_result['733']=["frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTopic.html","Variable Structure","Structure for variable"];

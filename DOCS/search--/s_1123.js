@@ -1,0 +1,1 @@
+search_result['1123']=["frlrfSDKSTACK_VMZX81_CPUClassPeekTopic.html","ZX81_CPU.Peek Method","REQUIRED TO SEE IN-SIDE CURRENT POINTER LOCATION\r\n----------Public For Testing Purposes-----------"];

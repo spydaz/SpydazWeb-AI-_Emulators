@@ -1,0 +1,1 @@
+search_result['1020']=["frlrfSDKParserClass_BinaryExpressionTopic.html","Parser._BinaryExpression (Type_Id, AST_NODE, String) Method","syntax:\r\n\r\n\r\n-Literal(Primary Expression)\r\n-Multiplicative Expression\r\n-Addative Expression\r\n-ConditionalExpression(OperationalExpression)\r\n-Assignment Expression"];

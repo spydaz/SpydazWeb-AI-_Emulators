@@ -1,0 +1,1 @@
+search_result['1165']=["frlrfSDKSTACK_VMZX81_GPUClassConsolePrintTopic.html","ZX81_GPU.ConsolePrint Method",""];

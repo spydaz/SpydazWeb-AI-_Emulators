@@ -1,0 +1,1 @@
+search_result['652']=["frlrfAI_ZX81STACK_VMZX81_GPUClassConsolePrintTopic.html","ZX81_GPU.ConsolePrint Method",""];

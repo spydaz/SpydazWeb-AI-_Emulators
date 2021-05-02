@@ -1,0 +1,1 @@
+search_result['1082']=["frlrfSDKSTACK_VMStackMemoryFrameClassTopic.html","StackMemoryFrame Class","Memory frame for Variables"];

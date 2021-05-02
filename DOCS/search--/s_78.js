@@ -1,0 +1,1 @@
+search_result['78']=["frlrfAI_VMx86STACK_VMZX81_CPUClassctorTopic.html","ZX81_CPU(String) Constructor","Each Program can be considered to be a task or thread;\r\nA name should be assigned to the Process;\r\nProcesses themselves can be stacked in a higher level processor,\r\nallowing for paralel processing of ..."];

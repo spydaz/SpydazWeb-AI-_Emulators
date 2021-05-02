@@ -1,0 +1,1 @@
+search_result['698']=["frlrfAI_ZX81ZX81_RAMVariableClassTopic.html","Variable Structure",""];

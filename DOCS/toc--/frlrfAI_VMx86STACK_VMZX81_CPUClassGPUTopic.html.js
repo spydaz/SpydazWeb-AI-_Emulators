@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['23',"AI_VMx86.STACK_VM Namespace","frlrfAI_VMx86STACK_VM.html"],['42',"ZX81_CPU Class","frlrfAI_VMx86STACK_VMZX81_CPUClassTopic.html"],['84',"Fields","frlrfAI_VMx86STACK_VMZX81_CPUClassTopic_vars--.html"],['85',"GPU Field","frlrfAI_VMx86STACK_VMZX81_CPUClassGPUTopic.html"]];

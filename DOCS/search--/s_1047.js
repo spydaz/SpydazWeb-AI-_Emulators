@@ -1,0 +1,1 @@
+search_result['1047']=["frlrfSDKParserClass_WhitespaceNodeTopic.html","Parser._WhitespaceNode Method","Used to denote white space as it is often important later\r\nSome Parsers ignore this token ;\r\nIt is thought also; to be prudent to collect all tokens to let the Evaluator deal with this later"];

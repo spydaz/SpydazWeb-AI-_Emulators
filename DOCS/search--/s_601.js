@@ -1,0 +1,1 @@
+search_result['601']=["frlrfAI_ZX81STACK_VMZX81_CPUClassGet_Current_Stack_ItemTopic.html","ZX81_CPU.Get_Current_Stack_Item Property","Returns the current object on top of the stack"];

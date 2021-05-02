@@ -1,0 +1,1 @@
+search_result['1045']=["frlrfSDKParserClass_StringLiteralNodeTopic.html","Parser._StringLiteralNode Method","Syntax:\r\n\"hjk\"\r\nString Literal:\r\n -String"];

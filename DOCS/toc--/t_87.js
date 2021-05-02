@@ -1,0 +1,1 @@
+c['87']=[['88',"ZX81_GPU Constructor","frlrfAI_VMx86STACK_VMZX81_GPUClassctorTopic.html",0],['89',"Methods","frlrfAI_VMx86STACK_VMZX81_GPUClassTopic_methods--.html",1]];

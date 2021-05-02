@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['971',"SDK.STACK_VM Namespace","frlrfSDKSTACK_VM.html"],['1040',"ZX81_RAM Class","frlrfSDKSTACK_VMZX81_RAMClassTopic.html"],['1053',"Fields","frlrfSDKSTACK_VMZX81_RAMClassTopic_vars--.html"],['1054',"CurrentVars Field","frlrfSDKSTACK_VMZX81_RAMClassCurrentVarsTopic.html"]];
