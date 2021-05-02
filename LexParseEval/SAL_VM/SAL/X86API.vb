@@ -1,6 +1,6 @@
-﻿Imports SDK.STACK_VM
+﻿Imports SDK.SAL
 
-Namespace STACK_VM
+Namespace SAL
     Public Class X86API
         Public Shared Function RunMachineCode(ByRef Code As String) As String
             Code = UCase(Code)

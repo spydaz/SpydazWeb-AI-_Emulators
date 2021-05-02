@@ -1,4 +1,4 @@
-﻿Namespace STACK_VM
+﻿Namespace SAL
     Public Class ZX81_RAM
         Public Structure Variable
             Public iName As String

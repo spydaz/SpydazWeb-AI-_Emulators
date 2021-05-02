@@ -1,4 +1,4 @@
-﻿Namespace STACK_VM
+﻿Namespace SAL
     ''' <summary>
     ''' Memory frame for Variables 
     ''' </summary>

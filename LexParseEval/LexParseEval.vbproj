@@ -77,31 +77,31 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SAL_VM\STACK_VM\SalCode_Helpers.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\AstNode.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\AstProgram.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_AssignmentExpression.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_BlockExpression.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_ExpressionStatement.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_Identifier.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\Compiler\ClassEvaluator.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\EXT.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\Compiler\Lexer.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\AstExpressionFactory\AstExpression.vb" />
-    <Compile Include="Small_PLang\Repl\ReplErrorSystem.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\GrammarFactory\Token.vb" />
-    <Compile Include="Small_PLang\SmallProgLang\Compiler\Parser.vb" />
-    <Compile Include="Small_PLang\Repl\FormREPL.designer.vb">
+    <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\AstNode.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\AstProgram.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_AssignmentExpression.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_BlockExpression.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ExpressionStatement.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Identifier.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
+    <Compile Include="SmallProgLang\Compiler\ClassEvaluator.vb" />
+    <Compile Include="SmallProgLang\EXT.vb" />
+    <Compile Include="SmallProgLang\Compiler\Lexer.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\AstExpression.vb" />
+    <Compile Include="SmallProgLang\Repl\ReplErrorSystem.vb" />
+    <Compile Include="SmallProgLang\GrammarFactory\Token.vb" />
+    <Compile Include="SmallProgLang\Compiler\Parser.vb" />
+    <Compile Include="SmallProgLang\Repl\FormREPL.designer.vb">
       <DependentUpon>FormREPL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Small_PLang\Repl\FormREPL.vb">
+    <Compile Include="SmallProgLang\Repl\FormREPL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Small_PLang\SmallProgLang\GrammarFactory\Grammar.vb" />
+    <Compile Include="SmallProgLang\GrammarFactory\Grammar.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -118,8 +118,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SAL_VM\STACK_VM\X86API.vb" />
-    <Compile Include="SAL_VM\STACK_VM\Ext.vb" />
+    <Compile Include="SAL_VM\SAL\X86API.vb" />
+    <Compile Include="SAL_VM\SAL\Ext.vb" />
     <Compile Include="SAL_VM\MachineUI\FormDisplayConsole.designer.vb">
       <DependentUpon>FormDisplayConsole.vb</DependentUpon>
     </Compile>
@@ -132,13 +132,13 @@
     <Compile Include="SAL_VM\MachineUI\VM_MachineUI.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAL_VM\STACK_VM\StackMemoryFrame.vb" />
-    <Compile Include="SAL_VM\STACK_VM\ZX81_CPU.vb" />
-    <Compile Include="SAL_VM\STACK_VM\ZX81_GPU.vb" />
-    <Compile Include="SAL_VM\STACK_VM\ZX81_RAM.vb" />
+    <Compile Include="SAL_VM\SAL\StackMemoryFrame.vb" />
+    <Compile Include="SAL_VM\SAL\ZX81_CPU.vb" />
+    <Compile Include="SAL_VM\SAL\ZX81_GPU.vb" />
+    <Compile Include="SAL_VM\SAL\ZX81_RAM.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Small_PLang\Repl\FormREPL.resx">
+    <EmbeddedResource Include="SmallProgLang\Repl\FormREPL.resx">
       <DependentUpon>FormREPL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

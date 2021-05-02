@@ -1,4 +1,4 @@
-﻿Namespace STACK_VM
+﻿Namespace SAL
     Public Module SalCode_Helpers
         Private Function _Binary_op(ByRef Left As Integer, ByRef Right As Integer, ByRef iOperator As String) As List(Of String)
 
