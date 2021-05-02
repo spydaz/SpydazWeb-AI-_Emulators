@@ -4,13 +4,6 @@ SpydazWeb Program languges and virtual machines, Parser/Compiler/Interpretor. AS
 https://spydaz.github.io/SpydazWeb-AI-_Emulators/
 
 
-- name: render-md-mermaid
-  uses: nielsvaneck/render-md-mermaid@v1
-
-graph TD
- A[Lex Tokens] --> B[Parse to AST]  -->  C[Transpile to S-Expression] --> E[Execute on StackVM] 
-
-
 
 ## DESCRIPTION:
 	A basic programming language designed in stages to be compiled and executed on a virtual machine :
