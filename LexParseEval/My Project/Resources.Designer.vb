@@ -111,11 +111,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to SpydazWeb Assembly Language : 
+        '''	Description :
+        '''		This assembly language is specific to this virtual processor 
+        '''		Enableing for the code to be executed on the cpu: 
+        '''		This is a Micro based instruction set (Misc)
+        '''	ZX81:
+        '''		_PUSH					: Pushes items on to the stack (top)
+        '''		_POP					: Pops items off the stack (top)
+        '''		_PEEK					: Views items on the stack (top)
+        '''		_WAIT					: Pauses execution of code
+        '''		_PAUSE					: Pauses execution of code
+        '''		_HALT					: HALT execution of code
+        '''		_RESUME					: Resumes execu [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property QuickRef_SAL() As String
+            Get
+                Return ResourceManager.GetString("QuickRef_SAL", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Script() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Script", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property SERIES_1_sal9000() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SERIES 1 sal9000", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

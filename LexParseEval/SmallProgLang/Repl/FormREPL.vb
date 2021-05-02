@@ -147,4 +147,10 @@ Public Class FormREPL
         help.StartInfo.Arguments = Application.StartupPath & "\help\LexParseEval.chm"
         help.Start()
     End Sub
+    Public VM As VM_MachineUI
+
+    Private Sub ButtonOpenVM_Click(sender As Object, e As EventArgs) Handles ButtonOpenVM.Click
+        VM = New VM_MachineUI
+        VM.Show()
+    End Sub
 End Class

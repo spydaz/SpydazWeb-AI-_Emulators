@@ -19,4 +19,13 @@ Public Class VM_MachineUI
     Private Sub ButtonClrScrn_Click(sender As Object, e As EventArgs) Handles ButtonClrScrn.Click
         RichTextBoxInfo.Clear()
     End Sub
+    Public Sub DISPLAY_TEXT(ByRef Str As String)
+        RichTextBoxInfo.Clear()
+        RichTextBoxInfo.Text = Str
+    End Sub
+    Private Sub ButtonRef_Click(sender As Object, e As EventArgs) Handles ButtonRef.Click
+        Dim frm As New VM_MachineUI
+        frm.DISPLAY_TEXT(My.Resources.QuickRef_SAL)
+        frm.Show()
+    End Sub
 End Class

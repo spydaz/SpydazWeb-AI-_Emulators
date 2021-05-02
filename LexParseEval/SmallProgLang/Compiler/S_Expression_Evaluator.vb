@@ -2,11 +2,14 @@
     Namespace Compiler
 
         ''' <summary>
-        ''' Evaluates SAL Code Evaluator
-        ''' Converts S_Expression Code to Sal_Code
+        ''' Evaluates Arrays of tokens, 
+        ''' Taken from the populated AST NODES, 
+        ''' The Expected format is Reverse poilsh Notation. Operator/ (Operands)
+        ''' The Product is returned ; 
+        ''' 
         ''' </summary>
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
-        Public Class SAL_Evaluator
+        Public Class S_Expression_Evaluator
             Private GlobalEnvironment As EnvironmentalMemory
             ''' <summary>
             ''' Create a new instance of the PROGRAMMING Interpretor
@@ -29,16 +32,19 @@
             Private Function GetDebuggerDisplay() As String
                 Return ToString()
             End Function
-
-
-
+            ''' <summary>
+            ''' Used for imediate Evaluations
+            ''' </summary>
+            ''' <param name="Expr"></param>
+            ''' <param name="Env"></param>
+            ''' <returns></returns>
             Public Function Eval(ByRef Expr As Object, Optional Env As EnvironmentalMemory = Nothing) As Object
                 'Created for tracking 
                 IncrLineNumber()
                 If Env Is Nothing Then
                     Env = GlobalEnvironment
                 End If
-#Region "Literals"
+#Region "Get Literal Literals"
                 '[Literals]
                 '- 3 0r 5.6 [integer]
                 If IsNumberInt(Expr) = True Then
@@ -62,87 +68,85 @@
                     End If
                 End If
 #End Region
+                'To Identify What type of Expression
+                'A Count of the Supplied elements is taken: 
+
+                If IsArray(Expr) = True Then
+                    Select Case Expr.count
+                        Case 4
+                            '       Case Expr(0) = "DIM"
+                            'Syntax: 
+                            'Dim Var = 92
+                            'Dim var = False
+                            'Dim var = ""
+                            'Assign in Global Memory
+                            Env.Define(Expr(1), Expr(3))
+                            Return True
+
+                        'Syntax: 
+                            '4 * 92
+                            'A >= B
+                            '4 + 92
+                            'A <= B
+                        Case 3
+                            Select Case Expr(0)
+         'Maths Expressions (Recursive)
+            'Syntax: Basic Arithmatic + 4 6
+         '+ 3 5
+         '+ $VAR$ $VAR$
+         '+ $VAR$ 3
+                                Case "+"
+                                    Return Eval(Expr(1)) + Eval(Expr(2))
+                                Case "-"
+                                    Return Eval(Expr(1)) - Eval(Expr(2))
+                                Case "*"
+                                    Return Eval(Expr(1)) * Eval(Expr(2))
+                                Case "/"
+                                    Return Eval(Expr(1)) / Eval(Expr(2))
+    'Conditionals: (Recursive)
+    'Syntax: Basic Conditionals < 4 6
+         '< 3 5
+         '< $VAR$ $VAR$
+         '< $VAR$ 3
+                                Case ">"
+                                    Return Eval(Expr(1)) > Eval(Expr(2))
+                                Case "<"
+                                    Return Eval(Expr(1)) > Eval(Expr(2))
+                                Case ">="
+                                    Return Eval(Expr(1)) >= Eval(Expr(2))
+                                Case "<="
+                                    Return Eval(Expr(1)) <= Eval(Expr(2))
+                                Case "="
+                                    Return Eval(Expr(1)) = Eval(Expr(2))
+
+
+
+                            End Select
+
+                        Case 6
+                            Select Case Expr(0)
+                                'Syntax: 
+                    'While(0)
+                    '(>(1)a(2)b(3)) = true(4)
+                    '{Codeblock(5)}
+                                Case "WHILE"
+                                    ' #while Op var1 var2 EQVAR Codeblock #loop
+                                    Env.Define("WHILE", "BOOLEAN")
+                                    'Get Result expression (conditional) or (maths)
+                                    Dim Result() As String = ({Eval(Expr(1)), Eval(Expr(2)), Eval(Expr(3))})
+                                    'WhileCmd
+                                    Do While (Eval(Result) = Eval(Expr(4)))
+                                        Dim WhileEnv As New EnvironmentalMemory(Env)
+                                        'RETURN ENVIRONEMT? (TEST) PERHAPS NOTHING NEEDED TO BE RETURNED
+                                        Env = EvalBlock(Expr(5), WhileEnv)
+                                    Loop
+                                    ' #expr(6) = "Loop" (Signify End of Loop)
+                                    Return True
+                            End Select
+                    End Select
+                End If
 
                 Return "Not Implemented Bad Expression Syntax =" & Expr & vbNewLine & "LineNumber =" & LineNumber
-            End Function
-
-            Private Function _Binary_op(ByRef Left As Integer, ByRef Right As Integer, ByRef iOperator As String) As List(Of String)
-
-                Dim PROGRAM As New List(Of String)
-                Select Case iOperator
-                    Case "-"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("SUB")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "+"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("ADD")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "/"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("DIV")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "*"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("MUL")
-                        PROGRAM.Add("PRINT_M")
-                    Case ">"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("IS_GT")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "<"
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("IS_LT")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case ">="
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("IS_GTE")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "<="
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("IS_LTE")
-                        PROGRAM.Add("PRINT_M")
-
-                    Case "="
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Left.ToString)
-                        PROGRAM.Add("PUSH")
-                        PROGRAM.Add(Right.ToString)
-                        PROGRAM.Add("IS_EQ")
-                        PROGRAM.Add("PRINT_M")
-
-                End Select
-                Return PROGRAM
             End Function
             ''' <summary>
             ''' Evaluates a block of code returning the Global Environment the block environment is disposed of
@@ -160,6 +164,51 @@
                 ' CHanges to the global memory enviroment need to be made? 
                 Return Env.GlobalMemory
             End Function
+            Private Function _CheckCondition(ByRef Left As Integer, ByRef Right As Integer, ByRef iOperator As String) As Boolean
+
+                Select Case iOperator
+
+                    Case ">"
+                        If Left > Right Then
+                            Return True
+                        Else
+                            Return False
+                        End If
+
+
+                    Case "<"
+                        If Left < Right Then
+                            Return True
+                        Else
+                            Return False
+                        End If
+
+                    Case ">="
+                        If Left >= Right Then
+                            Return True
+                        Else
+                            Return False
+                        End If
+
+                    Case "<="
+                        If Left <= Right Then
+                            Return True
+                        Else
+                            Return False
+                        End If
+
+                    Case "="
+                        If Left = Right Then
+                            Return True
+                        Else
+                            Return False
+                        End If
+                    Case Else
+                        Return False
+                End Select
+
+            End Function
+
 
 #Region "Literals"
             ''' <summary>

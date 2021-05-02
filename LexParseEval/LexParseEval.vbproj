@@ -78,6 +78,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SmallProgLang\Compiler\AST_Cleaner.vb" />
     <Compile Include="SmallProgLang\Compiler\EnvironmentalMemory.vb" />
     <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
@@ -90,8 +91,8 @@
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
-    <Compile Include="SmallProgLang\Compiler\SAL_Evaluator.vb" />
-    <Compile Include="SmallProgLang\Compiler\Transpiler.vb" />
+    <Compile Include="SmallProgLang\Compiler\S_Expression_Evaluator.vb" />
+    <Compile Include="SmallProgLang\Compiler\Sal_Transpiler.vb" />
     <Compile Include="SmallProgLang\EXT.vb" />
     <Compile Include="SmallProgLang\Compiler\Lexer.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstExpression.vb" />
@@ -235,6 +236,7 @@
     <Content Include="ExternalResearch\Tests\SExpression_tests__\while-test.js" />
     <None Include="Resources\ipad-mockup-hands.png" />
     <None Include="Resources\Console A.jpg" />
+    <None Include="Resources\SERIES 1 sal9000.bmp" />
     <Content Include="SAL_VM\SAL.txt" />
     <None Include="Resources\Dell UltraSharp 27.png" />
   </ItemGroup>
