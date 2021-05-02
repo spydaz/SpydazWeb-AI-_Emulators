@@ -78,7 +78,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SmallProgLang\Compiler\AST_Cleaner.vb" />
+    <Compile Include="SmallProgLang\AstExpressionFactory\AST_Cleaner.vb" />
     <Compile Include="SmallProgLang\Compiler\EnvironmentalMemory.vb" />
     <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
@@ -237,6 +237,8 @@
     <None Include="Resources\ipad-mockup-hands.png" />
     <None Include="Resources\Console A.jpg" />
     <None Include="Resources\SERIES 1 sal9000.bmp" />
+    <None Include="Resources\X SERIES AL 9000s.jpg" />
+    <None Include="Resources\EYE BLUE .gif" />
     <Content Include="SAL_VM\SAL.txt" />
     <None Include="Resources\Dell UltraSharp 27.png" />
   </ItemGroup>

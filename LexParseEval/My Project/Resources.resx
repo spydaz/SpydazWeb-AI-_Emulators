@@ -121,11 +121,14 @@
   <data name="Arrow_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arrow_Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Console A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Console A.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SERIES 1 sal9000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SERIES 1 sal9000.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ipad-mockup-hands" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ipad-mockup-hands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Console A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Console A.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dell_UltraSharp_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dell UltraSharp 27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,9 +138,6 @@
   </data>
   <data name="Complier_RUN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Complier_RUN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SERIES 1 sal9000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SERIES 1 sal9000.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickRef_SAL" xml:space="preserve">
     <value>SpydazWeb Assembly Language : 
@@ -183,5 +183,11 @@
 		_INCR					: number is incremented by 1
 		_DECR 					: number is Decremented by 2</value>
     <comment>Sal Ref</comment>
+  </data>
+  <data name="X SERIES AL 9000s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\X SERIES AL 9000s.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EYE BLUE " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EYE BLUE .gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

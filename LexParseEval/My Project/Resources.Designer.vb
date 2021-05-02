@@ -103,6 +103,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property EYE_BLUE_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("EYE BLUE ", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property ipad_mockup_hands() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ipad-mockup-hands", resourceCulture)
@@ -147,6 +157,16 @@ Namespace My.Resources
         Friend ReadOnly Property SERIES_1_sal9000() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("SERIES 1 sal9000", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property X_SERIES_AL_9000s() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("X SERIES AL 9000s", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
