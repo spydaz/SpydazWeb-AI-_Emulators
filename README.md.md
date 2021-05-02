@@ -52,6 +52,8 @@ https://spydaz.github.io/SpydazWeb-AI-_Emulators/
 	_TO_NEG					: number is sent to positive
 	_INCR					: number is incremented by 1
 	_DECR 					: number is Decremented by 2
+
+graph TD A[Lex Tokens] --> B[Parse to AST] --> C[Transpile to S-Expression] --> E[Execute on StackVM]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NDM3MTkyXX0=
+eyJoaXN0b3J5IjpbMTQ3NDM1MTUyLDE0OTQzNzE5Ml19
 -->
