@@ -53,11 +53,11 @@
     <add key="VBdocman_dontSortSeeAlsoList"><![CDATA[0]]></add>
     <add key="VBdocman_templateFolder"><![CDATA[$(VSdocmanDir)Templates]]></add>
     <add key="VBdocman_ConstantValueDisplay"><![CDATA[1]]></add>
-    <add key="VBdocman_helpTitle"><![CDATA[LexParseEval Reference]]></add>
+    <add key="VBdocman_helpTitle"><![CDATA[AI_VMx86 Reference]]></add>
     <add key="VBdocman_insertSourceGlobal"><![CDATA[1]]></add>
     <add key="VBdocman_SupportedNetStandard"><![CDATA[]]></add>
     <add key="VBdocman_SupportedXamarinMac"><![CDATA[]]></add>
-    <add key="VBdocman_comFriend"><![CDATA[0]]></add>
+    <add key="VBdocman_comFriend"><![CDATA[-1]]></add>
     <add key="VBdocman_templatePath"><![CDATA[chm_msdn2.vbdt]]></add>
     <add key="VBdocman_comDeclare"><![CDATA[-1]]></add>
     <add key="VBdocman_conditionalConstants"><![CDATA[]]></add>
@@ -71,8 +71,8 @@
   <topic>
     <type>normal</type>
     <is-default>yes</is-default>
-    <name>LexParseEval Reference</name>
-    <id>lexparseeval_reference</id>
+    <name>AI_VMx86 Reference</name>
+    <id>ai_vmx86_reference</id>
     <comment><![CDATA[<summary></summary>vsdocman_escaped_]_]_></comment>
     <namespaces />
     <topics>
@@ -80,7 +80,7 @@
         <type>placeholder</type>
         <is-default>no</is-default>
         <name />
-        <id>d98a4f0baf4c404a9ea66d1d1e86503b</id>
+        <id>7bc41a6c54ca4614a4a058aa6c6ff339</id>
         <comment><![CDATA[vsdocman_escaped_]_]_></comment>
         <namespaces />
         <topics />
