@@ -2,11 +2,9 @@
 SpydazWeb Program languges and virtual machines, Parser/Compiler/Interpretor. AST Creator... Experiments in developing compilers and programing langugages . Using Mini Basic language to Tokenizer to AST to Assembly code 
 
 https://spydaz.github.io/SpydazWeb-AI-_Emulators/
-##Process
+
 graph TD
- A[Lex Tokens] --> B[Parse to AST]  --> 
- C[Transpile to S-Expression] --> 
-E[Execute on StackVM] 
+ A[Lex Tokens] --> B[Parse to AST]  -->  C[Transpile to S-Expression] --> E[Execute on StackVM] 
 
 ## DESCRIPTION:
 	A basic programming language designed in stages to be compiled and executed on a virtual machine :
