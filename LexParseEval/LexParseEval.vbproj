@@ -214,6 +214,8 @@
     <Content Include="ExternalResearch\Tests\SExpression_tests__\user-defined-function-test.js" />
     <Content Include="ExternalResearch\Tests\SExpression_tests__\variables-test.js" />
     <Content Include="ExternalResearch\Tests\SExpression_tests__\while-test.js" />
+    <None Include="Resources\ipad-mockup-hands.png" />
+    <None Include="Resources\Console A.jpg" />
     <Content Include="SAL_VM\SAL.txt" />
     <None Include="Resources\Dell UltraSharp 27.png" />
   </ItemGroup>
