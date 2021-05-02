@@ -60,12 +60,17 @@ https://spydaz.github.io/SpydazWeb-AI-_Emulators/
 
 ```mermaid
 graph TD
-A[Lex Tokens]  -->  
-B[Parse to AST]  -->
-C[Transpile to S-Expression]  -->
-E[Execute on StackVM]
+
+A[Lex Tokens]  -->|RegEx Defines Gramar tokens| C{Parse to AST}
+
+C -->|One| D[Transpile to S-Expression]
+
+C -->|Two| E[Evaluate AsT]
+
+C -->|Three| F[Execute on VM]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTg1MTk0OSwxNDk0MzcxOTJdfQ==
+eyJoaXN0b3J5IjpbMTk4Mjk2NTEwNCwtMTUxODUxOTQ5LDE0OT
+QzNzE5Ml19
 -->
