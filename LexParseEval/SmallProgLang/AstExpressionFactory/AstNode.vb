@@ -46,6 +46,7 @@
         ''' Root Ast node Type
         ''' 
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class AstNode
             ''' <summary>
             ''' Type Of Node
@@ -80,7 +81,9 @@
                 Return lst
             End Function
 
-
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
+            End Function
         End Class
     End Namespace
 

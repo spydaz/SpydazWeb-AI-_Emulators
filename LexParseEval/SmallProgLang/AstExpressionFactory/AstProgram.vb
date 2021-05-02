@@ -27,6 +27,7 @@
         '''}
         ''' 
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class AstProgram
             Inherits AstNode
             ''' <summary>
@@ -48,6 +49,10 @@
                     lst.AddRange(item.ToArraylist)
                 Next
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

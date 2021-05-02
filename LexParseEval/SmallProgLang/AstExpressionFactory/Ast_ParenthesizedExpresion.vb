@@ -4,6 +4,7 @@
         ''' <summary>
         ''' Used for Operational Expression
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_ParenthesizedExpresion
             Inherits AstExpression
             Public Body As List(Of AstExpression)
@@ -17,6 +18,10 @@
                 Next
                 Me._End = iBody(iBody.Count - 1)._End
             End Sub
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
+            End Function
         End Class
     End Namespace
 

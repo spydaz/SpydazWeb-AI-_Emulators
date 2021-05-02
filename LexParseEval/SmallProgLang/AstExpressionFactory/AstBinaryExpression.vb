@@ -4,6 +4,7 @@
         ''' <summary>
         ''' Used for Binary Operations
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class AstBinaryExpression
             Inherits AstExpression
             Public _Left As AstExpression
@@ -27,6 +28,9 @@
                 Return lst
             End Function
 
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
+            End Function
         End Class
     End Namespace
 

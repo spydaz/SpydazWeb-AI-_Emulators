@@ -9,6 +9,7 @@
         ''' 
         ''' 
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_Identifier
             Inherits AstNode
             Public _Name As String
@@ -21,6 +22,10 @@
                 Dim lst = MyBase.ToArraylist()
                 lst.Add(_Name)
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

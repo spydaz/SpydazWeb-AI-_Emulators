@@ -9,7 +9,7 @@ Imports SDK.SmallProgLang.GrammarFactory
 '-------------------------------------
 'NOTE: 
 'Loosly - Based on DIMTRY (Building a Parser from Scratch)
-'This is a test of that style of AST creations _  
+'This is a test of that style of AST creation _  
 'MODEL_
 'LEX _ PARSE _ EVAL 
 
@@ -735,7 +735,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR)
 
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
 
@@ -746,7 +746,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR)
 
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             'NOTE: When adding further binary expressions maybe trickle down with this side
                             'the final level will need to be primary expression? 
@@ -758,7 +758,7 @@ Namespace SmallProgLang
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             'NOTE: When adding further binary expressions maybe trickle down with this side
                             'the final level will need to be primary expression? 
@@ -773,7 +773,7 @@ Namespace SmallProgLang
                         If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
                             'collect it (do not step back just take it)
                             Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
                             'create expression (replacing previosuly parsed primary expression
@@ -781,7 +781,7 @@ Namespace SmallProgLang
                             _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
                         Else
                             'Do normal-(old way make binary expression sort out later in eval)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
@@ -794,7 +794,7 @@ Namespace SmallProgLang
                         If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
                             'collect it (do not step back just take it)
                             Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
                             'create expression (replacing previouly parsed primary expression
@@ -802,7 +802,7 @@ Namespace SmallProgLang
                             _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
                         Else
                             'Do normal-(old way make binary expression sort out later in eval)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
@@ -817,15 +817,16 @@ Namespace SmallProgLang
 #End Region
 
 #End Region
+            Public Function _GetAssignmentOperator() As String
+                Dim str = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                str = str.Replace("\U003c", "<")
+                str = str.Replace("\U003e", ">")
+                ' \U003c < Less-than sign
+                ' \U003e > Greater-than sign
 
 
-#Region "ASSIGNMENT"
-
-
-
-
-
-#End Region
+                Return str
+            End Function
 #End Region
 
             ''' <summary>

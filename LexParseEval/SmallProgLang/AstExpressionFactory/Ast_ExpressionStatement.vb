@@ -7,6 +7,7 @@
         ''' Expression Statement Types
         ''' 
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_ExpressionStatement
             Inherits AstExpression
             ''' <summary>
@@ -29,6 +30,10 @@
                 Dim lst As List(Of String) = MyBase.ToArraylist()
                 lst.AddRange(_Expression.iLiteral.toarraylist)
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

@@ -1,6 +1,7 @@
 ﻿Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_AssignmentExpression
             Inherits AstExpression
             ''' <summary>
@@ -29,6 +30,9 @@
                 Return lst
             End Function
 
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
+            End Function
         End Class
     End Namespace
 

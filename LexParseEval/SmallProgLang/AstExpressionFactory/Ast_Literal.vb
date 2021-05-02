@@ -10,6 +10,7 @@
         ''' 
         ''' 
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_Literal
             Inherits AstNode
             ''' <summary>
@@ -27,6 +28,10 @@
                 Dim lst = MyBase.ToArraylist()
                 lst.Add(iLiteral.ToString)
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

@@ -4,6 +4,7 @@
         ''' <summary>
         ''' Used for CodeBlocks
         ''' </summary>
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_BlockExpression
             Inherits AstExpression
             Public Body As List(Of Ast_ExpressionStatement)
@@ -23,6 +24,10 @@
                     lst.AddRange(item.ToArraylist)
                 Next
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

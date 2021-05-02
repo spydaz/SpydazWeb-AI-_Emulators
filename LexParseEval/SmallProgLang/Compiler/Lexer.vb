@@ -4,8 +4,7 @@ Imports SDK.SmallProgLang.GrammarFactory.Grammar
 
 Namespace SmallProgLang
     Namespace Compiler
-
-
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Lexer
             ''' <summary>
             ''' Cursor Position
@@ -227,6 +226,10 @@ Namespace SmallProgLang
                 EoFCursor = Script.Length
                 CurrentGrammar = Grammar
             End Sub
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
+            End Function
         End Class
     End Namespace
 End Namespace

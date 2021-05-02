@@ -1,6 +1,7 @@
 ﻿Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
+        <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_VariableExpressionStatement
             Inherits AstExpression
             ''' <summary>
@@ -23,6 +24,10 @@
                 Dim lst = MyBase.ToArraylist()
                 lst.AddRange(_Expression.ToArraylist)
                 Return lst
+            End Function
+
+            Private Function GetDebuggerDisplay() As String
+                Return ToString()
             End Function
         End Class
     End Namespace

@@ -58,6 +58,7 @@
       <HintPath>packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -88,7 +89,8 @@
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
-    <Compile Include="SmallProgLang\Compiler\ClassEvaluator.vb" />
+    <Compile Include="SmallProgLang\Compiler\SAL_Evaluator.vb" />
+    <Compile Include="SmallProgLang\Compiler\Transpiler.vb" />
     <Compile Include="SmallProgLang\EXT.vb" />
     <Compile Include="SmallProgLang\Compiler\Lexer.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstExpression.vb" />
@@ -161,6 +163,9 @@
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
     <None Include="ExternalResearch\Tests\Primers\test.lang" />
     <None Include="Langs\vbnet.json" />
+    <None Include="Help\LexParseEval.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

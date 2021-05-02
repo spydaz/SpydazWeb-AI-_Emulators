@@ -1,4 +1,6 @@
-﻿Imports SDK
+﻿Imports System.IO
+Imports System.Security.Cryptography
+Imports SDK
 Imports SDK.SmallProgLang
 Imports SDK.SmallProgLang.Ast_ExpressionFactory
 Imports SDK.SmallProgLang.Compiler
@@ -34,11 +36,7 @@ Public Class FormREPL
                 TextboxErrors.Text = "all Passed sucessfully"
             End If
         End If
-        'Dim lxr As New Lexer(InputCode)
-        'Dim toks As List(Of Token) = lxr.TokenizeScript
-        'For Each item In toks
-        '    TextBoxREPL_OUTPUT.Text = item.ToJson
-        'Next
+
     End Sub
 
     Public Sub loadTree(ByRef Prog As AstProgram)
@@ -94,5 +92,59 @@ Public Class FormREPL
         Next
         root.Nodes.Add(Body)
         AstTreeView.Nodes.Add(root)
+    End Sub
+
+    Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
+        Dim sr As StreamReader
+
+        'Supposing you haven't already set these properties...
+        With OpenTextFileDialog
+            .FileName = ""
+            .Title = "Open a Program file..."
+            .InitialDirectory = "C:\"
+            .Filter = " Program Files|*.*"
+        End With
+
+        If OpenTextFileDialog.ShowDialog() = DialogResult.OK Then
+            Try
+                sr = New StreamReader(OpenTextFileDialog.FileName)
+                TextBoxCodeInput.Text = OpenTextFileDialog.FileName
+            Catch ex As Exception
+                TextboxErrors.Text = "The file specified could not be opened." & vbNewLine & "Error message:" & vbNewLine & vbNewLine & ex.Message & vbNewLine & " File Could Not Be Opened!"
+            End Try
+        End If
+    End Sub
+
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+        Dim sr As StreamWriter
+
+        'Supposing you haven't already set these properties...
+        With SaveTextFileDialog
+            .FileName = ""
+            .Title = "Save a Program file..."
+            .InitialDirectory = "C:\"
+            .Filter = " Program Files|*.*"
+        End With
+
+        If SaveTextFileDialog.ShowDialog() = DialogResult.OK Then
+            Try
+                sr = New StreamWriter(SaveTextFileDialog.FileName)
+
+            Catch ex As Exception
+                TextboxErrors.Text = "The file specified could not be opened." & vbNewLine & "Error message:" & vbNewLine & ex.Message & "File Could Not Be Opened!"
+            End Try
+        End If
+    End Sub
+
+    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
+        TextBoxCodeInput.Text = ""
+    End Sub
+
+    Private Sub HelpToolStripButton_Click(sender As Object, e As EventArgs) Handles HelpToolStripButton.Click
+        Dim help As New Process
+        help.StartInfo.UseShellExecute = True
+        help.StartInfo.FileName = "c:\windows\hh.exe"
+        help.StartInfo.Arguments = Application.StartupPath & "\help\LexParseEval.chm"
+        help.Start()
     End Sub
 End Class
