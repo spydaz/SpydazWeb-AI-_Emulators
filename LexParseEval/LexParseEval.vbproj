@@ -78,6 +78,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SmallProgLang\Compiler\EnvironmentalMemory.vb" />
     <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AstNode.vb" />

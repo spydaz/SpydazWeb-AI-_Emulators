@@ -47,13 +47,9 @@
             Return Env.GetVar(Expr(0))
         End If
         ' - "TRUE" "FALSE"
-        If IsBoolean(Expr) = True Then
-            If Expr = "TRUE" Then
-                Return True
-            Else
-                Return False
-            End If
-        End If
+
+
+
         '[Binary Comand]
         'Object is array then its a command (binary comand)
         If IsArray(Expr) = True And Expr.count = 3 Then
@@ -105,6 +101,10 @@
                     Return True
             End Select
         End If
+
+
+
+
         If Expr = "LOOP" Then
             Return True   'Do Nothing
         End If
