@@ -5,7 +5,7 @@ Imports SDK.SmallProgLang
 Imports SDK.SmallProgLang.Ast_ExpressionFactory
 Imports SDK.SmallProgLang.Compiler
 
-Public Class FormREPL
+Public Class FrmPL_REPL
 
     Dim PSER As New Parser
     Private Sub ToolStripButtonCompile_Click(sender As Object, e As EventArgs) Handles ToolStripButtonCompileCode.Click
