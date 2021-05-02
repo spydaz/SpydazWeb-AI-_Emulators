@@ -1,4 +1,6 @@
-﻿Public Class ReplErrorSystem
+﻿Imports SDK.SmallProgLang.Ast_ExpressionFactory
+Imports SDK.SmallProgLang
+Public Class ReplErrorSystem
 
 
     ''' <summary>

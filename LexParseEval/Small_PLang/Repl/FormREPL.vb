@@ -1,4 +1,7 @@
 ﻿Imports SDK
+Imports SDK.SmallProgLang
+Imports SDK.SmallProgLang.Ast_ExpressionFactory
+Imports SDK.SmallProgLang.Compiler
 
 Public Class FormREPL
 
@@ -27,8 +30,8 @@ Public Class FormREPL
                 Else
                 End If
             Else
-                TextBoxErrors.ForeColor = Color.Green
-                TextBoxErrors.Text = "all Passed sucessfully"
+                TextboxErrors.ForeColor = Color.Green
+                TextboxErrors.Text = "all Passed sucessfully"
             End If
         End If
         'Dim lxr As New Lexer(InputCode)

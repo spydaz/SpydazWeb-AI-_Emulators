@@ -1,22 +1,4 @@
-﻿
-Imports System.Web.Script.Serialization
-Namespace STACK_VM
-    Public Module Ext
-        <System.Runtime.CompilerServices.Extension()>
-        Public Function SplitAtNewLine(input As String) As IEnumerable(Of String)
-            Return input.Split({Environment.NewLine}, StringSplitOptions.None)
-        End Function
-        <System.Runtime.CompilerServices.Extension()>
-        Public Function ExtractLastChar(ByRef InputStr As String) As String
-            ExtractLastChar = Right(InputStr, 1)
-        End Function
-        <System.Runtime.CompilerServices.Extension()>
-        Public Function ExtractFirstChar(ByRef InputStr As String) As String
-            ExtractFirstChar = Left(InputStr, 1)
-        End Function
-
-    End Module
-
+﻿Namespace STACK_VM
     Public Module SalCode_Helpers
         Private Function _Binary_op(ByRef Left As Integer, ByRef Right As Integer, ByRef iOperator As String) As List(Of String)
 
