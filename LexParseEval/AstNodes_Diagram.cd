@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression">
+    <Position X="5.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAggAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_AssignmentExpression.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression">
+    <Position X="8.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_BlockExpression.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement">
+    <Position X="14.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_ExpressionStatement.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier">
+    <Position X="23" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_Identifier.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_Literal.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ParenthesizedExpresion">
+    <Position X="11.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement">
+    <Position X="17" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression">
+    <Position X="20.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BACAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstExpression">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\AstExpression.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAABAAAAABAAAAAAAAAAAAAAAAgABAAAAAAAAABAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\AstNode.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram">
+    <Position X="25.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\AstProgram.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SDK.SmallProgLang.Ast_ExpressionFactory.AST_NODE" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAGQU4AAQEBAAAAAAAAECKAATRAASAIHJEQhA=</HashCode>
+      <FileName>SmallProgLang\AstExpressionFactory\AstNode.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="High Tower Text" Size="10" />
+</ClassDiagram>

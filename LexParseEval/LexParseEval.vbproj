@@ -155,6 +155,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AstNodes_Diagram.cd" />
     <None Include="ExternalResearch\Tests\Ast_tests\example.lt" />
     <None Include="ExternalResearch\Tests\Primers\lang.bnf" />
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
