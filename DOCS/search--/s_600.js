@@ -1,1 +1,0 @@
-search_result['600']=["frlrfAI_ZX81STACK_VMZX81_CPUClassGet_Current_Stack_DataTopic.html","ZX81_CPU.Get_Current_Stack_Data Property","Returns the current data in the stack"];

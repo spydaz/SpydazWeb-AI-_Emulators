@@ -1,1 +1,0 @@
-search_result['1121']=["frlrfSDKSTACK_VMZX81_CPUClassLoadProgramTopic2_overloads--.html","ZX81_CPU.LoadProgram Method","Loads items in to the program cache;\r\n this has been added to allow for continuious running of the VM\r\n the run/wait Command will be added to the assembler\r\n enabling for the pausing of the program an..."];

@@ -1,1 +1,0 @@
-search_result['1026']=["frlrfSDKParserClass_CodeBeginNodeTopic.html","Parser._CodeBeginNode Method","Used to Eat Node"];

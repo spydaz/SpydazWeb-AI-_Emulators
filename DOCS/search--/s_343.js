@@ -1,1 +1,0 @@
-search_result['343']=["frlrfAI_ZX81ConcreteExpressionsPrintFunctionClassctorTopic5.html","PrintFunction(MultiplicativeOperation, ZX81_RAM) Constructor",""];

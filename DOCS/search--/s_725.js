@@ -1,1 +1,0 @@
-search_result['725']=["frlrfBasicProgrammingAPPEnvironmentalMemoryClassGlobalMemoryTopic.html","EnvironmentalMemory.GlobalMemory Property","Global memeory passed in from parent environment"];

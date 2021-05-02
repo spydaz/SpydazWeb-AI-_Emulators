@@ -1,1 +1,0 @@
-c['1056']=[['1057',"ExtractFirstChar Method","frlrfSDKSTACK_VMExtClassExtractFirstCharTopic.html",0],['1058',"ExtractLastChar Method","frlrfSDKSTACK_VMExtClassExtractLastCharTopic.html",0],['1059',"SplitAtNewLine Method","frlrfSDKSTACK_VMExtClassSplitAtNewLineTopic.html",0]];

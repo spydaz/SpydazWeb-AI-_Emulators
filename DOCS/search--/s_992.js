@@ -1,1 +1,0 @@
-search_result['992']=["frlrfSDKLexerClassGetIdentifiedTokenTopic.html","Lexer.GetIdentifiedToken Method","Identifys token"];

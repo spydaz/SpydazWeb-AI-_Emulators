@@ -1,1 +1,0 @@
-search_result['976']=["frlrfSDKGrammarFactoryGrammarClassGetGrammarTopic.html","Grammar.GetGrammar Method","Set OF KeyWords for Language with RegEx Search Expressions\r\nBased on basic programming languge keywords and symbols /Literals\r\nThis is a preloaded Grammar (list of Grammar objects)"];

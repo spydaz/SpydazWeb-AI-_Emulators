@@ -1,1 +1,0 @@
-search_result['742']=["frlrfBasicProgrammingAPPEvaluatorClassEvalBlockTopic.html","Evaluator.EvalBlock Method","Evaluates a block of code returning the Global Environment the block environment is disposed of"];

@@ -1,1 +1,0 @@
-c['991']=[['992',"Var Structure","frlrfSDKSTACK_VMZX81_CPUStackMemoryFrameVarClassTopic.html",1],['996',"StackMemoryFrame Constructor","frlrfSDKSTACK_VMZX81_CPUStackMemoryFrameClassctorTopic.html",0],['997',"Methods","frlrfSDKSTACK_VMZX81_CPUStackMemoryFrameClassTopic_methods--.html",1],['1002',"Fields","frlrfSDKSTACK_VMZX81_CPUStackMemoryFrameClassTopic_vars--.html",1]];

@@ -1,1 +1,0 @@
-search_result['1177']=["frlrfSDKSTACK_VMZX81_RAMClassCurrentVarsTopic.html","CurrentVars Field","Currently only Variables can be stored"];

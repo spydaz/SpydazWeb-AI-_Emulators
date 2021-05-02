@@ -1,1 +1,0 @@
-c['639']=[['640',"Fields","frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTopic_vars--.html",1]];

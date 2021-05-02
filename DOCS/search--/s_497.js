@@ -1,1 +1,0 @@
-search_result['497']=["frlrfAI_ZX81GRAMMARSPL_GrammarClassGetLettersRuleTopic.html","PL_Grammar.GetLettersRule Method",""];

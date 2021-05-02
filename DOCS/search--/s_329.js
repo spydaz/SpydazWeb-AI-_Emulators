@@ -1,1 +1,0 @@
-search_result['329']=["frlrfAI_ZX81ConcreteExpressionsMultiplicativeOperationClassGetValueTopic.html","MultiplicativeOperation.GetValue Method",""];

@@ -1,1 +1,0 @@
-search_result['205']=["frlrfAI_ZX81CompilerClassLexerClassCollectCodeBlocksTopic.html","ClassLexer.CollectCodeBlocks Method","Collects tokens into codeBLocks by COnvert to a single token containing the code cblock\r\nShould be executes on a per statment basis not on a program basis"];

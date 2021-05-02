@@ -1,1 +1,0 @@
-search_result['218']=["frlrfAI_ZX81CompilerClassLexerClassGetTokenRuleTopic.html","ClassLexer.GetTokenRule Method","Checks current token to see if it is in TokenList.COMPONENTSTRINGS\r\n(all reserved terms which point to this term)  Allowing for multiple ways to ie: DIM/PUBLIC/PRIVATE"];

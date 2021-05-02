@@ -1,1 +1,0 @@
-c['1040']=[['1041',"Variable Structure","frlrfSDKSTACK_VMZX81_RAMVariableClassTopic.html",1],['1046',"ZX81_RAM Constructor","frlrfSDKSTACK_VMZX81_RAMClassctorTopic.html",0],['1047',"Methods","frlrfSDKSTACK_VMZX81_RAMClassTopic_methods--.html",1],['1053',"Fields","frlrfSDKSTACK_VMZX81_RAMClassTopic_vars--.html",1]];

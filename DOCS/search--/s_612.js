@@ -1,1 +1,0 @@
-search_result['612']=["frlrfAI_ZX81STACK_VMZX81_CPUClassRunningStateTopic.html","ZX81_CPU.RunningState Property","Used to monitor the Program status ;\r\nIf the program is being executed then the cpu must be running\r\nthe Property value can only be changed within the program"];

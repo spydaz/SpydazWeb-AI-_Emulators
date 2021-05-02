@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['341',"AI_ZX81.ConcreteExpressions Namespace","frlrfAI_ZX81ConcreteExpressions.html"],['408',"LoopFunction Class","frlrfAI_ZX81ConcreteExpressionsLoopFunctionClassTopic.html"],['412',"Methods","frlrfAI_ZX81ConcreteExpressionsLoopFunctionClassTopic_methods--.html"]];

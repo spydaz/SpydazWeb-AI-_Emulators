@@ -1,1 +1,0 @@
-search_result['83']=["frlrfAI_VMx86STACK_VMZX81_CPUClassEXECUTETopic.html","ZX81_CPU.EXECUTE Method","Executes the next instruction in the Program\r\nEach Instruction is fed individually to the decoder :\r\nThe Execute cycle Checks the Current State to determine\r\nif to fetch the next instruction to be dec..."];

@@ -1,1 +1,0 @@
-search_result['510']=["frlrfAI_ZX81ModuleKnowledgeStructuresAbstractSyntaxClassSyntaxSearchStrTopic.html","AbstractSyntax.SyntaxSearchStr Property","Auto Populated by Items for each list a search string is retruned"];

@@ -1,1 +1,0 @@
-c['1042']=[['1043',"iName Field","frlrfSDKSTACK_VMZX81_RAMVariableClassiNameTopic.html",0],['1044',"iType Field","frlrfSDKSTACK_VMZX81_RAMVariableClassiTypeTopic.html",0],['1045',"iValue Field","frlrfSDKSTACK_VMZX81_RAMVariableClassiValueTopic.html",0]];

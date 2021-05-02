@@ -1,1 +1,0 @@
-search_result['1198']=["frlrfSDKTokenClassTopic.html","Token Structure","Token to be returned"];

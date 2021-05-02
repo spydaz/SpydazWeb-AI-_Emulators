@@ -1,1 +1,0 @@
-search_result['1063']=["frlrfSDKSTACK_VMExtClassExtractLastCharTopic.html","Ext.ExtractLastChar Method",""];

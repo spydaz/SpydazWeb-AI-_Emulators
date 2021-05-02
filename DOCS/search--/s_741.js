@@ -1,1 +1,0 @@
-search_result['741']=["frlrfBasicProgrammingAPPEvaluatorClassctorTopic.html","Evaluator Constructor","Create a new instance of the PROGRAMMING Interpretor"];

@@ -1,1 +1,0 @@
-search_result['748']=["frlrfBasicProgrammingAPPEvaluatorClassIsVariableNameTopic.html","Evaluator.IsVariableName Method","If Epr token is variable ake then it can be handled correctlly"];

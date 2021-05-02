@@ -1,1 +1,0 @@
-c['640']=[['641',"Name Field","frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassNameTopic.html",0],['642',"Type Field","frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTypeTopic.html",0],['643',"Value Field","frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassValueTopic.html",0]];

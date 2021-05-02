@@ -1,1 +1,0 @@
-search_result['1039']=["frlrfSDKParserClass_ParenthesizedExpressionTopic.html","Parser._ParenthesizedExpression Method","Syntax:\r\n\r\n( OptionalStatmentList; )"];

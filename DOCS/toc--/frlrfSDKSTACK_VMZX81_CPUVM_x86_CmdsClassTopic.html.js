@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['971',"SDK.STACK_VM Namespace","frlrfSDKSTACK_VM.html"],['990',"ZX81_CPU Class","frlrfSDKSTACK_VMZX81_CPUClassTopic.html"],['1009',"VM_x86_Cmds Enumeration","frlrfSDKSTACK_VMZX81_CPUVM_x86_CmdsClassTopic.html"]];

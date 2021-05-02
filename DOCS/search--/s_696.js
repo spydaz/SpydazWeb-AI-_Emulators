@@ -1,1 +1,0 @@
-search_result['696']=["frlrfAI_ZX81ZX81_RAMVariableClassiTypeTopic.html","iType Field",""];

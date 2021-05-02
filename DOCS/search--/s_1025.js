@@ -1,1 +1,0 @@
-search_result['1025']=["frlrfSDKParserClass_BooleanNodeTopic.html","Parser._BooleanNode Method","Used to return boolean literals if badly detected it will return false"];

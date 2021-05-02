@@ -1,1 +1,0 @@
-search_result['528']=["frlrfAI_ZX81ModuleKnowledgeStructuresClassExtractLastCharTopic.html","ModuleKnowledgeStructures.ExtractLastChar Method",""];

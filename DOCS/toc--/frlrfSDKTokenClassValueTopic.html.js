@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['716',"SDK Namespace","frlrfSDK.html"],['963',"Token Structure","frlrfSDKTokenClassTopic.html"],['966',"Fields","frlrfSDKTokenClassTopic_vars--.html"],['968',"Value Field","frlrfSDKTokenClassValueTopic.html"]];

@@ -1,1 +1,0 @@
-search_result['673']=["frlrfAI_ZX81STACK_VMZX81_VMClassSetProgramTopic.html","ZX81_VM.SetProgram Method",""];

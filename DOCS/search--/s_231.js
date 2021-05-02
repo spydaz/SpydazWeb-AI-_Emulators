@@ -1,1 +1,0 @@
-search_result['231']=["frlrfAI_ZX81CompilerClassParserClassGetSyntaxTopic.html","ClassParser.GetSyntax Method","Given as statment (Token Statment)\r\nReturn an Abstract Syntax Token (Used for execution)"];

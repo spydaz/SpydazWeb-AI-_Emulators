@@ -1,1 +1,0 @@
-search_result['182']=["frlrfAI_ZX81CompilerBinaryExpressionClassiOperatorTopic.html","iOperator Field","Operator such as \"+\" or \"DIM\""];

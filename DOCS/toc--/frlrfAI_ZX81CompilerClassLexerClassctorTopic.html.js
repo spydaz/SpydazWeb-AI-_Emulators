@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['232',"AI_ZX81.Compiler Namespace","frlrfAI_ZX81Compiler.html"],['267',"ClassLexer Class","frlrfAI_ZX81CompilerClassLexerClassTopic.html"],['268',"ClassLexer Constructor","frlrfAI_ZX81CompilerClassLexerClassctorTopic.html"]];

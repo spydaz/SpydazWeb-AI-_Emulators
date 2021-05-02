@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['131',"AI_ZX81 Namespace","frlrfAI_ZX81.html"],['132',"ZX81_RAM Class","frlrfAI_ZX81ZX81_RAMClassTopic.html"],['139',"Methods","frlrfAI_ZX81ZX81_RAMClassTopic_methods--.html"],['142',"GetVar Method","frlrfAI_ZX81ZX81_RAMClassGetVarTopic.html"]];

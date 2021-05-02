@@ -1,1 +1,0 @@
-search_result['232']=["frlrfAI_ZX81CompilerClassParserClassParseFOR_NEXTTopic.html","ClassParser.ParseFOR_NEXT Method",""];

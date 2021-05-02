@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['637',"BasicProgrammingAPP Namespace","frlrfBasicProgrammingAPP.html"],['663',"TokenizerClass Class","frlrfBasicProgrammingAPPTokenizerClassClassTopic.html"],['664',"Methods","frlrfBasicProgrammingAPPTokenizerClassClassTopic_methods--.html"]];

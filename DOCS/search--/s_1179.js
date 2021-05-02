@@ -1,1 +1,0 @@
-search_result['1179']=["frlrfSDKSTACK_VMZX81_RAMClassRemoveVarTopic.html","ZX81_RAM.RemoveVar Method",""];

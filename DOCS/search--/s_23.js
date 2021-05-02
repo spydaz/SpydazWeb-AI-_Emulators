@@ -1,1 +1,0 @@
-search_result['23']=["frlrfAI_VMx86STACK_VMExtClassExtractLastCharTopic.html","Ext.ExtractLastChar Method",""];

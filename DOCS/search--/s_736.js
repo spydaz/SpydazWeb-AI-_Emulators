@@ -1,1 +1,0 @@
-search_result['736']=["frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTopic_methods--.html","Variable Methods",""];

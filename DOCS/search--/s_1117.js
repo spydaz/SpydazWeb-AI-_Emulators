@@ -1,1 +1,0 @@
-search_result['1117']=["frlrfSDKSTACK_VMZX81_CPUClassIsHaltedTopic.html","ZX81_CPU.IsHalted Property","Checks the status of the cpu"];

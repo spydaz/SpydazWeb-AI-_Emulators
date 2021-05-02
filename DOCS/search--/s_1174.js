@@ -1,1 +1,0 @@
-search_result['1174']=["frlrfSDKSTACK_VMZX81_RAMClassAddVarTopic.html","ZX81_RAM.AddVar Method",""];

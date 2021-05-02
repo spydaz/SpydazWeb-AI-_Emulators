@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['23',"AI_VMx86.STACK_VM Namespace","frlrfAI_VMx86STACK_VM.html"],['24',"StackMemoryFrame Class","frlrfAI_VMx86STACK_VMStackMemoryFrameClassTopic.html"],['29',"StackMemoryFrame Constructor","frlrfAI_VMx86STACK_VMStackMemoryFrameClassctorTopic.html"]];

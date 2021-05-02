@@ -1,1 +1,0 @@
-search_result['379']=["frlrfAI_ZX81FormDisplayConsoleClassGlobalvarsTopic.html","Globalvars Field",""];

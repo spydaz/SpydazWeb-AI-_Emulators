@@ -1,1 +1,0 @@
-search_result['183']=["frlrfAI_ZX81CompilerBinaryExpressionClassLeftTopic.html","Left Field","(LeftNode = ParameterExpression(Parameter/5/a/int))"];

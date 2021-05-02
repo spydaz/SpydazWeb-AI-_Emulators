@@ -1,1 +1,0 @@
-search_result['744']=["frlrfBasicProgrammingAPPEvaluatorClassIsArrayTopic.html","Evaluator.IsArray Method","if token is an array then it contains an expression"];

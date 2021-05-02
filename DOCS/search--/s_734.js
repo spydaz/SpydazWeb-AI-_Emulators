@@ -1,1 +1,0 @@
-search_result['734']=["frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTopic_attached_props--.html","Variable Attached Properties",""];

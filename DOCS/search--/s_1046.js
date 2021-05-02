@@ -1,1 +1,0 @@
-search_result['1046']=["frlrfSDKParserClass_VariableExpressionTopic.html","Parser._VariableExpression Method","Syntax:\r\nVariable: -Identifier as expression"];

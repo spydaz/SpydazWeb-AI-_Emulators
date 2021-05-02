@@ -1,1 +1,0 @@
-search_result['724']=["frlrfBasicProgrammingAPPEnvironmentalMemoryClassGetVarTopic.html","EnvironmentalMemory.GetVar Method","Returns the value from the stored variable"];

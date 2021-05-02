@@ -1,1 +1,0 @@
-search_result['735']=["frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTopic_events--.html","Variable Events",""];

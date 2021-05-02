@@ -1,1 +1,0 @@
-c['619']=[['620',"ZX81_VM Constructor","frlrfAI_ZX81STACK_VMZX81_VMClassctorTopic.html",0],['621',"Properties","frlrfAI_ZX81STACK_VMZX81_VMClassTopic_props--.html",1],['626',"Methods","frlrfAI_ZX81STACK_VMZX81_VMClassTopic_methods--.html",1]];

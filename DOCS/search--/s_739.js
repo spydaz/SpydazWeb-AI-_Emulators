@@ -1,1 +1,0 @@
-search_result['739']=["frlrfBasicProgrammingAPPEnvironmentalMemoryVariableClassTypeTopic.html","Type Field","Type ass string identifier"];

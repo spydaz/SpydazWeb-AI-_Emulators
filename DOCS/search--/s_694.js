@@ -1,1 +1,0 @@
-search_result['694']=["frlrfAI_ZX81ZX81_RAMClassUpdateVarTopic.html","ZX81_RAM.UpdateVar Method",""];

@@ -1,1 +1,0 @@
-search_result['584']=["frlrfAI_ZX81STACK_VMStackMemoryFrameVarClassTopic.html","Var Structure",""];

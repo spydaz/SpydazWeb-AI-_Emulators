@@ -1,1 +1,0 @@
-search_result['498']=["frlrfAI_ZX81GRAMMARSPL_GrammarClassGetMathOperatorsTopic.html","PL_Grammar.GetMathOperators Method",""];

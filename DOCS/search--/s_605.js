@@ -1,1 +1,0 @@
-search_result['605']=["frlrfAI_ZX81STACK_VMZX81_CPUClassIsWaitTopic.html","ZX81_CPU.IsWait Property",""];

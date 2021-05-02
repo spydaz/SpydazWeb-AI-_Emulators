@@ -1,1 +1,0 @@
-search_result['296']=["frlrfAI_ZX81ConcreteExpressionsConditionalOperationClassGetValueTopic.html","ConditionalOperation.GetValue Method",""];

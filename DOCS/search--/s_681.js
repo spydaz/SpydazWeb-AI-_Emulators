@@ -1,1 +1,0 @@
-search_result['681']=["frlrfAI_ZX81STACK_VMZX81_VMClass_nextTopic.html","ZX81_VM._next Method","Executes next Cmd Increment by 1 if not greater than target\r\nreturn true if loop is required"];

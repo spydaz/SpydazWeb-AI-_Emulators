@@ -1,1 +1,0 @@
-c['180']=[['181',"ClearText Method","frlrfAI_ZX81Form_DisplayHelpNotesClassClearTextTopic.html",0],['182',"DisplayText Method","frlrfAI_ZX81Form_DisplayHelpNotesClassDisplayTextTopic.html",0],['183',"Dispose Method","frlrfAI_ZX81Form_DisplayHelpNotesClassDisposeTopic_overloads--.html",1],['186',"SetTitle Method","frlrfAI_ZX81Form_DisplayHelpNotesClassSetTitleTopic.html",0]];

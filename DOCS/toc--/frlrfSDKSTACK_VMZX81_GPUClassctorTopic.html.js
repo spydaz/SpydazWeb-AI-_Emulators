@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['971',"SDK.STACK_VM Namespace","frlrfSDKSTACK_VM.html"],['1035',"ZX81_GPU Class","frlrfSDKSTACK_VMZX81_GPUClassTopic.html"],['1036',"ZX81_GPU Constructor","frlrfSDKSTACK_VMZX81_GPUClassctorTopic.html"]];

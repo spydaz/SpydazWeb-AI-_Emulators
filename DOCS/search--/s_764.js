@@ -1,1 +1,0 @@
-search_result['764']=["frlrfBasicProgrammingAPPExtClassExtractFirstCharTopic.html","Ext.ExtractFirstChar Method",""];

@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Quick Refference Guides","frlrfsalquickrefCustomTopic.html"],['716',"SDK Namespace","frlrfSDK.html"],['726',"Lexer Class","frlrfSDKLexerClassTopic.html"],['742',"Fields","frlrfSDKLexerClassTopic_vars--.html"],['743',"CurrentGrammar Field","frlrfSDKLexerClassCurrentGrammarTopic.html"]];

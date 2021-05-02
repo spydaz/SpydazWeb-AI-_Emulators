@@ -1,1 +1,0 @@
-search_result['701']=["frlrfAI_ZX81ZX81_RAMVariableClassTopic_methods--.html","Variable Methods",""];

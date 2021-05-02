@@ -1,1 +1,0 @@
-c['699']=[['700',"ExtractFirstChar Method","frlrfBasicProgrammingAPPExtClassExtractFirstCharTopic.html",0],['701',"ExtractLastChar Method","frlrfBasicProgrammingAPPExtClassExtractLastCharTopic.html",0],['702',"SplitAtNewLine Method","frlrfBasicProgrammingAPPExtClassSplitAtNewLineTopic.html",0]];

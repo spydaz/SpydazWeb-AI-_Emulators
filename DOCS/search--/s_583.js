@@ -1,1 +1,0 @@
-search_result['583']=["frlrfAI_ZX81STACK_VMStackMemoryFrameClassVariablesTopic.html","Variables Field",""];

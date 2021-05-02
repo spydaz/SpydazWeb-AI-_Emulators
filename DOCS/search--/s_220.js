@@ -1,1 +1,0 @@
-search_result['220']=["frlrfAI_ZX81CompilerClassLexerClassRemoveWhiteSpaceTopic.html","ClassLexer.RemoveWhiteSpace Method","Removes whitespace tokens from the token list"];

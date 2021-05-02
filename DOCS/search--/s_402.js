@@ -1,1 +1,0 @@
-search_result['402']=["frlrfAI_ZX81GRAMMARSAST_GrammarClassAddMathOperationTopic.html","AST_Grammar.AddMathOperation Method","_ADD         -\u003e var/number/float + var/number/float\r\n_MINUS       -\u003e var/number/float - var/number/float\r\n_DIVIDE      -\u003e var/number/float / var/number/float\r\n_MULTIPLY    -\u003e var/number/float * var/nu..."];

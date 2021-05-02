@@ -1,1 +1,0 @@
-search_result['512']=["frlrfAI_ZX81ModuleKnowledgeStructuresAbstractSyntaxClassTopic.html","AbstractSyntax Structure","Abstrax Syntax Token Uses the data stored and\r\nAssoicated Expression to execute the components\r\nfrom the Lexer Statment;\r\nThese tokens can finally form the tree for the Program to be executed;\r\nThese ..."];

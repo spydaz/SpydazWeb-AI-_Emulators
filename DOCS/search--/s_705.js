@@ -1,1 +1,0 @@
-search_result['705']=["frlrfBasicProgrammingAPPAST_TREEClassClearTextTopic.html","AST_TREE.ClearText Method",""];
