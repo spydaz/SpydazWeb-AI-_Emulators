@@ -53,7 +53,7 @@ https://spydaz.github.io/SpydazWeb-AI-_Emulators/
 	_INCR					: number is incremented by 1
 	_DECR 					: number is Decremented by 2
 
-graph TD A[Lex Tokens] --> B[Parse to AST] --> C[Transpile to S-Expression] --> E[Execute on StackVM]
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDM1MTUyLDE0OTQzNzE5Ml19
+eyJoaXN0b3J5IjpbMzAwMjA0MDA0LDE0OTQzNzE5Ml19
 -->
