@@ -78,47 +78,55 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repl\FrmSal_Repl.Designer.vb">
+    <Compile Include="SourceCode\REPL\FrmSal_Repl.Designer.vb">
       <DependentUpon>FrmSal_Repl.vb</DependentUpon>
     </Compile>
-    <Compile Include="Repl\FrmSal_Repl.vb">
+    <Compile Include="SourceCode\REPL\FrmSal_Repl.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAL_VM\MachineUI\EMU_MachineUI.designer.vb">
+    <Compile Include="SourceCode\SAL_VM\MachineUI\EMU_MachineUI.designer.vb">
       <DependentUpon>EMU_MachineUI.vb</DependentUpon>
     </Compile>
-    <Compile Include="SAL_VM\MachineUI\EMU_MachineUI.vb">
+    <Compile Include="SourceCode\SAL_VM\MachineUI\EMU_MachineUI.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SmallProgLang\Abstract_Executable_Expressions\ExpressionEvaluators.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\AST_Cleaner.vb" />
-    <Compile Include="SmallProgLang\Compiler\EnvironmentalMemory.vb" />
-    <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\AstNode.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\AstProgram.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_AssignmentExpression.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_BlockExpression.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ExpressionStatement.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Identifier.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
-    <Compile Include="SmallProgLang\Compiler\S_Expression_Evaluator.vb" />
-    <Compile Include="SmallProgLang\Compiler\Sal_Transpiler.vb" />
-    <Compile Include="SmallProgLang\EXT.vb" />
-    <Compile Include="SmallProgLang\Compiler\Lexer.vb" />
-    <Compile Include="SmallProgLang\AstExpressionFactory\AstExpression.vb" />
-    <Compile Include="Repl\ReplErrorSystem.vb" />
-    <Compile Include="SmallProgLang\GrammarFactory\Token.vb" />
-    <Compile Include="SmallProgLang\Compiler\Parser.vb" />
-    <Compile Include="Repl\FrmPL_REPL.designer.vb">
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\AddativeOperation.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\BinaryExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Body.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\ConditionalOperation.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\ConstantExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Expression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\PrintFunction.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\AST_Cleaner.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Evaluator\EnvironmentalMemory.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\SalCode_Helpers.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\AstBinaryExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\AstNode.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\AstProgram.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_AssignmentExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_BlockExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_ExpressionStatement.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_Identifier.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_Literal.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_ParenthesizedExpresion.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\Ast_VariableExpressionStatement.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Evaluator\S_Expression_Evaluator.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Transpiler\Sal_Transpiler.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\MultiplicativeOperation.vb" />
+    <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\UnaryExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\EXT.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Compiler\Lexer.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\AstExpression.vb" />
+    <Compile Include="SourceCode\REPL\ReplErrorSystem.vb" />
+    <Compile Include="SourceCode\SmallProgLang\GrammarFactory\Token.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Compiler\Parser.vb" />
+    <Compile Include="SourceCode\REPL\FrmPL_REPL.designer.vb">
       <DependentUpon>FrmPL_REPL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Repl\FrmPL_REPL.vb">
+    <Compile Include="SourceCode\REPL\FrmPL_REPL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SmallProgLang\GrammarFactory\Grammar.vb" />
+    <Compile Include="SourceCode\SmallProgLang\GrammarFactory\Grammar.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,30 +143,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SAL_VM\SAL\X86API.vb" />
-    <Compile Include="SAL_VM\SAL\Ext.vb" />
-    <Compile Include="SAL_VM\MachineUI\FormDisplayConsole.designer.vb">
+    <Compile Include="SourceCode\SAL_VM\SAL\X86API.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\Ext.vb" />
+    <Compile Include="SourceCode\SAL_VM\MachineUI\FormDisplayConsole.designer.vb">
       <DependentUpon>FormDisplayConsole.vb</DependentUpon>
     </Compile>
-    <Compile Include="SAL_VM\MachineUI\FormDisplayConsole.vb">
+    <Compile Include="SourceCode\SAL_VM\MachineUI\FormDisplayConsole.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAL_VM\MachineUI\VM_MachineUI.designer.vb">
+    <Compile Include="SourceCode\SAL_VM\MachineUI\VM_MachineUI.designer.vb">
       <DependentUpon>VM_MachineUI.vb</DependentUpon>
     </Compile>
-    <Compile Include="SAL_VM\MachineUI\VM_MachineUI.vb">
+    <Compile Include="SourceCode\SAL_VM\MachineUI\VM_MachineUI.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SAL_VM\SAL\StackMemoryFrame.vb" />
-    <Compile Include="SAL_VM\SAL\ZX81_CPU.vb" />
-    <Compile Include="SAL_VM\SAL\ZX81_GPU.vb" />
-    <Compile Include="SAL_VM\SAL\ZX81_RAM.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\StackMemoryFrame.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\ZX81_CPU.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\ZX81_GPU.vb" />
+    <Compile Include="SourceCode\SAL_VM\SAL\ZX81_RAM.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Repl\FrmSal_Repl.resx">
+    <EmbeddedResource Include="SourceCode\REPL\FrmSal_Repl.resx">
       <DependentUpon>FrmSal_Repl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Repl\FrmPL_REPL.resx">
+    <EmbeddedResource Include="SourceCode\REPL\FrmPL_REPL.resx">
       <DependentUpon>FrmPL_REPL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -167,23 +175,26 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SAL_VM\MachineUI\FormDisplayConsole.resx">
+    <EmbeddedResource Include="SourceCode\SAL_VM\MachineUI\FormDisplayConsole.resx">
       <DependentUpon>FormDisplayConsole.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SAL_VM\MachineUI\VM_MachineUI.resx">
+    <EmbeddedResource Include="SourceCode\SAL_VM\MachineUI\VM_MachineUI.resx">
       <DependentUpon>VM_MachineUI.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SAL_VM\MachineUI\EMU_MachineUI.resx">
+    <EmbeddedResource Include="SourceCode\SAL_VM\MachineUI\EMU_MachineUI.resx">
       <DependentUpon>EMU_MachineUI.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AstNodes_Diagram.cd" />
+    <None Include="ExternalResearch\AstNodes_Diagram.cd" />
     <None Include="ExternalResearch\Tests\Ast_tests\example.lt" />
     <None Include="ExternalResearch\Tests\Primers\lang.bnf" />
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
     <None Include="ExternalResearch\Tests\Primers\test.lang" />
-    <None Include="Langs\vbnet.json" />
+    <Content Include="Langs\vbnet.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ExternalResearch\ProgrammingLanguageSyntax.PL" />
     <None Include="Help\LexParseEval.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -258,7 +269,7 @@
     <None Include="Resources\SERIES 1 sal9000.bmp" />
     <None Include="Resources\X SERIES AL 9000s.jpg" />
     <None Include="Resources\EYE BLUE .gif" />
-    <Content Include="SAL_VM\SAL.txt" />
+    <Content Include="SourceCode\SAL_VM\SAL.txt" />
     <None Include="Resources\Dell UltraSharp 27.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

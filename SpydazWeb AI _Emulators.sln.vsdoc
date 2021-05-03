@@ -117,6 +117,5 @@
     <add key="VBdocman_AI_ZX81"><![CDATA[default]]></add>
     <add key="VBdocman_Ast_JsonGenerator"><![CDATA[default]]></add>
     <add key="VBdocman_LexParseEval"><![CDATA[default]]></add>
-    <add key="VBdocman_OnlineEmulator"><![CDATA[default]]></add>
   </appSettings>
 </configuration>
