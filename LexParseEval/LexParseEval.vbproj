@@ -99,7 +99,7 @@
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\ConstantExpression.vb" />
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Expression.vb" />
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\PrintFunction.vb" />
-    <Compile Include="SourceCode\SmallProgLang\Evaluator\EnvironmentalMemory.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Interpretor\EnvironmentalMemory.vb" />
     <Compile Include="SourceCode\SAL_VM\SAL\SalCode_Helpers.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Abstract\AstBinaryExpression.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\ABSTRACT\AstNode.vb" />
@@ -111,7 +111,7 @@
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Abstract\Ast_Literal.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Functional\Ast_ParenthesizedExpresion.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Functional\Ast_VariableExpressionStatement.vb" />
-    <Compile Include="SourceCode\SmallProgLang\Evaluator\S_Expression_Evaluator.vb" />
+    <Compile Include="SourceCode\SmallProgLang\Interpretor\S_Expression_Evaluator.vb" />
     <Compile Include="SourceCode\SmallProgLang\Transpiler\Sal_Transpiler.vb" />
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\MultiplicativeOperation.vb" />
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\UnaryExpression.vb" />
