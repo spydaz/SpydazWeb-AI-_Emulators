@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("LexParseEval - VIRTUAL MACHINE - Small Programming Language (SAL)")>
+<Assembly: AssemblyTitle("Small Programming Language (SAL_VM)  & REPL")>
 <Assembly: AssemblyDescription("SpydazWeb - ProgrammingLanguage - LexParseEval - simple programming language => AST ExpressionTree => S-Expression Lang => Mini Assembly language")>
 <Assembly: AssemblyCompany("SpydazWeb AI")>
 <Assembly: AssemblyProduct("SpydazWeb AI SDK")>

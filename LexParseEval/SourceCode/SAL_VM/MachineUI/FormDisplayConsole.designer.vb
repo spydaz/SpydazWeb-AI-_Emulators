@@ -34,8 +34,10 @@ Partial Class FormDisplayConsole
         Me.GroupBox1.Controls.Add(Me.Zx81_DisplayScreen)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(670, 474)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1005, 693)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -46,27 +48,30 @@ Partial Class FormDisplayConsole
         Me.Zx81_DisplayScreen.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Zx81_DisplayScreen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Zx81_DisplayScreen.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zx81_DisplayScreen.Location = New System.Drawing.Point(3, 16)
+        Me.Zx81_DisplayScreen.Location = New System.Drawing.Point(4, 24)
+        Me.Zx81_DisplayScreen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Zx81_DisplayScreen.Name = "Zx81_DisplayScreen"
-        Me.Zx81_DisplayScreen.Size = New System.Drawing.Size(664, 455)
+        Me.Zx81_DisplayScreen.Size = New System.Drawing.Size(997, 665)
         Me.Zx81_DisplayScreen.TabIndex = 0
-        Me.Zx81_DisplayScreen.Text = "SpydazWeb AI ZX81 Copyright © 2020" & Global.Microsoft.VisualBasic.ChrW(10) & "Ready." & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Zx81_DisplayScreen.Text = "SpydazWeb AI S.A.L Copyright © 2020" & Global.Microsoft.VisualBasic.ChrW(10) & "Ready." & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'FormDisplayConsole
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.SDK.My.Resources.Resources.Dell_UltraSharp_27
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(670, 672)
+        Me.ClientSize = New System.Drawing.Size(1005, 982)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
+        Me.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(938, 711)
-        Me.MinimumSize = New System.Drawing.Size(680, 711)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximumSize = New System.Drawing.Size(1402, 1021)
+        Me.MinimumSize = New System.Drawing.Size(1015, 1021)
         Me.Name = "FormDisplayConsole"
-        Me.Text = "SpydazWeb AI ZX2020"
+        Me.Text = "S.A.L2020© "
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

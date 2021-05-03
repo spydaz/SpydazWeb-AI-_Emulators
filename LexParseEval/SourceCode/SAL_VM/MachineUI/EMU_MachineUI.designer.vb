@@ -101,10 +101,12 @@ Partial Class EMU_MachineUI
         Me.BrowserMain.Location = New System.Drawing.Point(3, 24)
         Me.BrowserMain.MinimumSize = New System.Drawing.Size(20, 20)
         Me.BrowserMain.Name = "BrowserMain"
+        Me.BrowserMain.ScriptErrorsSuppressed = True
         Me.BrowserMain.Size = New System.Drawing.Size(706, 373)
         Me.BrowserMain.TabIndex = 0
+        Me.BrowserMain.Url = New System.Uri("HTTP://www.spydazweb.co.uk", System.UriKind.Absolute)
         '
-        'X_EMU
+        'EMU_MachineUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -120,7 +122,7 @@ Partial Class EMU_MachineUI
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "X_EMU"
+        Me.Name = "EMU_MachineUI"
         Me.Text = "Online System"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

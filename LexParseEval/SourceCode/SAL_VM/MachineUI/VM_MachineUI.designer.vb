@@ -30,6 +30,7 @@ Partial Class VM_MachineUI
         Me.ButtonClrScrn = New System.Windows.Forms.Button()
         Me.ButtonNewScrn = New System.Windows.Forms.Button()
         Me.ButtonRef = New System.Windows.Forms.Button()
+        Me.ButtonEMU = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +64,7 @@ Partial Class VM_MachineUI
         '
         Me.ButtonRunCode.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.ButtonRunCode.BackColor = System.Drawing.Color.DimGray
-        Me.ButtonRunCode.Location = New System.Drawing.Point(750, 522)
+        Me.ButtonRunCode.Location = New System.Drawing.Point(12, 522)
         Me.ButtonRunCode.Name = "ButtonRunCode"
         Me.ButtonRunCode.Size = New System.Drawing.Size(80, 32)
         Me.ButtonRunCode.TabIndex = 1
@@ -84,9 +85,9 @@ Partial Class VM_MachineUI
         '
         Me.ButtonClrScrn.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.ButtonClrScrn.BackColor = System.Drawing.Color.DimGray
-        Me.ButtonClrScrn.Location = New System.Drawing.Point(552, 522)
+        Me.ButtonClrScrn.Location = New System.Drawing.Point(98, 522)
         Me.ButtonClrScrn.Name = "ButtonClrScrn"
-        Me.ButtonClrScrn.Size = New System.Drawing.Size(89, 32)
+        Me.ButtonClrScrn.Size = New System.Drawing.Size(64, 32)
         Me.ButtonClrScrn.TabIndex = 1
         Me.ButtonClrScrn.Text = "Clear Scrn"
         Me.ButtonClrScrn.UseVisualStyleBackColor = False
@@ -95,7 +96,7 @@ Partial Class VM_MachineUI
         '
         Me.ButtonNewScrn.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.ButtonNewScrn.BackColor = System.Drawing.Color.DimGray
-        Me.ButtonNewScrn.Location = New System.Drawing.Point(647, 522)
+        Me.ButtonNewScrn.Location = New System.Drawing.Point(378, 522)
         Me.ButtonNewScrn.Name = "ButtonNewScrn"
         Me.ButtonNewScrn.Size = New System.Drawing.Size(97, 32)
         Me.ButtonNewScrn.TabIndex = 1
@@ -106,12 +107,23 @@ Partial Class VM_MachineUI
         '
         Me.ButtonRef.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.ButtonRef.BackColor = System.Drawing.Color.DimGray
-        Me.ButtonRef.Location = New System.Drawing.Point(484, 522)
+        Me.ButtonRef.Location = New System.Drawing.Point(780, 522)
         Me.ButtonRef.Name = "ButtonRef"
         Me.ButtonRef.Size = New System.Drawing.Size(62, 32)
         Me.ButtonRef.TabIndex = 1
         Me.ButtonRef.Text = "Ref"
         Me.ButtonRef.UseVisualStyleBackColor = False
+        '
+        'ButtonEMU
+        '
+        Me.ButtonEMU.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.ButtonEMU.BackColor = System.Drawing.Color.DimGray
+        Me.ButtonEMU.Location = New System.Drawing.Point(712, 522)
+        Me.ButtonEMU.Name = "ButtonEMU"
+        Me.ButtonEMU.Size = New System.Drawing.Size(62, 32)
+        Me.ButtonEMU.TabIndex = 1
+        Me.ButtonEMU.Text = "EMU"
+        Me.ButtonEMU.UseVisualStyleBackColor = False
         '
         'VM_MachineUI
         '
@@ -123,6 +135,7 @@ Partial Class VM_MachineUI
         Me.ClientSize = New System.Drawing.Size(854, 730)
         Me.Controls.Add(Me.RichTextBoxInfo)
         Me.Controls.Add(Me.ButtonNewScrn)
+        Me.Controls.Add(Me.ButtonEMU)
         Me.Controls.Add(Me.ButtonRef)
         Me.Controls.Add(Me.ButtonClrScrn)
         Me.Controls.Add(Me.ButtonRunCode)
@@ -130,11 +143,11 @@ Partial Class VM_MachineUI
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Comic Sans MS", 11.1!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "VM_MachineUI"
-        Me.Text = "X86_MACHINE_CODE"
+        Me.Text = "SpydazWeb Assembly Language (SAL)"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -147,4 +160,5 @@ Partial Class VM_MachineUI
     Friend WithEvents ButtonClrScrn As Button
     Friend WithEvents ButtonNewScrn As Button
     Friend WithEvents ButtonRef As Button
+    Friend WithEvents ButtonEMU As Button
 End Class

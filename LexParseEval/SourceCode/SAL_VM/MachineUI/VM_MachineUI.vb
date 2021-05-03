@@ -28,4 +28,9 @@ Public Class VM_MachineUI
         frm.DISPLAY_TEXT(My.Resources.QuickRef_SAL)
         frm.Show()
     End Sub
+
+    Private Sub ButtonEMU_Click(sender As Object, e As EventArgs) Handles ButtonEMU.Click
+        Dim frmU As New EMU_MachineUI
+        frmU.Show()
+    End Sub
 End Class

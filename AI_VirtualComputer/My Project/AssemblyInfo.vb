@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("AI_ZX81")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("AI_ZX81")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyDescription("First Attempt at building a parser / compilers ... Applied principle to undertanding Sentence Structureing, as it may be possible to use this technique to parse sentences structures syntactically to gramatical shapes")>
+<Assembly: AssemblyCompany("SpydazWeb AI")>
+<Assembly: AssemblyProduct("AI_ZX81 (test project)")>
+<Assembly: AssemblyCopyright("SpydazWeb AI Copyright ©  2020")>
+<Assembly: AssemblyTrademark("SpydazWeb AI Copyright ©  2020")>
 
 <Assembly: ComVisible(False)>
 
