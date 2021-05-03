@@ -191,9 +191,7 @@
     <None Include="ExternalResearch\Tests\Primers\lang.bnf" />
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
     <None Include="ExternalResearch\Tests\Primers\test.lang" />
-    <Content Include="Langs\vbnet.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ExternalResearch\Langs\vbnet.json" />
     <None Include="ExternalResearch\ProgrammingLanguageSyntax.PL" />
     <None Include="Help\LexParseEval.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

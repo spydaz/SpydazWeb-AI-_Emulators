@@ -1,7 +1,7 @@
 ﻿Imports SDK.SmallProgLang.Ast_ExpressionFactory
 
 Namespace SmallProgLang
-    Namespace Compiler
+    Namespace Transpiler
         ''' <summary>
         ''' Transpiles to SAL Code; 
         ''' Can be run on SAL Assembler
@@ -35,7 +35,7 @@ Namespace SmallProgLang
                 IncrLineNumber()
 
                 'Detect Binary Expressions
-                Select Case Expr.count
+                Select Case Expr.Count
                     Case 2
                         Return (_print(Expr(1)))
                     Case 3

@@ -1,5 +1,5 @@
 ﻿Namespace SmallProgLang
-    Namespace Compiler
+    Namespace Evaluator
         Public Class EnvironmentalMemory
             ''' <summary>
             ''' Structure for variable

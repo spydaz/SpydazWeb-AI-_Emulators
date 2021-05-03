@@ -1,5 +1,5 @@
 ﻿Namespace SmallProgLang
-    Namespace Compiler
+    Namespace Evaluator
 
         ''' <summary>
         ''' Evaluates Arrays of tokens, 
