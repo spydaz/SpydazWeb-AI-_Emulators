@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "OnlineEmulator", "OnlineEmulator\OnlineEmulator.vbproj", "{11FDE9CE-3C0F-4DBF-80E8-A2A46D17280E}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AI_VMx86", "AI_VMx86\AI_VMx86.vbproj", "{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ast_JsonGenerator", "PL_Compiler\Ast_JsonGenerator.vbproj", "{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}"
@@ -35,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11FDE9CE-3C0F-4DBF-80E8-A2A46D17280E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11FDE9CE-3C0F-4DBF-80E8-A2A46D17280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11FDE9CE-3C0F-4DBF-80E8-A2A46D17280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11FDE9CE-3C0F-4DBF-80E8-A2A46D17280E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Release|Any CPU.ActiveCfg = Release|Any CPU

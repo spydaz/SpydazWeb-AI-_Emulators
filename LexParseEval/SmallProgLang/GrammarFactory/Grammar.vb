@@ -189,6 +189,46 @@ Namespace SmallProgLang
                 ''' DECLARE VAR 
                 ''' </summary>
                 _VARIABLE_DECLARE
+                'Sal token_IDs
+                SAL_NULL
+                SAL_REMOVE
+                SAL_RESUME
+                SAL_PUSH
+                SAL_PULL
+                SAL_PEEK
+                SAL_WAIT
+                SAL_PAUSE
+                SAL_HALT
+                SAL_DUP
+                SAL_JMP
+                SAL_JIF_T
+                SAL_JIF_F
+                SAL_JIF_EQ
+                SAL_JIF_GT
+                SAL_JIF_LT
+                SAL_LOAD
+                SAL_STORE
+                SAL_CALL
+                SAL_RET
+                SAL_PRINT_M
+                SAL_PRINT_C
+                SAL_ADD
+                SAL_SUB
+                SAL_MUL
+                SAL_DIV
+                SAL_AND
+                SAL_OR
+                SAL_NOT
+                SAL_IS_EQ
+                SAL_IS_GT
+                SAL_IS_GTE
+                SAL_IS_LT
+                SAL_IS_LTE
+                SAL_TO_POS
+                SAL_TO_NEG
+                SAL_INCR
+                SAL_DECR
+
             End Enum
             ''' <summary>
             ''' Identifier
@@ -204,7 +244,7 @@ Namespace SmallProgLang
             ''' This is a preloaded Grammar (list of Grammar objects)
             ''' </summary>
             ''' <returns></returns>
-            Public Shared Function GetGrammar() As List(Of Grammar)
+            Public Shared Function GetPLGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
                 Dim NewGram As New Grammar
 
@@ -448,6 +488,266 @@ Namespace SmallProgLang
                 iSpec.Add(NewGram)
                 Return iSpec
             End Function
+            Public Shared Function GetSALGrammar() As List(Of Grammar)
+                Dim iSpec As New List(Of Grammar)
+                Dim NewGram As New Grammar
+
+
+                'Literals
+                NewGram.ID = Type_Id._INTEGER
+                NewGram.Exp = "^\d+"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._STRING
+                NewGram.Exp = "^" & Chr(34) & "[^" & Chr(34) & "]*" & Chr(34)
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._STRING
+                NewGram.Exp = "^'[^']*'"
+                iSpec.Add(NewGram)
+
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._WHITESPACE
+                NewGram.Exp = "^\s"
+                iSpec.Add(NewGram)
+
+
+                'Sal_Cmds
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_NULL
+                NewGram.Exp = "^\bnull\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_REMOVE
+                NewGram.Exp = "^\bremove\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_RESUME
+                NewGram.Exp = "^\bresume\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PUSH
+                NewGram.Exp = "^\bpush\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PULL
+                NewGram.Exp = "^\bpull\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PEEK
+                NewGram.Exp = "^\bpeek\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_WAIT
+                NewGram.Exp = "^\bwait\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PAUSE
+                NewGram.Exp = "^\bpause\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_HALT
+                NewGram.Exp = "^\bhalt\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_DUP
+                NewGram.Exp = "^\bdup\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JMP
+                NewGram.Exp = "^\bjmp\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_T
+                NewGram.Exp = "^\bjif_t\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_F
+                NewGram.Exp = "^\bjif_f\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_EQ
+                NewGram.Exp = "^\bjif_eq\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_GT
+                NewGram.Exp = "^\bjif_gt\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_LT
+                NewGram.Exp = "^\bjif_lt\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_LOAD
+                NewGram.Exp = "^\bload\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_STORE
+                NewGram.Exp = "^\bstore\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_CALL
+                NewGram.Exp = "^\bcall\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_RET
+                NewGram.Exp = "^\bret\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PRINT_M
+                NewGram.Exp = "^\bprint_m\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_PRINT_C
+                NewGram.Exp = "^\bprint_c\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_ADD
+                NewGram.Exp = "^\badd\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_SUB
+                NewGram.Exp = "^\bsub\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_MUL
+                NewGram.Exp = "^\bmul\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_DIV
+                NewGram.Exp = "^\bdiv\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_ADD
+                NewGram.Exp = "^\band\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_OR
+                NewGram.Exp = "^\bor\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_NOT
+                NewGram.Exp = "^\bnot\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_JIF_LT
+                NewGram.Exp = "^\bis_eq\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_IS_GT
+                NewGram.Exp = "^\bis_gt\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_IS_GTE
+                NewGram.Exp = "^\bis_gte\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_IS_LT
+                NewGram.Exp = "^\bis_lt\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_IS_LT
+                NewGram.Exp = "^\bis_lte\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_TO_POS
+                NewGram.Exp = "^\bto_pos\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_TO_NEG
+                NewGram.Exp = "^\bto_neg\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_INCR
+                NewGram.Exp = "^\bincr\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id.SAL_DECR
+                NewGram.Exp = "^\bdecr\b"
+                iSpec.Add(NewGram)
+                'logical(boolean) - Literal
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._TRUE
+                NewGram.Exp = "^\btrue\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._FALSE
+                NewGram.Exp = "^\bfalse\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._NULL
+                NewGram.Exp = "^\bnull\b"
+                iSpec.Add(NewGram)
+
+
+                'Equality operators: ==, !=
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._NOT_EQUALS
+                NewGram.Exp = "^[\=!]"
+                iSpec.Add(NewGram)
+                'Relational operators: >, >=, <, <=
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._RELATIONAL_OPERATOR
+                NewGram.Exp = "^[><]\=?"
+                iSpec.Add(NewGram)
+                'Math operators: +, -, *, /
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._ADDITIVE_OPERATOR
+                NewGram.Exp = "^[+\-]"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._MULTIPLICATIVE_OPERATOR
+                NewGram.Exp = "^[*/]"
+                iSpec.Add(NewGram)
+                'Conditional BLOCK CODE: LEFT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CONDITIONAL_BEGIN
+                NewGram.Exp = "^\("
+                iSpec.Add(NewGram)
+                'Conditional BLOCK CODE: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CONDITIONAL_END
+                NewGram.Exp = "^\)"
+                iSpec.Add(NewGram)
+                'BLOCK CODE: LEFT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CODE_BEGIN
+                NewGram.Exp = "^\{"
+                iSpec.Add(NewGram)
+                'BLOCK CODE: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CODE_END
+                NewGram.Exp = "^\}"
+                iSpec.Add(NewGram)
+                'END STATEMENT or EMPTY STATEMENT
+                'EMPTY CODE BLOCKS CONTAIN (1 EMPTY STATEMENT)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._STATEMENT_END
+                NewGram.Exp = "^\;"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LIST_SEPERATOR
+                NewGram.Exp = "^\,"
+                iSpec.Add(NewGram)
+                'ARGS LIST : LEFT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LIST_BEGIN
+                NewGram.Exp = "^\["
+                iSpec.Add(NewGram)
+                'ARGS LIST: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LIST_END
+                NewGram.Exp = "^\]"
+                iSpec.Add(NewGram)
+
+                'ARGS LIST: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._EOF
+                NewGram.Exp = "EOF"
+                iSpec.Add(NewGram)
+                Return iSpec
+            End Function
+
         End Structure
     End Namespace
 End Namespace

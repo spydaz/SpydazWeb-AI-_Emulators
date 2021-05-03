@@ -84,6 +84,13 @@
     <Compile Include="Repl\FrmSal_Repl.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SAL_VM\MachineUI\EMU_MachineUI.designer.vb">
+      <DependentUpon>EMU_MachineUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SAL_VM\MachineUI\EMU_MachineUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallProgLang\Abstract_Executable_Expressions\ExpressionEvaluators.vb" />
     <Compile Include="SmallProgLang\AstExpressionFactory\AST_Cleaner.vb" />
     <Compile Include="SmallProgLang\Compiler\EnvironmentalMemory.vb" />
     <Compile Include="SAL_VM\SAL\SalCode_Helpers.vb" />
@@ -165,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SAL_VM\MachineUI\VM_MachineUI.resx">
       <DependentUpon>VM_MachineUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAL_VM\MachineUI\EMU_MachineUI.resx">
+      <DependentUpon>EMU_MachineUI.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

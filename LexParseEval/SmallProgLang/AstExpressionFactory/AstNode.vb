@@ -39,6 +39,45 @@
             _OperationBegin = 32
             _OperationEnd = 33
             _ConditionalExpression = 34
+            'Sal token_IDs
+            SAL_NULL
+            SAL_REMOVE
+            SAL_RESUME
+            SAL_PUSH
+            SAL_PULL
+            SAL_PEEK
+            SAL_WAIT
+            SAL_PAUSE
+            SAL_HALT
+            SAL_DUP
+            SAL_JMP
+            SAL_JIF_T
+            SAL_JIF_F
+            SAL_JIF_EQ
+            SAL_JIF_GT
+            SAL_JIF_LT
+            SAL_LOAD
+            SAL_STORE
+            SAL_CALL
+            SAL_RET
+            SAL_PRINT_M
+            SAL_PRINT_C
+            SAL_ADD
+            SAL_SUB
+            SAL_MUL
+            SAL_DIV
+            SAL_AND
+            SAL_OR
+            SAL_NOT
+            SAL_IS_EQ
+            SAL_IS_GT
+            SAL_IS_GTE
+            SAL_IS_LT
+            SAL_IS_LTE
+            SAL_TO_POS
+            SAL_TO_NEG
+            SAL_INCR
+            SAL_DECR
         End Enum
         ''' <summary>
         ''' Syntax: 

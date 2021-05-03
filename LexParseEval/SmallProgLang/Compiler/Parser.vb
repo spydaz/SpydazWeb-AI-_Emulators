@@ -1,6 +1,7 @@
 ﻿Imports System.Linq.Expressions
 Imports System.Text.Json
 Imports System.Web.Script.Serialization
+Imports SDK.Repl
 Imports SDK.SmallProgLang
 Imports SDK.SmallProgLang.Ast_ExpressionFactory
 Imports SDK.SmallProgLang.GrammarFactory
@@ -149,7 +150,7 @@ Namespace SmallProgLang
                         Else
                             'Technically badtoken try capture
                             Dim etok = __UnknownStatementNode()
-                            ParserErrors.Add(ReplErrorSystem.DisplayError("Unknown Statement/Expression Uncountered", etok))
+                            ParserErrors.Add(PL_ReplErrorSystem.DisplayError("Unknown Statement/Expression Uncountered", etok))
                             Return New Ast_ExpressionStatement(etok)
                         End If
                         Exit Select
@@ -191,7 +192,7 @@ Namespace SmallProgLang
                     Case Else
                         'Technically badtoken try capture
                         Dim etok = __UnknownStatementNode()
-                        ParserErrors.Add(ReplErrorSystem.DisplayError("Unknown Literal Uncountered", etok))
+                        ParserErrors.Add(PL_ReplErrorSystem.DisplayError("Unknown Literal Uncountered", etok))
                         Return etok
                 End Select
                 Return Nothing
@@ -484,7 +485,7 @@ Namespace SmallProgLang
                 End Select
                 'Technically badtoken try capture
                 Dim etok = __UnknownStatementNode()
-                ParserErrors.Add(ReplErrorSystem.DisplayError("Unknown Statement Uncountered", etok))
+                ParserErrors.Add(PL_ReplErrorSystem.DisplayError("Unknown Statement Uncountered", etok))
                 Return New Ast_ExpressionStatement(etok)
             End Function
             ''' <summary>
