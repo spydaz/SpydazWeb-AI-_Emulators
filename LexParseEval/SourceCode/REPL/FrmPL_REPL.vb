@@ -12,16 +12,18 @@ Public Class FrmPL_REPL
         Dim InputCode As String = TextBoxCodeInput.Text
 
 
-        Dim outputStr = PSER.Parse(InputCode)
-
+        Dim outputStr = PSER.ParseFactory(InputCode)
+        AstTreeView.Nodes.Clear()
         loadTree(outputStr)
 
         TextBoxREPL_OUTPUT.Text = FormatJsonOutput(outputStr.ToJson)
+        TextboxErrors.Text = ""
         If PSER.ParserErrors IsNot Nothing Then
             If PSER.ParserErrors.Count > 0 Then
+                TextboxErrors.Text = "Error in Syntax :" & vbNewLine
                 For Each item In PSER.ParserErrors
 
-                    TextboxErrors.Text &= item & vbNewLine
+                    TextboxErrors.Text &= vbNewLine & item & vbNewLine
                 Next
                 If outputStr.Body IsNot Nothing Then
                     For Each item In outputStr.Body
@@ -33,7 +35,7 @@ Public Class FrmPL_REPL
                 End If
             Else
                 TextboxErrors.ForeColor = Color.Green
-                TextboxErrors.Text = "all Passed sucessfully"
+                TextboxErrors.Text = "all Passed sucessfully" & vbNewLine
             End If
         End If
 

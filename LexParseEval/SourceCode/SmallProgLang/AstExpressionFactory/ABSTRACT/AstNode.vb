@@ -78,6 +78,9 @@
             SAL_TO_NEG
             SAL_INCR
             SAL_DECR
+            _SAL_Expression
+            _Sal_Program_title
+            _Sal_BeginStatement
         End Enum
         ''' <summary>
         ''' Syntax: 

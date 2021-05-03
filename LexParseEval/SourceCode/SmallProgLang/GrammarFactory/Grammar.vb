@@ -228,7 +228,9 @@ Namespace SmallProgLang
                 SAL_TO_NEG
                 SAL_INCR
                 SAL_DECR
-
+                _SAL_PROGRAM_BEGIN
+                _SAL_EXPRESSION_BEGIN
+                _PL_PROGRAM_BEGIN
             End Enum
             ''' <summary>
             ''' Identifier
@@ -247,6 +249,11 @@ Namespace SmallProgLang
             Public Shared Function GetPLGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
                 Dim NewGram As New Grammar
+
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._PL_PROGRAM_BEGIN
+                NewGram.Exp = "\bspl_lang\b"
+                iSpec.Add(NewGram)
 
 
                 'Literals
@@ -486,12 +493,25 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._EOF
                 NewGram.Exp = "EOF"
                 iSpec.Add(NewGram)
+
+
+
+
+
                 Return iSpec
             End Function
             Public Shared Function GetSALGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
                 Dim NewGram As New Grammar
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._SAL_PROGRAM_BEGIN
+                NewGram.Exp = "^\bsal_lang\b"
+                iSpec.Add(NewGram)
 
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._SAL_EXPRESSION_BEGIN
+                NewGram.Exp = "^\bsal\b"
+                iSpec.Add(NewGram)
 
                 'Literals
                 NewGram.ID = Type_Id._INTEGER
@@ -746,6 +766,13 @@ Namespace SmallProgLang
                 NewGram.Exp = "EOF"
                 iSpec.Add(NewGram)
                 Return iSpec
+            End Function
+
+            Public Shared Function GetExtendedGrammar() As List(Of Grammar)
+                Dim lst As New List(Of Grammar)
+                lst.AddRange(GetSALGrammar)
+                lst.AddRange(GetPLGrammar)
+                Return lst
             End Function
 
         End Structure

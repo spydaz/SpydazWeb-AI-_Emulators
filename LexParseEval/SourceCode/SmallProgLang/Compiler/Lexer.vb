@@ -219,7 +219,7 @@ Namespace SmallProgLang
             Public Sub New(ByRef Script As String)
                 Me.CurrentScript = Script
                 EoFCursor = Script.Length
-                CurrentGrammar = GrammarFactory.Grammar.GetPLGrammar
+                CurrentGrammar = GrammarFactory.Grammar.GetExtendedGrammar
             End Sub
             ''' <summary>
             ''' Use for Sal and OtherLangs
