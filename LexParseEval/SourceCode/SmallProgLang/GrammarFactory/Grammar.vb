@@ -232,6 +232,7 @@ Namespace SmallProgLang
                 _SAL_EXPRESSION_BEGIN
                 _PL_PROGRAM_BEGIN
                 _Def
+                _EQUALITY
             End Enum
             ''' <summary>
             ''' Identifier
@@ -332,21 +333,9 @@ Namespace SmallProgLang
                 NewGram.Exp = "^\bdim\b"
                 iSpec.Add(NewGram)
                 'Assignment operators: xLeft assigns output of right (9+4) (+= 9) (-=2) (3) (true)
-                NewGram = New Grammar
-                ''=
-                NewGram.ID = Type_Id._SIMPLE_ASSIGN
-                NewGram.Exp = "^\="
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                ''=
-                NewGram.ID = Type_Id._SIMPLE_ASSIGN
-                NewGram.Exp = "^\bassigns\b"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                '*=, /=, +=, -=,
-                'NewGram.ID = Type_Id._COMPLEX_ASSIGN
-                'NewGram.Exp = "^[+\-*/\]\="
-                'iSpec.Add(NewGram)
+
+
+
 
                 'DO WHILE/UNTIL
                 NewGram = New Grammar
@@ -428,35 +417,8 @@ Namespace SmallProgLang
                 iSpec.Add(NewGram)
 
 
-                'Equality operators: ==, !=
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._NOT_EQUALS
-                NewGram.Exp = "^[!]\="
-                ' iSpec.Add(NewGram)
-                'Relational operators: >, >=, <, <=
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._RELATIONAL_OPERATOR
-                NewGram.Exp = "^[><]\=?"
-                iSpec.Add(NewGram)
-                'Math operators: +, -, *, /
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._ADDITIVE_OPERATOR
-                NewGram.Exp = "^[+\-]"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._MULTIPLICATIVE_OPERATOR
-                NewGram.Exp = "^[*/]"
-                iSpec.Add(NewGram)
-                'Conditional BLOCK CODE: LEFT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CONDITIONAL_BEGIN
-                NewGram.Exp = "^\("
-                iSpec.Add(NewGram)
-                'Conditional BLOCK CODE: RIGHT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CONDITIONAL_END
-                NewGram.Exp = "^\)"
-                iSpec.Add(NewGram)
+
+
                 'BLOCK CODE: LEFT BOUNDRY
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._CODE_BEGIN
@@ -506,6 +468,64 @@ Namespace SmallProgLang
 
                 Return iSpec
             End Function
+
+            Public Shared Function GetLogicGrammar() As List(Of Grammar)
+                Dim iSpec As New List(Of Grammar)
+                Dim NewGram As New Grammar
+
+                ''=
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._SIMPLE_ASSIGN
+                NewGram.Exp = "^\="
+                iSpec.Add(NewGram)
+
+                '*=, /=, +=, -=,
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._COMPLEX_ASSIGN
+                NewGram.Exp = "(\*|\/|\+|\-)="
+                iSpec.Add(NewGram)
+
+
+                'Conditional BLOCK CODE: LEFT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CONDITIONAL_BEGIN
+                NewGram.Exp = "^\("
+                iSpec.Add(NewGram)
+                'Conditional BLOCK CODE: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._CONDITIONAL_END
+                NewGram.Exp = "^\)"
+                iSpec.Add(NewGram)
+
+
+
+                'Equality operators: ==, !=
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._EQUALITY
+                NewGram.Exp = "^(=|!)=\="
+
+                iSpec.Add(NewGram)
+
+                'Relational operators: >, >=, <, <=
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._RELATIONAL_OPERATOR
+                NewGram.Exp = "^[><]\=?"
+                iSpec.Add(NewGram)
+                'Math operators: +, -, *, /
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._ADDITIVE_OPERATOR
+                NewGram.Exp = "^[+\-]"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._MULTIPLICATIVE_OPERATOR
+                NewGram.Exp = "^[*/]"
+                iSpec.Add(NewGram)
+
+                Return iSpec
+            End Function
+
+
+
             Public Shared Function GetSALGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
                 Dim NewGram As New Grammar
@@ -532,12 +552,23 @@ Namespace SmallProgLang
                 NewGram.Exp = "^'[^']*'"
                 iSpec.Add(NewGram)
 
+                'Variable
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._VARIABLE
+                NewGram.Exp = "^[a-z][a-z0-9]+"
+                iSpec.Add(NewGram)
+
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._WHITESPACE
                 NewGram.Exp = "^\s"
                 iSpec.Add(NewGram)
 
+                NewGram.ID = Type_Id._SIMPLE_ASSIGN
+                NewGram.Exp = "^\bassigns\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
 
+#Region "SAL"
                 'Sal_Cmds
                 NewGram = New Grammar
                 NewGram.ID = Type_Id.SAL_NULL
@@ -705,63 +736,8 @@ Namespace SmallProgLang
                 NewGram.Exp = "^\bnull\b"
                 iSpec.Add(NewGram)
 
+#End Region
 
-
-                iSpec.Add(NewGram)
-                'Relational operators: >, >=, <, <=
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._RELATIONAL_OPERATOR
-                NewGram.Exp = "^[><]\=?"
-                iSpec.Add(NewGram)
-                'Math operators: +, -, *, /
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._ADDITIVE_OPERATOR
-                NewGram.Exp = "^[+\-]"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._MULTIPLICATIVE_OPERATOR
-                NewGram.Exp = "^[*/]"
-                iSpec.Add(NewGram)
-                'Conditional BLOCK CODE: LEFT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CONDITIONAL_BEGIN
-                NewGram.Exp = "^\("
-                iSpec.Add(NewGram)
-                'Conditional BLOCK CODE: RIGHT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CONDITIONAL_END
-                NewGram.Exp = "^\)"
-                iSpec.Add(NewGram)
-                'BLOCK CODE: LEFT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CODE_BEGIN
-                NewGram.Exp = "^\{"
-                iSpec.Add(NewGram)
-                'BLOCK CODE: RIGHT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._CODE_END
-                NewGram.Exp = "^\}"
-                iSpec.Add(NewGram)
-                'END STATEMENT or EMPTY STATEMENT
-                'EMPTY CODE BLOCKS CONTAIN (1 EMPTY STATEMENT)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._STATEMENT_END
-                NewGram.Exp = "^\;"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LIST_SEPERATOR
-                NewGram.Exp = "^\,"
-                iSpec.Add(NewGram)
-                'ARGS LIST : LEFT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LIST_BEGIN
-                NewGram.Exp = "^\["
-                iSpec.Add(NewGram)
-                'ARGS LIST: RIGHT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LIST_END
-                NewGram.Exp = "^\]"
-                iSpec.Add(NewGram)
 
                 'ARGS LIST: RIGHT BOUNDRY
                 NewGram = New Grammar
@@ -775,6 +751,7 @@ Namespace SmallProgLang
                 Dim lst As New List(Of Grammar)
                 lst.AddRange(GetSALGrammar)
                 lst.AddRange(GetPLGrammar)
+                lst.AddRange(GetLogicGrammar)
                 Return lst
             End Function
 
