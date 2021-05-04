@@ -1,40 +1,5 @@
 {
-	"For": {
-		"prefix": "for",
-		"body": [
-			"For ${1:index} As ${2:ObjectType} = ${3:lower} To ${4:Upper}",
-			"\t$0",
-			"Next\n"
-		],
-		"description": "For Next Loop"
-	},
-	"ForEach": {
-		"prefix": "foreach",
-		"body": [
-			"For Each ${1:Variable} As ${2:ObjectType} In ${3:Collection}",
-			"\t$0",
-			"Next\n"
-		],
-		"description": "For Each...Next"
-	},
-	"If": {
-		"prefix": "if",
-		"body": [
-			"If ${1:Boolean} Then",
-			"\t$0",
-			"End If\n"
-		],
-		"description": "If..."
-	},
-	"Function": {
-		"prefix": "function",
-		"body": [
-			"Function ${1:FunctionName}(${2:ParameterList}) As ${3:ReturnType}",
-			"\t$0",
-			"End Function\n"
-		],
-		"description": "Function..."
-	},
+
 	"Sub": {
 		"prefix": "sub",
 		"body": [
@@ -44,31 +9,8 @@
 		],
 		"description": "Sub ..."
 	},
-	"DoWhile": {
-		"prefix": "dowhile",
-		"body": [
-			"Do While ${1:Boolean}",
-			"\t$0",
-			"Loop\n"
-		],
-		"description": "Do While ... Loop"
-	},
-	"DoUntil": {
-		"prefix": "dountil",
-		"body": [
-			"Do Until ${1:Boolean}",
-			"\t$0",
-			"Loop\n"
-		],
-		"description": "Do Until ... Loop"
-	},
-	"Dim": {
-		"prefix": "dim",
-		"body": [
-			"Dim ${1:Name} As ${2:Type}"
-		],
-		"description": "Dim ... As"
-	},
+
+
 	"Operator": {
 		"prefix": "Operator",
 		"body": [
@@ -103,24 +45,7 @@
 		],
 		"description": "Try..."
 	},
-	"Module": {
-		"prefix": "Module",
-		"body": [
-			"Module ${1:Name}",
-			"\t$0",
-			"End Module\n"
-		],
-		"description": "Module..."
-	},
-	"Class": {
-		"prefix": "Class",
-		"body": [
-			"Class ${1:Name}",
-			"\t$0",
-			"End Class\n"
-		],
-		"description": "Class..."
-	},
+
 	"Interface": {
 		"prefix": "Interface",
 		"body": [
@@ -157,13 +82,7 @@
 		],
 		"description": "SyncLock..."
 	},
-	"Declare": {
-		"prefix": "Declare",
-		"body": [
-			"Declare Function ${1:Name} Lib \"${2:user32}\" (${3:ParameterList}) As ${4:Type} "
-		],
-		"description": "Declare Function ..."
-	},
+
 	"Region Start": {
 		"prefix": "#Region",
 		"body": [

@@ -78,7 +78,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <None Include="ExternalResearch\Module1.vb" />
+    <None Include="ExternalResearch\Tests\Primers\Temp_Mde.vb" />
     <Compile Include="SourceCode\REPL\FrmSal_Repl.Designer.vb">
       <DependentUpon>FrmSal_Repl.vb</DependentUpon>
     </Compile>
@@ -91,6 +92,8 @@
     <Compile Include="SourceCode\SAL_VM\MachineUI\EMU_MachineUI.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Functional\Ast_UnaryExpression.vb" />
+    <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\PL\Functional\Ast_VariableDeclarationExpression.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\SAL\Abstract\Ast_SAL_Literal.vb" />
     <Compile Include="SourceCode\SmallProgLang\AstExpressionFactory\SAL\Abstract\Ast_SalExpression.vb" />
     <Compile Include="SourceCode\SmallProgLang\ExpressionEvaluators\Operations\AddativeOperation.vb" />
@@ -193,7 +196,7 @@
     <None Include="ExternalResearch\Tests\Primers\lang.bnf" />
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
     <None Include="ExternalResearch\Tests\Primers\test.lang" />
-    <Content Include="ExternalResearch\Langs\vbnet.json" />
+    <Content Include="ExternalResearch\Tests\Primers\vbnet.json" />
     <None Include="ExternalResearch\OLD_ProgrammingLanguageSyntax.PL" />
     <None Include="Help\LexParseEval.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -243,7 +246,6 @@
     <Content Include="ExternalResearch\Tests\Ast_tests\variable-test.js" />
     <Content Include="ExternalResearch\Tests\Ast_tests\while-test.js" />
     <Content Include="ExternalResearch\Tests\Primers\json.ast.js" />
-    <Content Include="ExternalResearch\Tests\Primers\json.grammar.js" />
     <Content Include="ExternalResearch\Tests\SExpression_tests__\block-test.js" />
     <Content Include="ExternalResearch\Tests\SExpression_tests__\built-in-function-test.js" />
     <Content Include="ExternalResearch\Tests\SExpression_tests__\class-test.js" />

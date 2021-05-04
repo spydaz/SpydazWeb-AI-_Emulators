@@ -233,6 +233,11 @@ Namespace SmallProgLang
                 _PL_PROGRAM_BEGIN
                 _Def
                 _EQUALITY
+                _JSON_digit
+                _JSON_esc
+                _JSON_int
+                _JSON_exp
+                _JSON_frac
             End Enum
             ''' <summary>
             ''' Identifier
@@ -257,38 +262,14 @@ Namespace SmallProgLang
                 NewGram.Exp = "\bspl_lang\b"
                 iSpec.Add(NewGram)
 
-
-                'Literals
-                NewGram.ID = Type_Id._INTEGER
-                NewGram.Exp = "^\d+"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._STRING
-                NewGram.Exp = "^" & Chr(34) & "[^" & Chr(34) & "]*" & Chr(34)
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._STRING
-                NewGram.Exp = "^'[^']*'"
-                iSpec.Add(NewGram)
-
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._WHITESPACE
-                NewGram.Exp = "^\s"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._COMMENTS
-                NewGram.Exp = "^\/\/.*"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._COMMENTS
-                NewGram.Exp = "^\/\*[\s\S]*?\*\/"
-                iSpec.Add(NewGram)
-
+#Region "Print"
                 'Prints
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._PRINT
                 NewGram.Exp = "^\bprint\b"
                 iSpec.Add(NewGram)
+#End Region
+#Region "Functions/Classes"
 
                 'Functions/Classes
                 NewGram = New Grammar
@@ -311,7 +292,8 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._NEW
                 NewGram.Exp = "^\bnew\b"
                 iSpec.Add(NewGram)
-
+#End Region
+#Region "IF/THEN"
                 'IF/THEN
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._IF
@@ -329,14 +311,16 @@ Namespace SmallProgLang
                 'ASSIGNMENT : Syntax  _Variable _AS 
                 'Reconsidered Using Dim (Could Still Implement by changing Assignment handler/Generator)
                 NewGram = New Grammar
-                NewGram.ID = Type_Id._DIM
+                NewGram.ID = Type_Id._VARIABLE_DECLARE
                 NewGram.Exp = "^\bdim\b"
                 iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._VARIABLE_DECLARE
+                NewGram.Exp = "^\blet\b"
+                iSpec.Add(NewGram)
                 'Assignment operators: xLeft assigns output of right (9+4) (+= 9) (-=2) (3) (true)
-
-
-
-
+#End Region
+#Region "DO WHILE/UNTIL"
                 'DO WHILE/UNTIL
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._WHILE
@@ -354,7 +338,12 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._LOOP
                 NewGram.Exp = "^\bloop\b"
                 iSpec.Add(NewGram)
-
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._DO
+                NewGram.Exp = "^\bdo\b"
+                iSpec.Add(NewGram)
+#End Region
+#Region "For/Next"
 
                 'For/To  For/Each/in /Next
                 NewGram = New Grammar
@@ -378,47 +367,26 @@ Namespace SmallProgLang
                 NewGram.Exp = "^\bin\b"
                 iSpec.Add(NewGram)
 
-
-
-                'Logical Operators:  &&, ||
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LOGICAL_AND
-                NewGram.Exp = "^\band\b"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LOGICAL_AND
-                NewGram.Exp = "^\&\& "
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LOGICAL_OR
-                NewGram.Exp = "^\bor\b"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LOGICAL_OR
-                NewGram.Exp = "^\|\|"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._LOGICAL_NOT
-                NewGram.Exp = "^\bnot\b"
-                iSpec.Add(NewGram)
-
-                'logical(boolean) - Literal
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._TRUE
-                NewGram.Exp = "^\btrue\b"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._FALSE
-                NewGram.Exp = "^\bfalse\b"
-                iSpec.Add(NewGram)
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._NULL
-                NewGram.Exp = "^\bnull\b"
-                iSpec.Add(NewGram)
+#End Region
 
 
 
 
+                iSpec.AddRange(GetLogicGrammar)
+                iSpec.AddRange(GetLiteralsGrammar)
+                iSpec.AddRange(GetSymbolsGrammar)
+                'ARGS LIST: RIGHT BOUNDRY
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._EOF
+                NewGram.Exp = "EOF"
+                iSpec.Add(NewGram)
+
+                Return iSpec
+            End Function
+            Public Shared Function GetSymbolsGrammar() As List(Of Grammar)
+                Dim iSpec As New List(Of Grammar)
+                Dim NewGram As New Grammar
+#Region "Seperators"
                 'BLOCK CODE: LEFT BOUNDRY
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._CODE_BEGIN
@@ -449,29 +417,27 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._LIST_END
                 NewGram.Exp = "^\]"
                 iSpec.Add(NewGram)
-
-                'Variable
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._VARIABLE
-                NewGram.Exp = "^[a-z][a-z0-9]+"
-                iSpec.Add(NewGram)
-
-                'ARGS LIST: RIGHT BOUNDRY
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._EOF
-                NewGram.Exp = "EOF"
-                iSpec.Add(NewGram)
-
-
-
-
-
+#End Region
                 Return iSpec
             End Function
-
             Public Shared Function GetLogicGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
                 Dim NewGram As New Grammar
+
+
+                'logical(boolean) - Literal
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._TRUE
+                NewGram.Exp = "^\btrue\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._FALSE
+                NewGram.Exp = "^\bfalse\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._NULL
+                NewGram.Exp = "^\bnull\b"
+                iSpec.Add(NewGram)
 
                 ''=
                 NewGram = New Grammar
@@ -497,7 +463,21 @@ Namespace SmallProgLang
                 NewGram.Exp = "^\)"
                 iSpec.Add(NewGram)
 
+                'Logical Operators:  &&, ||
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LOGICAL_AND
+                NewGram.Exp = "^\band\b"
+                iSpec.Add(NewGram)
 
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LOGICAL_OR
+                NewGram.Exp = "^\bor\b"
+                iSpec.Add(NewGram)
+
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._LOGICAL_NOT
+                NewGram.Exp = "^\bnot\b"
+                iSpec.Add(NewGram)
 
                 'Equality operators: ==, !=
                 NewGram = New Grammar
@@ -523,22 +503,10 @@ Namespace SmallProgLang
 
                 Return iSpec
             End Function
-
-
-
-            Public Shared Function GetSALGrammar() As List(Of Grammar)
+            Public Shared Function GetLiteralsGrammar() As List(Of Grammar)
                 Dim iSpec As New List(Of Grammar)
+
                 Dim NewGram As New Grammar
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._SAL_PROGRAM_BEGIN
-                NewGram.Exp = "^\bsal_lang\b"
-                iSpec.Add(NewGram)
-
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._SAL_EXPRESSION_BEGIN
-                NewGram.Exp = "^\bsal\b"
-                iSpec.Add(NewGram)
-
                 'Literals
                 NewGram.ID = Type_Id._INTEGER
                 NewGram.Exp = "^\d+"
@@ -552,11 +520,42 @@ Namespace SmallProgLang
                 NewGram.Exp = "^'[^']*'"
                 iSpec.Add(NewGram)
 
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._WHITESPACE
+                NewGram.Exp = "^\s"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._COMMENTS
+                NewGram.Exp = "^\/\/.*"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._COMMENTS
+                NewGram.Exp = "^\/\*[\s\S]*?\*\/"
+                iSpec.Add(NewGram)
+
                 'Variable
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._VARIABLE
                 NewGram.Exp = "^[a-z][a-z0-9]+"
                 iSpec.Add(NewGram)
+
+
+
+                Return iSpec
+            End Function
+            Public Shared Function GetSALGrammar() As List(Of Grammar)
+                Dim iSpec As New List(Of Grammar)
+                Dim NewGram As New Grammar
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._SAL_PROGRAM_BEGIN
+                NewGram.Exp = "^\bsal_lang\b"
+                iSpec.Add(NewGram)
+
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._SAL_EXPRESSION_BEGIN
+                NewGram.Exp = "^\bsal\b"
+                iSpec.Add(NewGram)
+
 
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._WHITESPACE
@@ -566,7 +565,7 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._SIMPLE_ASSIGN
                 NewGram.Exp = "^\bassigns\b"
                 iSpec.Add(NewGram)
-                NewGram = New Grammar
+
 
 #Region "SAL"
                 'Sal_Cmds
@@ -738,21 +737,108 @@ Namespace SmallProgLang
 
 #End Region
 
+                iSpec.AddRange(GetLogicGrammar)
+                iSpec.AddRange(GetLiteralsGrammar)
+                iSpec.AddRange(GetSymbolsGrammar)
 
-                'ARGS LIST: RIGHT BOUNDRY
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._EOF
                 NewGram.Exp = "EOF"
                 iSpec.Add(NewGram)
                 Return iSpec
             End Function
-
             Public Shared Function GetExtendedGrammar() As List(Of Grammar)
                 Dim lst As New List(Of Grammar)
                 lst.AddRange(GetSALGrammar)
                 lst.AddRange(GetPLGrammar)
                 lst.AddRange(GetLogicGrammar)
+                lst.AddRange(GetLiteralsGrammar)
+                lst.AddRange(GetSymbolsGrammar)
                 Return lst
+            End Function
+
+            ''' <summary>
+            ''' Still Developing grammar:
+            ''' </summary>
+            ''' <returns></returns>
+            Public Shared Function GetJsonGrammar() As List(Of Grammar)
+                Dim iSpec As New List(Of Grammar)
+                Dim NewGram As New Grammar
+
+                '"tokens" "STRING NUMBER { } [ ] , : TRUE FALSE NULL",
+                '"start": "JSONText",
+
+                ''"JSONString" [[ "STRING", "$$ = yytext;" ]],
+
+                ''"JSONNumber" [[ "NUMBER", "$$ = Number(yytext);" ]],
+
+                ''"JSONNullLiteral" [[ "NULL", "$$ = null;" ]],
+
+                ''"JSONBooleanLiteral" [[ "TRUE", "$$ = true;" ],
+                ''                       [ "FALSE", "$$ = false;" ]],
+
+
+                ''"JSONText" [[ "JSONValue", "return $$ = $1;" ]],
+
+                ''"JSONValue" [[ "JSONNullLiteral",    "$$ = $1;" ],
+                ''              [ "JSONBooleanLiteral", "$$ = $1;" ],
+                ''              [ "JSONString",         "$$ = $1;" ],
+                ''              [ "JSONNumber",         "$$ = $1;" ],
+                ''              [ "JSONObject",         "$$ = $1;" ],
+                ''              [ "JSONArray",          "$$ = $1;" ]],
+
+                ''"JSONObject" [[ "{ }", "$$ = {};" ],
+                ''               [ "{ JSONMemberList }", "$$ = $2;" ]],
+
+                ''"JSONMember" [[ "JSONString : JSONValue", "$$ = [$1, $3];" ]],
+
+                ''"JSONMemberList" [[ "JSONMember", "$$ = {}; $$[$1[0]] = $1[1];" ],
+                ''                   [ "JSONMemberList , JSONMember", "$$ = $1; $1[$3[0]] = $3[1];" ]],
+
+                ''"JSONArray" [[ "[ ]", "$$ = [];" ],
+                ''              [ "[ JSONElementList ]", "$$ = $2;" ]],
+
+                ''"JSONElementList" [[ "JSONValue", "$$ = [$1];" ],
+                ''                    [ "JSONElementList , JSONValue", "$$ = $1; $1.push($3);" ]]
+
+
+                '["\\s+", "/* skip whitespace */"],
+                '["{int}{frac}?{exp}?\\b", "return 'NUMBER';"],
+                '["\"(?:{esc}[\"bfnrt/{esc}]|{esc}u[a-fA-F0-9]{4}|[^\"{esc}])*\"", "yytext = yytext.substr(1,yyleng-2); return 'STRING';"],
+                '["\\{", "return '{'"],
+                '["\\}", "return '}'"],
+                '["\\[", "return '['"],
+                '["\\]", "return ']'"],
+                '[",", "return ','"],
+                '[":", "return ':'"],
+                '["true\\b", "return 'TRUE'"],
+                '["false\\b", "return 'FALSE'"],
+                '["null\\b", "return 'NULL'"]
+
+
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._JSON_digit
+                NewGram.Exp = "^[0-9]"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._JSON_esc
+                NewGram.Exp = "^\\\\"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._JSON_int
+                NewGram.Exp = "^-?(?:[0-9]|[1-9][0-9]+)"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._JSON_exp
+                NewGram.Exp = "(?:[eE][-+]?[0-9]+)"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._JSON_frac
+                NewGram.Exp = "(?:[eE][-+]?[0-9]+)"
+                iSpec.Add(NewGram)
+
+
+                Return iSpec
             End Function
 
         End Structure

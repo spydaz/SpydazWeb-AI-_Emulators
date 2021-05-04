@@ -773,11 +773,13 @@ Namespace SmallProgLang
                 Dim tok = Tokenizer.IdentifiyToken(Lookahead)
                 Select Case tok
                     Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
-                        Return _ParenthesizedExpression()
+                        Return _LeftHandExpression()
+                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
+                        Return _LeftHandExpression()
                     Case GrammarFactory.Grammar.Type_Id._VARIABLE
-                        Return _VariableExpression()
+                        Return _LeftHandExpression()
                     Case GrammarFactory.Grammar.Type_Id._SAL_EXPRESSION_BEGIN
-                        Return _SAL_Expression()
+                        Return _LeftHandExpression()
                     Case Else
                         'Literal - Node!
                         Dim Expr As Ast_ExpressionStatement
@@ -810,6 +812,25 @@ Namespace SmallProgLang
                 Return nde
 
             End Function
+
+            Public Function _LeftHandExpression()
+                Lookahead = Tokenizer.ViewNext
+                Dim tok = Tokenizer.IdentifiyToken(Lookahead)
+                Select Case tok
+                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
+                        Return _VariableExpression()
+                    Case GrammarFactory.Grammar.Type_Id._SAL_EXPRESSION_BEGIN
+                        Return _SAL_Expression()
+                    Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
+                        Return _ParenthesizedExpression()
+                    Case Else
+                        Return _VariableExpression()
+                End Select
+
+
+            End Function
+
+
             ''' <summary>
             ''' -Literals
             ''' Syntax:
@@ -1237,22 +1258,21 @@ Namespace SmallProgLang
 
                 'if the next operation is here then do it
                 Select Case toktype
+                    'DETECT DIM fIRST
                     Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
-                        Exit Select
+                        'GET DIM fIRST(DISPOSE OF)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Return _VariableDeclaration(_left)
                     Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                        Dim _Operator As String = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                        Lookahead = Tokenizer.ViewNext
-                        ''Temp
-                        Dim nde = New AstBinaryExpression(AST_NODE._assignExpression, New Ast_VariableExpressionStatement(_left), _Operator, _BinaryExpression)
-                        nde._TypeStr = "_assignExpression"
+                        Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
+                        nde._TypeStr = "_AssignmentExpression"
                         Return nde
-
                     Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
-                        Dim _Operator As String = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                        Lookahead = Tokenizer.ViewNext
-                        ''Temp
-                        Dim nde = New AstBinaryExpression(AST_NODE._assignExpression, New Ast_VariableExpressionStatement(_left), _Operator, _BinaryExpression)
-                        nde._TypeStr = "_assignExpression"
+
+                        Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
+                        nde._TypeStr = "_AssignmentExpression"
                         Return nde
 
 
@@ -1263,6 +1283,85 @@ Namespace SmallProgLang
                 'Return Error(HERE - Unimplemented Function)
                 Return New Ast_VariableExpressionStatement(_left)
             End Function
+
+            Public Function _VariableInitializer(ByRef _left As Ast_Identifier) As Ast_UnaryExpression
+                Lookahead = Tokenizer.ViewNext
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+
+                Dim _Operator As String = _GetAssignmentOperator()
+                Lookahead = Tokenizer.ViewNext
+                ''Temp
+                Dim unry As New Ast_UnaryExpression(_left._Name, _BinaryExpression)
+                unry._TypeStr = "_VariableInitializer"
+                Lookahead = Tokenizer.ViewNext
+                Return unry
+            End Function
+            ''' <summary>
+            '''  Variable declaration, no init:OR INIT
+            '''  DIM A 
+            '''  DIM A AS STRING / INTEGER / BOOLEAN / LIST
+            ''' </summary>
+            ''' <param name="_left">IDENTIFIER</param>
+            ''' <returns></returns>
+            Public Function _VariableDeclaration(ByRef _left As Ast_Identifier) As Ast_VariableDeclarationExpression
+                Lookahead = Tokenizer.ViewNext
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+
+                'As (CHECK)
+                Dim _Operator = Tokenizer.GetIdentifiedToken(Lookahead)
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                'NEED GRAMMAR DESCRIPTORS ...ETC (rougH setup right now will test later)
+                Dim ObjType As String = Tokenizer.IdentifiyToken(Lookahead)
+
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Select Case Lookahead
+                    Case "STRING"
+                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                    Case "BOOLEAN"
+                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+
+                        Return X
+                    Case "LIST"
+                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                    Case "INTEGER"
+
+                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                    Case Else
+                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                End Select
+
+            End Function
+            Public Function _AssignmentExpression(ByRef _left As Ast_Identifier) As Ast_UnaryExpression
+                Lookahead = Tokenizer.ViewNext
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Select Case toktype
+                    Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
+
+                        Return _VariableInitializer(_left)
+
+                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
+                        Return _VariableInitializer(_left)
+
+                End Select
+                Return _left
+            End Function
+
+
             ''' <summary>
             ''' 
             ''' Syntax: 

@@ -1,4 +1,7 @@
-﻿Public Class EMU_MachineUI
+﻿Imports System.Web
+Imports SDK.SmallProgLang.Compiler
+
+Public Class EMU_MachineUI
 
 
     Public Sub GoUrl(ByRef Url As String)
@@ -36,6 +39,21 @@
                 Return "https://jamesfriend.com.au/pce-js/pce-js-apps/"
             Case "Windows 95"
                 Return "https://win95.ajf.me/win95.html"
+            Case "RegEX 101"
+                Return "https://regex101.com/"
+            Case "Mermaid diagrams"
+                Return "https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0NocmlzdG1hc10gLS0-fEdldCBtb25leXwgQihHbyBzaG9wcGluZylcbiAgICBCIC0tPiBDe0xldCBtZSB0aGlua31cbiAgICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICAgIEMgLS0-fFR3b3wgRVtpUGhvbmVdXG4gICAgQyAtLT58VGhyZWV8IEZbZmE6ZmEtY2FyIENhcl1cbiAgIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"
+            Case "AST Explorer"
+                Return "https://astexplorer.net/"
+            Case "Visual basic"
+                Return "https://rextester.com/l/visual_basic_online_compiler"
+            Case "Nearly Parser"
+                Return "https://omrelli.ug/nearley-playground/"
+            Case "Code Script Prettier"
+                Return "https://esprima.org/demo/parse.html"
+            Case ".NET"
+                Return "https://try.dot.net/"
+
         End Select
         Return Nothing
     End Function

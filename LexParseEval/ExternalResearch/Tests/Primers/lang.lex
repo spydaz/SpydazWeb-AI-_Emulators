@@ -5,13 +5,7 @@
  * Test source code is in: examples/test.lang
  *
  * How to run:
- *
- *   ./bin/syntax \
- *     --grammar examples/lang.bnf \
- *     --lex examples/lang.lex \
- *     --mode lalr1 \
- *     --file examples/test.lang
- */
+
 {
   macros: {
     id: `[a-zA-Z0-9_]`,
