@@ -238,6 +238,8 @@ Namespace SmallProgLang
                 _JSON_int
                 _JSON_exp
                 _JSON_frac
+                _FUNCTION_DECLARE
+                _DOT
             End Enum
             ''' <summary>
             ''' Identifier
@@ -270,20 +272,27 @@ Namespace SmallProgLang
                 iSpec.Add(NewGram)
 #End Region
 #Region "Functions/Classes"
-
+#Region "Return Value"
                 'Functions/Classes
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._RETURN
                 NewGram.Exp = "^\breturn\b"
                 iSpec.Add(NewGram)
+#End Region
+
+#Region "Declare Function"
                 NewGram = New Grammar
-                NewGram.ID = Type_Id._Def
+                NewGram.ID = Type_Id._FUNCTION_DECLARE
                 NewGram.Exp = "\bdef\b"
                 iSpec.Add(NewGram)
                 NewGram = New Grammar
-                NewGram.ID = Type_Id._FUNCTION
+                NewGram.ID = Type_Id._FUNCTION_DECLARE
                 NewGram.Exp = "^\bfunction\b"
                 iSpec.Add(NewGram)
+#End Region
+
+
+
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._CLASS
                 NewGram.Exp = "^\bclass\b"
@@ -420,6 +429,11 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._LIST_END
                 NewGram.Exp = "^\]"
                 iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._DOT
+                NewGram.Exp = "^\\."
+                iSpec.Add(NewGram)
+
 #End Region
                 Return iSpec
             End Function
