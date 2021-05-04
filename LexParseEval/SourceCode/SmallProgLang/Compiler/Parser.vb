@@ -1360,7 +1360,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR)
 
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             _Right = _BinaryExpression()
 
@@ -1371,7 +1371,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR)
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
 
                             'NOTE: When adding further binary expressions maybe trickle down with this side
                             'the final level will need to be primary expression? 
@@ -1383,7 +1383,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
 
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                            _Operator = _GetAssignmentOperator()
                             Lookahead = Tokenizer.ViewNext
                             'NOTE: When adding further binary expressions maybe trickle down with this side
                             'the final level will need to be primary expression? 
@@ -1484,13 +1484,16 @@ Namespace SmallProgLang
 #End Region
             Public Function _GetAssignmentOperator() As String
                 Dim str = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                str = str.Replace("\U003c", "<")
-                str = str.Replace("\U003e", ">")
+                str = str.Replace("\u003c", " Less than")
+                str = str.Replace("\u003e", " Greater Than ")
                 ' \U003c < Less-than sign
                 ' \U003e > Greater-than sign
+                str = str.Replace("<=", " Less than equals ")
+                str = str.Replace(">=", " Greater Than equals ")
+                str = str.Replace("<", " Less than ")
+                str = str.Replace(">", " Greater Than ")
 
-
-                Return str
+                Return UCase(str)
             End Function
 #End Region
             ''' <summary>
