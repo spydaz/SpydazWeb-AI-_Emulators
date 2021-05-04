@@ -759,7 +759,6 @@ Namespace SmallProgLang
                 lst.AddRange(GetLiteralsGrammar)
                 Return lst
             End Function
-
             ''' <summary>
             ''' Still Developing grammar:
             ''' </summary>

@@ -7,8 +7,8 @@
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_BlockExpression
             Inherits AstExpression
-            Public Body As List(Of Ast_ExpressionStatement)
-            Public Sub New(ByRef iBody As List(Of Ast_ExpressionStatement))
+            Public Body As List(Of AstExpression)
+            Public Sub New(ByRef iBody As List(Of AstExpression))
                 MyBase.New(AST_NODE._blockCode)
                 Me._TypeStr = "_blockCode"
                 Body = iBody

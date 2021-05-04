@@ -13,22 +13,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "OriginalConcept", "Original
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\AstNodes_Diagram.cd = Scripts\AstNodes_Diagram.cd
-		Scripts\Basic Program Langugae GRAMMAR.txt = Scripts\Basic Program Langugae GRAMMAR.txt
-		Scripts\Basic Tests.txt = Scripts\Basic Tests.txt
-		Scripts\IF.txt = Scripts\IF.txt
-		Scripts\json.ast.js = Scripts\json.ast.js
-		Scripts\lang.bnf = Scripts\lang.bnf
-		Scripts\lang.lex = Scripts\lang.lex
-		Scripts\MaxFunct.txt = Scripts\MaxFunct.txt
-		Scripts\Module1.vb = Scripts\Module1.vb
-		Scripts\OLD_ProgrammingLanguageSyntax.PL = Scripts\OLD_ProgrammingLanguageSyntax.PL
-		Scripts\SampleCmds.txt = Scripts\SampleCmds.txt
 		Scripts\Simple Assembly language.txt = Scripts\Simple Assembly language.txt
 		Scripts\Temp_Mde.vb = Scripts\Temp_Mde.vb
-		Scripts\test.lang = Scripts\test.lang
-		Scripts\VBNET.JSON = Scripts\VBNET.JSON
-		Scripts\While.txt = Scripts\While.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicTests", "BasicTests", "{3B46CC32-176D-4EA3-B30F-BEFA8ABA2581}"
@@ -79,6 +65,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SExpressionTests", "SExpres
 		Scripts\SExpression_tests__\while-test.js = Scripts\SExpression_tests__\while-test.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Langs", "Langs", "{27B78179-692E-481E-B0EA-8ECFBCAF0B53}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\json.ast.js = Scripts\json.ast.js
+		Scripts\lang.bnf = Scripts\lang.bnf
+		Scripts\lang.lex = Scripts\lang.lex
+		Scripts\test.lang = Scripts\test.lang
+		Scripts\VBNET.JSON = Scripts\VBNET.JSON
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Progs", "Progs", "{617738BF-D655-4265-BABE-78BEEC0FD773}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Basic Program Langugae GRAMMAR.txt = Scripts\Basic Program Langugae GRAMMAR.txt
+		Scripts\Basic Tests.txt = Scripts\Basic Tests.txt
+		Scripts\IF.txt = Scripts\IF.txt
+		Scripts\MaxFunct.txt = Scripts\MaxFunct.txt
+		Scripts\SampleCmds.txt = Scripts\SampleCmds.txt
+		Scripts\While.txt = Scripts\While.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +110,8 @@ Global
 		{F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D} = {B3F49A18-73AC-4794-992A-7E166B7803EE}
 		{3B46CC32-176D-4EA3-B30F-BEFA8ABA2581} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
 		{E1FE93F9-8A71-4BF8-BBAA-F761914FEDB9} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
+		{27B78179-692E-481E-B0EA-8ECFBCAF0B53} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
+		{617738BF-D655-4265-BABE-78BEEC0FD773} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5ACFE22B-196E-4FC9-A753-15D31931EA11}

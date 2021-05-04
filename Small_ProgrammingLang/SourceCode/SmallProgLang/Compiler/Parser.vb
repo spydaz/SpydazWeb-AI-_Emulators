@@ -799,19 +799,7 @@ Namespace SmallProgLang
 
                 End Select
             End Function
-            Public Function _VariableLiteralNode() As Ast_Literal
-                Dim Str As String = ""
-                Lookahead = Tokenizer.ViewNext
-                Dim tok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
-                Dim nde = New Ast_Literal(AST_NODE._variable, tok.Value)
-                nde._Start = tok._start
-                nde._End = tok._End
-                nde._Raw = tok.Value
-                nde._TypeStr = "_variable"
-                Lookahead = Tokenizer.ViewNext
-                Return nde
 
-            End Function
 
             Public Function _LeftHandExpression()
                 Lookahead = Tokenizer.ViewNext
@@ -1023,6 +1011,7 @@ Namespace SmallProgLang
             End Function
             Public Function _ConditionalBeginNode() As Ast_Literal
                 '   Dim tok As Token = Tokenizer.Eat(GrammarFactory.Grammar.Type_Id._NULL)
+                Lookahead = Tokenizer.ViewNext
                 Dim tok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
                 Dim nde = New Ast_Literal(AST_NODE._OperationBegin, tok.Value)
                 nde._Start = tok._start
@@ -1038,14 +1027,16 @@ Namespace SmallProgLang
             ''' <returns></returns>
             Public Function _CodeEndNode() As Ast_Literal
                 '   Dim tok As Token = Tokenizer.Eat(GrammarFactory.Grammar.Type_Id._NULL)
-                Dim tok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
-                Dim nde = New Ast_Literal(AST_NODE._Code_End, tok.Value)
-                nde._Start = tok._start
-                nde._End = tok._End
-                nde._Raw = tok.Value
-                nde._TypeStr = "_Code_End"
                 Lookahead = Tokenizer.ViewNext
-                Return nde
+                Dim tok = Tokenizer.IdentifiyToken(Lookahead)
+                Dim x = Tokenizer.GetIdentifiedToken(Lookahead)
+                'Dim nde = New Ast_Literal(AST_NODE._Code_End, tok.Value)
+                'nde._Start = tok._start
+                'nde._End = tok._End
+                'nde._Raw = tok.Value
+                'nde._TypeStr = "_Code_End"
+                'Lookahead = Tokenizer.ViewNext
+                Return New Ast_Literal(AST_NODE._Code_End)
             End Function
             Public Function _ConditionalEndNode() As Ast_Literal
                 '   Dim tok As Token = Tokenizer.Eat(GrammarFactory.Grammar.Type_Id._NULL)
@@ -1220,7 +1211,7 @@ Namespace SmallProgLang
             ''' <returns></returns>
             Public Function _BlockStatement() As Ast_BlockExpression
                 Dim toktype As GrammarFactory.Grammar.Type_Id
-                Dim Body As New List(Of Ast_ExpressionStatement)
+                Dim Body As New List(Of AstExpression)
                 _CodeBeginNode()
 
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
@@ -1231,11 +1222,12 @@ Namespace SmallProgLang
                     _CodeEndNode()
 
                 Else
-                    Do Until ((toktype) = GrammarFactory.Grammar.Type_Id._CODE_END)
-                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+                    Do While ((toktype) <> GrammarFactory.Grammar.Type_Id._CODE_END)
                         Body.Add(_ExpressionStatement)
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
                     Loop
                     _CodeEndNode()
+                    Return New Ast_BlockExpression(Body)
                 End If
                 Return New Ast_BlockExpression(Body)
             End Function
@@ -1291,7 +1283,8 @@ Namespace SmallProgLang
                 Dim _Operator As String = _GetAssignmentOperator()
                 Lookahead = Tokenizer.ViewNext
                 ''Temp
-                Dim unry As New Ast_UnaryExpression(_left._Name, _BinaryExpression)
+                Dim _Right As AstExpression = _BinaryExpression()
+                Dim unry As New Ast_UnaryExpression(_left._Name, _Right)
                 unry._TypeStr = "_VariableInitializer"
                 Lookahead = Tokenizer.ViewNext
                 Return unry
