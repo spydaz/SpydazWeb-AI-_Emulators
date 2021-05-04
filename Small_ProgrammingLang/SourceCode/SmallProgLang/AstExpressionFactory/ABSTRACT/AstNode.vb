@@ -81,6 +81,8 @@
             _SAL_Expression
             _Sal_Program_title
             _Sal_BeginStatement
+            _ListBegin
+            _ListEnd
         End Enum
         ''' <summary>
         ''' Syntax: 
