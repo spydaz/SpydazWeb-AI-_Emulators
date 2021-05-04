@@ -39,16 +39,7 @@ function LogicalExpression(left, operator, right) {
   };
 }
 
-/**
- * Creates an unary expression node.
- */
-function UnaryExpression(operator, argument) {
-  return {
-    type: 'UnaryExpression',
-    operator,
-    argument,
-  };
-}
+
 
 /**
  * Creates a literal node.

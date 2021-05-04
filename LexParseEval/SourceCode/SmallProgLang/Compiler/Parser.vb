@@ -2,6 +2,7 @@
 Imports System.Text.Json
 Imports System.Web
 Imports System.Web.Script.Serialization
+Imports Microsoft.VisualBasic.CompilerServices
 Imports SDK.Repl
 Imports SDK.SmallProgLang
 Imports SDK.SmallProgLang.Ast_ExpressionFactory
@@ -130,6 +131,11 @@ Namespace SmallProgLang
                         Lookahead = Tokenizer.ViewNext
                         'GetProgram
                         iProgram = _SAL_ProgramNode()
+                    Case Grammar.Type_Id._PL_PROGRAM_BEGIN
+                        Dim Decl = Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Tokenizer.IdentifiyToken(Lookahead)
+                        iProgram = _ProgramNode()
                     Case Else
                         'GetProgram
                         iProgram = _ProgramNode()
@@ -791,6 +797,19 @@ Namespace SmallProgLang
 
                 End Select
             End Function
+            Public Function _VariableLiteralNode() As Ast_Literal
+                Dim Str As String = ""
+                Lookahead = Tokenizer.ViewNext
+                Dim tok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
+                Dim nde = New Ast_Literal(AST_NODE._variable, tok.Value)
+                nde._Start = tok._start
+                nde._End = tok._End
+                nde._Raw = tok.Value
+                nde._TypeStr = "_variable"
+                Lookahead = Tokenizer.ViewNext
+                Return nde
+
+            End Function
             ''' <summary>
             ''' -Literals
             ''' Syntax:
@@ -808,7 +827,8 @@ Namespace SmallProgLang
                         Return _NumericLiteralNode()
                     Case GrammarFactory.Grammar.Type_Id._STRING
                         Return _StringLiteralNode()
-
+                    'Case GrammarFactory.Grammar.Type_Id._VARIABLE
+                    '    Return _VariableLiteralNode()
                     Case GrammarFactory.Grammar.Type_Id._LIST_BEGIN
                         Exit Select
                     Case GrammarFactory.Grammar.Type_Id._NULL
@@ -1092,6 +1112,7 @@ Namespace SmallProgLang
             Public Function _IdentifierLiteralNode() As Ast_Identifier
                 '   Dim tok As Token = Tokenizer.Eat(GrammarFactory.Grammar.Type_Id._NULL)
                 Dim tok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
+
                 Dim nde = New Ast_Identifier(tok.Value)
                 nde._Start = tok._start
                 nde._End = tok._End
@@ -1202,12 +1223,45 @@ Namespace SmallProgLang
             ''' <summary>
             ''' Syntax:
             ''' Variable: -Identifier as expression
-            ''' 
+            ''' - identifer = binaryExpression
             ''' </summary>
             ''' <returns></returns>
             Public Function _VariableExpression() As AstExpression
+                Dim toktype As GrammarFactory.Grammar.Type_Id
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Dim Tok As Ast_Identifier = Nothing
+                'Get Identifier (All Variable statements start with a Left)
+                Dim _left As Ast_Identifier = _IdentifierLiteralNode()
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
 
-                Return New Ast_VariableExpressionStatement(_IdentifierLiteralNode())
+                'if the next operation is here then do it
+                Select Case toktype
+                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
+                        Exit Select
+                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
+                        Dim _Operator As String = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                        Lookahead = Tokenizer.ViewNext
+                        ''Temp
+                        Dim nde = New AstBinaryExpression(AST_NODE._assignExpression, New Ast_VariableExpressionStatement(_left), _Operator, _BinaryExpression)
+                        nde._TypeStr = "_assignExpression"
+                        Return nde
+
+                    Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
+                        Dim _Operator As String = Tokenizer.GetIdentifiedToken(Lookahead).Value
+                        Lookahead = Tokenizer.ViewNext
+                        ''Temp
+                        Dim nde = New AstBinaryExpression(AST_NODE._assignExpression, New Ast_VariableExpressionStatement(_left), _Operator, _BinaryExpression)
+                        nde._TypeStr = "_assignExpression"
+                        Return nde
+
+
+                    Case Else
+                        'Return normal Variable expression simple(HERE)
+                        Return New Ast_VariableExpressionStatement(_left)
+                End Select
+                'Return Error(HERE - Unimplemented Function)
+                Return New Ast_VariableExpressionStatement(_left)
             End Function
             ''' <summary>
             ''' 
@@ -1339,46 +1393,8 @@ Namespace SmallProgLang
                             _left._TypeStr = "_ConditionalExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
-                    Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
-                        ''Check if last token was variabe(look back parser)
-                        If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
-                            'collect it (do not step back just take it)
-                            Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                            Lookahead = Tokenizer.ViewNext
-                            _Right = _BinaryExpression()
-                            'create expression (replacing previosuly parsed primary expression
-                            '(collects variable_expression) = pain later (for functions etc)
-                            _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
-                        Else
-                            'Do normal-(old way make binary expression sort out later in eval)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                            Lookahead = Tokenizer.ViewNext
-                            _Right = _BinaryExpression()
-                            _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_assignExpression"
-                        End If
 
 
-                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                        ''Check if last token was variable (look back parser)
-                        If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
-                            'collect it (do not step back just take it)
-                            Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                            Lookahead = Tokenizer.ViewNext
-                            _Right = _BinaryExpression()
-                            'create expression (replacing previouly parsed primary expression
-                            '(collects variable_expression) = pain later (for functions etc)
-                            _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
-                        Else
-                            'Do normal-(old way make binary expression sort out later in eval)
-                            _Operator = Tokenizer.GetIdentifiedToken(Lookahead).Value
-                            Lookahead = Tokenizer.ViewNext
-                            _Right = _BinaryExpression()
-                            _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_assignExpression"
-                        End If
 
                 End Select
                 Lookahead = Tokenizer.ViewNext
@@ -1414,87 +1430,47 @@ Namespace SmallProgLang
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
 
                 Select Case toktype
-                        Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
-                            Do While ((toktype) = GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR)
+                    Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR)
 
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                _Right = _BinaryExpression()
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            _Right = _BinaryExpression()
 
-                                _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
-                                _left._TypeStr = "_AddativeExpression"
-                                toktype = Tokenizer.IdentifiyToken(Lookahead)
-                            Loop
-                        Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
-                            Do While ((toktype) = GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR)
+                            _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_AddativeExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
+                    Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR)
 
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                'NOTE: When adding further binary expressions maybe trickle down with this side
-                                'the final level will need to be primary expression? 
-                                _Right = _BinaryExpression()
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            'NOTE: When adding further binary expressions maybe trickle down with this side
+                            'the final level will need to be primary expression? 
+                            _Right = _BinaryExpression()
 
-                                _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
-                                _left._TypeStr = "_MultiplicativeExpression"
-                                toktype = Tokenizer.IdentifiyToken(Lookahead)
-                            Loop
-                        Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
-                            Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                'NOTE: When adding further binary expressions maybe trickle down with this side
-                                'the final level will need to be primary expression? 
-                                _Right = _BinaryExpression()
+                            _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_MultiplicativeExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
+                    Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            'NOTE: When adding further binary expressions maybe trickle down with this side
+                            'the final level will need to be primary expression? 
+                            _Right = _BinaryExpression()
 
-                                _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
-                                _left._TypeStr = "_ConditionalExpression"
-                                toktype = Tokenizer.IdentifiyToken(Lookahead)
-                            Loop
-                        Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
-                            ''Check if last token was variabe(look back parser)
-                            If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
-                                'collect it (do not step back just take it)
-                                Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                _Right = _BinaryExpression()
-                                'create expression (replacing previosuly parsed primary expression
-                                '(collects variable_expression) = pain later (for functions etc)
-                                _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
-                            Else
-                                'Do normal-(old way make binary expression sort out later in eval)
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                _Right = _BinaryExpression()
-                                _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                                _left._TypeStr = "_assignExpression"
-                            End If
+                            _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_ConditionalExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
 
 
-                        Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                            ''Check if last token was variable (look back parser)
-                            If Tokenizer.GetLastToken.ID = GrammarFactory.Grammar.Type_Id._VARIABLE Then
-                                'collect it (do not step back just take it)
-                                Dim ident = New Ast_Identifier(Tokenizer.GetLastToken.Value)
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                _Right = _BinaryExpression()
-                                'create expression (replacing previouly parsed primary expression
-                                '(collects variable_expression) = pain later (for functions etc)
-                                _left = New Ast_AssignmentExpression(ident, _Operator, _Right)
-                            Else
-                                'Do normal-(old way make binary expression sort out later in eval)
-                                _Operator = _GetAssignmentOperator()
-                                Lookahead = Tokenizer.ViewNext
-                                _Right = _BinaryExpression()
-                                _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                                _left._TypeStr = "_assignExpression"
-                            End If
-
-
-                    End Select
-                    Lookahead = Tokenizer.ViewNext
-                    toktype = Tokenizer.IdentifiyToken(Lookahead)
+                End Select
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
                 If toktype = Grammar.Type_Id._STATEMENT_END Then
                     Dim x = __EmptyStatementNode()
                     Return _left

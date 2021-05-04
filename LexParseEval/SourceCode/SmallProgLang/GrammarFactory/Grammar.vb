@@ -231,6 +231,7 @@ Namespace SmallProgLang
                 _SAL_PROGRAM_BEGIN
                 _SAL_EXPRESSION_BEGIN
                 _PL_PROGRAM_BEGIN
+                _Def
             End Enum
             ''' <summary>
             ''' Identifier
@@ -293,10 +294,10 @@ Namespace SmallProgLang
                 NewGram.ID = Type_Id._RETURN
                 NewGram.Exp = "^\breturn\b"
                 iSpec.Add(NewGram)
-                'NewGram = New Grammar
-                'NewGram.ID = "DEF"
-                'NewGram.Exp = "\bdef\b"
-                'iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._Def
+                NewGram.Exp = "\bdef\b"
+                iSpec.Add(NewGram)
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._FUNCTION
                 NewGram.Exp = "^\bfunction\b"
@@ -326,10 +327,10 @@ Namespace SmallProgLang
 
                 'ASSIGNMENT : Syntax  _Variable _AS 
                 'Reconsidered Using Dim (Could Still Implement by changing Assignment handler/Generator)
-                'NewGram = New Grammar
-                'NewGram.ID = Type_Id._DIM
-                'NewGram.Exp = "^\bdim\b"
-                'iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._DIM
+                NewGram.Exp = "^\bdim\b"
+                iSpec.Add(NewGram)
                 'Assignment operators: xLeft assigns output of right (9+4) (+= 9) (-=2) (3) (true)
                 NewGram = New Grammar
                 ''=
@@ -337,10 +338,15 @@ Namespace SmallProgLang
                 NewGram.Exp = "^\="
                 iSpec.Add(NewGram)
                 NewGram = New Grammar
-                '*=, /=, +=, -=,
-                NewGram.ID = Type_Id._COMPLEX_ASSIGN
-                NewGram.Exp = "^[*/\+\-]\="
+                ''=
+                NewGram.ID = Type_Id._SIMPLE_ASSIGN
+                NewGram.Exp = "^\bassigns\b"
                 iSpec.Add(NewGram)
+                NewGram = New Grammar
+                '*=, /=, +=, -=,
+                'NewGram.ID = Type_Id._COMPLEX_ASSIGN
+                'NewGram.Exp = "^[+\-*/\]\="
+                'iSpec.Add(NewGram)
 
                 'DO WHILE/UNTIL
                 NewGram = New Grammar
@@ -425,8 +431,8 @@ Namespace SmallProgLang
                 'Equality operators: ==, !=
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._NOT_EQUALS
-                NewGram.Exp = "^[\=!]"
-                iSpec.Add(NewGram)
+                NewGram.Exp = "^[!]\="
+                ' iSpec.Add(NewGram)
                 'Relational operators: >, >=, <, <=
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._RELATIONAL_OPERATOR
@@ -700,10 +706,7 @@ Namespace SmallProgLang
                 iSpec.Add(NewGram)
 
 
-                'Equality operators: ==, !=
-                NewGram = New Grammar
-                NewGram.ID = Type_Id._NOT_EQUALS
-                NewGram.Exp = "^[\=!]"
+
                 iSpec.Add(NewGram)
                 'Relational operators: >, >=, <, <=
                 NewGram = New Grammar

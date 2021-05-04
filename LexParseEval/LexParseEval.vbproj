@@ -78,6 +78,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Module1.vb" />
     <Compile Include="SourceCode\REPL\FrmSal_Repl.Designer.vb">
       <DependentUpon>FrmSal_Repl.vb</DependentUpon>
     </Compile>
@@ -193,7 +194,7 @@
     <None Include="ExternalResearch\Tests\Primers\lang.lex" />
     <None Include="ExternalResearch\Tests\Primers\test.lang" />
     <Content Include="ExternalResearch\Langs\vbnet.json" />
-    <None Include="ExternalResearch\ProgrammingLanguageSyntax.PL" />
+    <None Include="ExternalResearch\OLD_ProgrammingLanguageSyntax.PL" />
     <None Include="Help\LexParseEval.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -268,7 +269,9 @@
     <None Include="Resources\SERIES 1 sal9000.bmp" />
     <None Include="Resources\X SERIES AL 9000s.jpg" />
     <None Include="Resources\EYE BLUE .gif" />
-    <Content Include="SourceCode\SAL_VM\SAL.txt" />
+    <Content Include="Help\SAL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Dell UltraSharp 27.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
