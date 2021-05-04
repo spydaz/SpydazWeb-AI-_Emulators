@@ -3,28 +3,80 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AI_VMx86", "AI_VMx86\AI_VMx86.vbproj", "{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}"
-EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ast_JsonGenerator", "PL_Compiler\Ast_JsonGenerator.vbproj", "{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}"
-EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AI_ZX81", "AI_VirtualComputer\AI_ZX81.vbproj", "{F5972C07-0950-4DB3-8734-47F0F80738A8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3F49A18-73AC-4794-992A-7E166B7803EE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Small_ProgrammingLang", "Small_ProgrammingLang\Small_ProgrammingLang.vbproj", "{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SAL_VM", "SAL_VM\SAL_VM.vbproj", "{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "OriginalConcept", "OriginalConcept\OriginalConcept.vbproj", "{F5972C07-0950-4DB3-8734-47F0F80738A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}"
 	ProjectSection(SolutionItems) = preProject
-		AstNodes_Diagram.png = AstNodes_Diagram.png
+		Scripts\AstNodes_Diagram.cd = Scripts\AstNodes_Diagram.cd
+		Scripts\Basic Program Langugae GRAMMAR.txt = Scripts\Basic Program Langugae GRAMMAR.txt
+		Scripts\Basic Tests.txt = Scripts\Basic Tests.txt
+		Scripts\IF.txt = Scripts\IF.txt
+		Scripts\json.ast.js = Scripts\json.ast.js
+		Scripts\lang.bnf = Scripts\lang.bnf
+		Scripts\lang.lex = Scripts\lang.lex
+		Scripts\MaxFunct.txt = Scripts\MaxFunct.txt
+		Scripts\Module1.vb = Scripts\Module1.vb
+		Scripts\OLD_ProgrammingLanguageSyntax.PL = Scripts\OLD_ProgrammingLanguageSyntax.PL
+		Scripts\SampleCmds.txt = Scripts\SampleCmds.txt
 		Scripts\Simple Assembly language.txt = Scripts\Simple Assembly language.txt
+		Scripts\Temp_Mde.vb = Scripts\Temp_Mde.vb
+		Scripts\test.lang = Scripts\test.lang
+		Scripts\VBNET.JSON = Scripts\VBNET.JSON
+		Scripts\While.txt = Scripts\While.txt
 	EndProjectSection
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LexParseEval", "LexParseEval\LexParseEval.vbproj", "{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Help", "Help", "{BB11AE54-0861-4C6A-88D7-2EAEB4A02DDB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicTests", "BasicTests", "{3B46CC32-176D-4EA3-B30F-BEFA8ABA2581}"
 	ProjectSection(SolutionItems) = preProject
-		Help\AI_VMx86.chm = Help\AI_VMx86.chm
-		Help\AI_ZX81.chm = Help\AI_ZX81.chm
-		Help\AST_Compiler.chm = Help\AST_Compiler.chm
-		Help\LexParseEval.chm = Help\LexParseEval.chm
-		Help\OnlineEmulator.chm = Help\OnlineEmulator.chm
-		Help\SpydazWeb AI _Emulators.chm = Help\SpydazWeb AI _Emulators.chm
+		Scripts\Ast_tests\assignment-test.js = Scripts\Ast_tests\assignment-test.js
+		Scripts\Ast_tests\block-test.js = Scripts\Ast_tests\block-test.js
+		Scripts\Ast_tests\call-test.js = Scripts\Ast_tests\call-test.js
+		Scripts\Ast_tests\class-test.js = Scripts\Ast_tests\class-test.js
+		Scripts\Ast_tests\do-while-test.js = Scripts\Ast_tests\do-while-test.js
+		Scripts\Ast_tests\empty-statement-test.js = Scripts\Ast_tests\empty-statement-test.js
+		Scripts\Ast_tests\equality-test.js = Scripts\Ast_tests\equality-test.js
+		Scripts\Ast_tests\for-test.js = Scripts\Ast_tests\for-test.js
+		Scripts\Ast_tests\function-declaration-test.js = Scripts\Ast_tests\function-declaration-test.js
+		Scripts\Ast_tests\if-test.js = Scripts\Ast_tests\if-test.js
+		Scripts\Ast_tests\literals-test.js = Scripts\Ast_tests\literals-test.js
+		Scripts\Ast_tests\logical-test.js = Scripts\Ast_tests\logical-test.js
+		Scripts\Ast_tests\math-test.js = Scripts\Ast_tests\math-test.js
+		Scripts\Ast_tests\member-test.js = Scripts\Ast_tests\member-test.js
+		Scripts\Ast_tests\relational-test.js = Scripts\Ast_tests\relational-test.js
+		Scripts\Ast_tests\run.js = Scripts\Ast_tests\run.js
+		Scripts\Ast_tests\statement-list-test.js = Scripts\Ast_tests\statement-list-test.js
+		Scripts\Ast_tests\unary-test.js = Scripts\Ast_tests\unary-test.js
+		Scripts\Ast_tests\variable-test.js = Scripts\Ast_tests\variable-test.js
+		Scripts\Ast_tests\while-test.js = Scripts\Ast_tests\while-test.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SExpressionTests", "SExpressionTests", "{E1FE93F9-8A71-4BF8-BBAA-F761914FEDB9}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\SExpression_tests__\block-test.js = Scripts\SExpression_tests__\block-test.js
+		Scripts\SExpression_tests__\built-in-function-test.js = Scripts\SExpression_tests__\built-in-function-test.js
+		Scripts\SExpression_tests__\class-test.js = Scripts\SExpression_tests__\class-test.js
+		Scripts\SExpression_tests__\dec-test.js = Scripts\SExpression_tests__\dec-test.js
+		Scripts\SExpression_tests__\dec-val-test.js = Scripts\SExpression_tests__\dec-val-test.js
+		Scripts\SExpression_tests__\for-test.js = Scripts\SExpression_tests__\for-test.js
+		Scripts\SExpression_tests__\if-test.js = Scripts\SExpression_tests__\if-test.js
+		Scripts\SExpression_tests__\import-test.js = Scripts\SExpression_tests__\import-test.js
+		Scripts\SExpression_tests__\inc-test.js = Scripts\SExpression_tests__\inc-test.js
+		Scripts\SExpression_tests__\inc-val-test.js = Scripts\SExpression_tests__\inc-val-test.js
+		Scripts\SExpression_tests__\lambda-function-test.js = Scripts\SExpression_tests__\lambda-function-test.js
+		Scripts\SExpression_tests__\math-test.js = Scripts\SExpression_tests__\math-test.js
+		Scripts\SExpression_tests__\module-test.js = Scripts\SExpression_tests__\module-test.js
+		Scripts\SExpression_tests__\run.js = Scripts\SExpression_tests__\run.js
+		Scripts\SExpression_tests__\self-eval-test.js = Scripts\SExpression_tests__\self-eval-test.js
+		Scripts\SExpression_tests__\switch-test.js = Scripts\SExpression_tests__\switch-test.js
+		Scripts\SExpression_tests__\test-util.js = Scripts\SExpression_tests__\test-util.js
+		Scripts\SExpression_tests__\user-defined-function-test.js = Scripts\SExpression_tests__\user-defined-function-test.js
+		Scripts\SExpression_tests__\variables-test.js = Scripts\SExpression_tests__\variables-test.js
+		Scripts\SExpression_tests__\while-test.js = Scripts\SExpression_tests__\while-test.js
 	EndProjectSection
 EndProject
 Global
@@ -33,28 +85,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CE8FA88-0006-4E78-8CA2-9EDEBA93CBD4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAD6B3A4-2D2A-4EF7-AA67-DDFC62ADC6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24601FC8-50FF-49DB-8A7A-AD8EA8F48D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5972C07-0950-4DB3-8734-47F0F80738A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BB11AE54-0861-4C6A-88D7-2EAEB4A02DDB} = {B3F49A18-73AC-4794-992A-7E166B7803EE}
+		{F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D} = {B3F49A18-73AC-4794-992A-7E166B7803EE}
+		{3B46CC32-176D-4EA3-B30F-BEFA8ABA2581} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
+		{E1FE93F9-8A71-4BF8-BBAA-F761914FEDB9} = {F2207F7E-9394-4F7C-A7A1-D0BEEF5A696D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5ACFE22B-196E-4FC9-A753-15D31931EA11}
