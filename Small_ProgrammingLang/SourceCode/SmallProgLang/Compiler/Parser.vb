@@ -779,8 +779,9 @@ Namespace SmallProgLang
                         _WhitespaceNode()
 
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
-                        __EndStatementNode()
-
+                        Return New Ast_ExpressionStatement(__EndStatementNode)
+                    Case Grammar.Type_Id._VARIABLE
+                        Return _LeftHandExpression()
 
                     Case Else
                         'Literal - Node!
@@ -827,8 +828,7 @@ Namespace SmallProgLang
 
 
                 Select Case toktype
-                        'due to most tokens detecting as variable (they can also be function names)
-                        'we must check if is a fucntion command
+
                     Case Grammar.Type_Id._VARIABLE
 
                         Dim iTok As Token = Tokenizer.CheckIdentifiedToken(Lookahead)
@@ -837,10 +837,18 @@ Namespace SmallProgLang
                         Select Case UCase(iTok.Value)
                             'Check Fucntion name
                             Case "DIM"
-                                Return _DimFunction()
+                                Dim nde = _DimFunction()
+                                nde._Start = iTok._start
+                                nde._End = iTok._End
+                                Lookahead = Tokenizer.ViewNext
+                                Return nde
                             Case Else
                                 'Do Variable Expression
-                                Return _VariableExpression()
+                                Dim nde = _VariableExpression()
+                                nde._Start = iTok._start
+                                nde._End = iTok._End
+                                Lookahead = Tokenizer.ViewNext
+                                Return nde
                         End Select
 
                     Case Grammar.Type_Id._COMMENTS
@@ -850,7 +858,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
                         Return _ParenthesizedExpression()
                     Case Else
-                        Return _PrimaryExpression()
+                        Return _BinaryExpression()
                 End Select
 
                 'Technically badtoken try capture
@@ -892,7 +900,11 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._STRING
                         Return _StringLiteralNode()
                     'Case GrammarFactory.Grammar.Type_Id._VARIABLE
-                    '    Return _VariableLiteralNode()
+                    '    Dim ntok = Tokenizer.GetIdentifiedToken(Lookahead)
+                    '    Dim xc = New Ast_Literal(AST_NODE._variable, ntok.Value)
+                    '    xc._Start = ntok._start
+                    '    xc._End = ntok._End
+                    '    xc._Raw = ntok.Value
                     Case GrammarFactory.Grammar.Type_Id._LIST_BEGIN
                         Return _ArrayListLiteral()
                         Exit Select
@@ -1262,6 +1274,8 @@ Namespace SmallProgLang
             'Begin Block
                     Case GrammarFactory.Grammar.Type_Id._CODE_BEGIN
                         Return _BlockStatement()
+                        'due to most tokens detecting as variable (they can also be function names)
+                        'we must check if is a fucntion command
             'Iteration Statments
                     Case GrammarFactory.Grammar.Type_Id._UNTIL
                         Return _IterationStatment()
@@ -1270,7 +1284,9 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._FOR
                         Return _IterationStatment()
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        _WhitespaceNode()
+                        Do While tok = GrammarFactory.Grammar.Type_Id._WHITESPACE
+                            _WhitespaceNode()
+                        Loop
                         'enable machine code in script;
                         ''when Evaluating can be executed on VM
                     Case Grammar.Type_Id._SAL_EXPRESSION_BEGIN
@@ -1326,17 +1342,18 @@ Namespace SmallProgLang
                 Dim toktype As GrammarFactory.Grammar.Type_Id
                 Dim Body As New List(Of AstExpression)
                 _CodeBeginNode()
-
+                Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
                 'Detect Empty List
                 If toktype = GrammarFactory.Grammar.Type_Id._CODE_END Then
 
                     Body.Add(New Ast_ExpressionStatement(__EmptyStatementNode))
                     _CodeEndNode()
-
+                    Return New Ast_BlockExpression(Body)
                 Else
                     Do While ((toktype) <> GrammarFactory.Grammar.Type_Id._CODE_END)
-                        Body.Add(_ExpressionStatement)
+                        Body.Add(_LeftHandExpression)
+                        Lookahead = Tokenizer.ViewNext
                         toktype = Tokenizer.IdentifiyToken(Lookahead)
                     Loop
                     _CodeEndNode()
@@ -1509,7 +1526,7 @@ Namespace SmallProgLang
                         nde._TypeStr = "_AssignmentExpression"
                         Return nde
                     Case Else
-                        'Return normal Variable expression simple(HERE)
+
                         Return New Ast_VariableExpressionStatement(_left)
                 End Select
                 'Return Error(HERE - Unimplemented Function)
@@ -1687,7 +1704,7 @@ Namespace SmallProgLang
 
                 End If
 
-                _left = _LeftHandExpression()
+                _left = _PrimaryExpression()
                 Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
                 Select Case toktype
@@ -1760,7 +1777,80 @@ Namespace SmallProgLang
 
                 End If
 
-                _left = _LeftHandExpression()
+                _left = _PrimaryExpression()
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+
+                Select Case toktype
+                    Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR)
+
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            _Right = _BinaryExpression()
+
+                            _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_AddativeExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
+                    Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR)
+
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            'NOTE: When adding further binary expressions maybe trickle down with this side
+                            'the final level will need to be primary expression? 
+                            _Right = _BinaryExpression()
+
+                            _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_MultiplicativeExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
+                    Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
+                        Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
+                            _Operator = _GetAssignmentOperator()
+                            Lookahead = Tokenizer.ViewNext
+                            'NOTE: When adding further binary expressions maybe trickle down with this side
+                            'the final level will need to be primary expression? 
+                            _Right = _BinaryExpression()
+
+                            _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
+                            _left._TypeStr = "_ConditionalExpression"
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                        Loop
+
+                    Case GrammarFactory.Grammar.Type_Id._WHITESPACE
+                        _WhitespaceNode()
+                End Select
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                If toktype = Grammar.Type_Id._STATEMENT_END Then
+                    Dim x = __EmptyStatementNode()
+                    Return _left
+                Else
+                    Return _left
+                End If
+                'End of file Marker
+                Return _left
+            End Function
+            Public Function _BinaryExpression(ByRef _left As AstExpression) As AstExpression
+
+                Dim _Operator As String = ""
+                Dim _Right As AstExpression
+                Dim toktype As GrammarFactory.Grammar.Type_Id
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                'Remove Erronious WhiteSpaces
+                If toktype = Grammar.Type_Id._WHITESPACE Then
+                    Do While toktype = Grammar.Type_Id._WHITESPACE
+                        _WhitespaceNode()
+                        Lookahead = Tokenizer.ViewNext
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+                    Loop
+                Else
+
+                End If
+
+
                 Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
 
