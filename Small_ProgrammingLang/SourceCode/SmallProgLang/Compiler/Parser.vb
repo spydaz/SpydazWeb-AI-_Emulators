@@ -831,26 +831,19 @@ Namespace SmallProgLang
                 Select Case toktype
 
                     Case Grammar.Type_Id._VARIABLE
-
+                        'Check if misIdentified
                         Dim iTok As Token = Tokenizer.CheckIdentifiedToken(Lookahead)
+                        If CheckFunction(iTok.Value) = True Then
+                            Return _CommandFunction()
+                        Else
+                            'Do Variable Expression
+                            Dim nde = _VariableExpression()
+                            nde._Start = iTok._start
+                            nde._End = iTok._End
+                            Lookahead = Tokenizer.ViewNext
+                            Return _BinaryExpression(nde)
+                        End If
 
-                        'Search in upper case due to a string search
-                        Select Case UCase(iTok.Value)
-                            'Check Fucntion name
-                            Case "DIM"
-                                Dim nde = _DimFunction()
-                                nde._Start = iTok._start
-                                nde._End = iTok._End
-                                Lookahead = Tokenizer.ViewNext
-                                Return nde
-                            Case Else
-                                'Do Variable Expression
-                                Dim nde = _VariableExpression()
-                                nde._Start = iTok._start
-                                nde._End = iTok._End
-                                Lookahead = Tokenizer.ViewNext
-                                Return nde
-                        End Select
 
                     Case Grammar.Type_Id._COMMENTS
                         Return _CommentsListExpression()
@@ -859,6 +852,7 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
                         Return _ParenthesizedExpression()
                     Case Else
+                        'Must be a primaryExpression With binary
                         Return _BinaryExpression()
                 End Select
 
@@ -867,6 +861,44 @@ Namespace SmallProgLang
                 ParserErrors.Add("Unknown Statement/_LeftHandExpression Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
                 Return New Ast_ExpressionStatement(etok)
             End Function
+
+            Public Function _CommandFunction() As AstExpression
+                Dim iTok As Token = Tokenizer.CheckIdentifiedToken(Lookahead)
+                Select Case UCase(iTok.Value)
+                            'Check Fucntion name
+                    Case "DIM"
+                        Dim nde = _DimFunction()
+                        nde._Start = iTok._start
+                        nde._End = iTok._End
+                        Lookahead = Tokenizer.ViewNext
+                        Return nde
+                    Case "FOR"
+                        Return _IterationStatment()
+                    Case "WHILE"
+                        Return _IterationStatment()
+                    Case "UNTIL"
+                        Return _IterationStatment()
+
+                End Select
+                Return Nothing
+            End Function
+            Public Function CheckFunction(ByRef Str As String) As Boolean
+                Select Case UCase(Str)
+                            'Check Fucntion name
+                    Case "DIM"
+                        Return True
+                    Case "FOR"
+                        Return True
+                    Case "WHILE"
+                        Return True
+                    Case "UNTIL"
+                        Return True
+
+                End Select
+                Return False
+
+            End Function
+
             Public Function _DimFunction() As AstExpression
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
                 Lookahead = Tokenizer.ViewNext
@@ -1278,13 +1310,7 @@ Namespace SmallProgLang
                         Return _BlockStatement()
                         'due to most tokens detecting as variable (they can also be function names)
                         'we must check if is a fucntion command
-            'Iteration Statments
-                    Case GrammarFactory.Grammar.Type_Id._UNTIL
-                        Return _IterationStatment()
-                    Case GrammarFactory.Grammar.Type_Id._WHILE
-                        Return _IterationStatment()
-                    Case GrammarFactory.Grammar.Type_Id._FOR
-                        Return _IterationStatment()
+
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
                         Do While tok = GrammarFactory.Grammar.Type_Id._WHITESPACE
                             _WhitespaceNode()
@@ -1537,7 +1563,7 @@ Namespace SmallProgLang
                 Lookahead = Tokenizer.ViewNext
                 ''Temp
                 '  Dim _Right As AstExpression = _BinaryExpression()
-                Dim _Right As Ast_Literal = New Ast_Literal(AST_NODE._assignExpression, _BinaryExpression)
+                Dim _Right As Ast_Literal = New Ast_Literal(AST_NODE._assignExpression, _Expression)
                 Dim unry As New Ast_UnaryExpression(_left, _Right)
                 unry._TypeStr = "_assignExpression"
                 Lookahead = Tokenizer.ViewNext
