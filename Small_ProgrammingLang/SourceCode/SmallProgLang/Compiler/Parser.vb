@@ -817,6 +817,8 @@ Namespace SmallProgLang
             ''' -_VariableExpression
             ''' -_COMMENTS
             ''' 
+            ''' 'Added Glitch(Select case on tokenvalue) ..... Not sure if it is the right way
+            ''' as the variables are blocking the keywords?
             ''' </summary>
             ''' <returns></returns>
             Public Function _LeftHandExpression() As AstExpression
@@ -868,7 +870,6 @@ Namespace SmallProgLang
                 Lookahead = Tokenizer.ViewNext
                 Return _VariableDeclaration(_VariableInitializer(_IdentifierLiteralNode))
             End Function
-
             ''' <summary>
             ''' -Literals
             ''' Syntax:
