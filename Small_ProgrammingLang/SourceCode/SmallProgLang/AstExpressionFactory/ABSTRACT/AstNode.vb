@@ -83,6 +83,7 @@
             _Sal_BeginStatement
             _ListBegin
             _ListEnd
+            _DeclareVariable
         End Enum
         ''' <summary>
         ''' Syntax: 
