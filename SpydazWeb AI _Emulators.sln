@@ -19,7 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{F220
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicTests", "BasicTests", "{3B46CC32-176D-4EA3-B30F-BEFA8ABA2581}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\Ast_tests\block-test.js = Scripts\Ast_tests\block-test.js
 		Scripts\Ast_tests\call-test.js = Scripts\Ast_tests\call-test.js
 		Scripts\Ast_tests\class-test.js = Scripts\Ast_tests\class-test.js
 		Scripts\Ast_tests\do-while-test.js = Scripts\Ast_tests\do-while-test.js
@@ -29,9 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicTests", "BasicTests", 
 		Scripts\Ast_tests\if-test.js = Scripts\Ast_tests\if-test.js
 		Scripts\Ast_tests\logical-test.js = Scripts\Ast_tests\logical-test.js
 		Scripts\Ast_tests\member-test.js = Scripts\Ast_tests\member-test.js
+		MY_VariableTest.js = MY_VariableTest.js
 		Scripts\Ast_tests\unary-test.js = Scripts\Ast_tests\unary-test.js
 		Scripts\Ast_tests\variable-test.js = Scripts\Ast_tests\variable-test.js
-		VariableTest1.js = VariableTest1.js
 		Scripts\Ast_tests\while-test.js = Scripts\Ast_tests\while-test.js
 	EndProjectSection
 EndProject
