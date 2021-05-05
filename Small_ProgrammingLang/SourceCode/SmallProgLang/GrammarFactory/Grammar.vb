@@ -470,7 +470,7 @@ Namespace SmallProgLang
                 '*=, /=, +=, -=,
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._COMPLEX_ASSIGN
-                NewGram.Exp = "(\*|\/|\+|\-)="
+                NewGram.Exp = "^(\*|\/|\+|\-)="
                 iSpec.Add(NewGram)
 
 

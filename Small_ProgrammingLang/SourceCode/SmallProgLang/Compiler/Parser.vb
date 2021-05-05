@@ -781,8 +781,7 @@ Namespace SmallProgLang
                         Return _AssignmentExpression(_IdentifierLiteralNode)
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
                         Return New Ast_ExpressionStatement(__EndStatementNode)
-                    Case Grammar.Type_Id._VARIABLE
-                        Return _LeftHandExpression()
+
 
                     Case Else
                         'Literal - Node!
@@ -831,17 +830,24 @@ Namespace SmallProgLang
                 Select Case toktype
 
                     Case Grammar.Type_Id._VARIABLE
+                        Dim _left As AstExpression
                         'Check if misIdentified
                         Dim iTok As Token = Tokenizer.CheckIdentifiedToken(Lookahead)
                         If CheckFunction(iTok.Value) = True Then
                             Return _CommandFunction()
                         Else
                             'Do Variable Expression
-                            Dim nde = _VariableExpression()
-                            nde._Start = iTok._start
-                            nde._End = iTok._End
+                            _left = _VariableExpression()
+                            'check complex
                             Lookahead = Tokenizer.ViewNext
-                            Return _BinaryExpression(nde)
+                            toktype = Tokenizer.IdentifiyToken(Lookahead)
+                            If toktype = GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN Then
+                                Return _AssignmentExpression(_left)
+                            Else
+                                Return _left
+                            End If
+
+
                         End If
 
 
@@ -1535,18 +1541,17 @@ Namespace SmallProgLang
                         toktype = Tokenizer.IdentifiyToken(Lookahead)
                     Loop
                 End If
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
                 'if the next operation is here then do it
                 Select Case toktype
 
 
-                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                        Dim nde = _AssignmentExpression(_left)
-                        nde._TypeStr = "_AssignmentExpression"
-                        Return nde
+
                     Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
 
                         Dim nde = _AssignmentExpression(_left)
-                        nde._TypeStr = "_AssignmentExpression"
+                        nde._TypeStr = "_SIMPLE_ASSIGN"
                         Return nde
                     Case Else
 
@@ -1555,16 +1560,15 @@ Namespace SmallProgLang
                 'Return Error(HERE - Unimplemented Function)
                 Return New Ast_VariableExpressionStatement(_left)
             End Function
-            Public Function _VariableInitializer(ByRef _left As Ast_Identifier) As Ast_UnaryExpression
+            Public Function _VariableInitializer(ByRef _left As Ast_Identifier) As AstExpression
                 Lookahead = Tokenizer.ViewNext
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
 
                 Dim _Operator As String = _GetAssignmentOperator()
                 Lookahead = Tokenizer.ViewNext
                 ''Temp
-                '  Dim _Right As AstExpression = _BinaryExpression()
-                Dim _Right As Ast_Literal = New Ast_Literal(AST_NODE._assignExpression, _Expression)
-                Dim unry As New Ast_UnaryExpression(_left, _Right)
+
+                Dim unry As New AstBinaryExpression(AST_NODE._assignExpression, New Ast_VariableExpressionStatement(_left), _Operator, _BinaryExpression)
                 unry._TypeStr = "_assignExpression"
                 Lookahead = Tokenizer.ViewNext
                 Return unry
@@ -1619,7 +1623,7 @@ Namespace SmallProgLang
             ''' </summary>
             ''' <param name="_left"></param>
             ''' <returns></returns>
-            Public Function _AssignmentExpression(ByRef _left As Ast_Identifier) As Ast_UnaryExpression
+            Public Function _AssignmentExpression(ByRef _left As Ast_Identifier) As AstExpression
                 Lookahead = Tokenizer.ViewNext
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
                 Select Case toktype
@@ -1627,13 +1631,25 @@ Namespace SmallProgLang
 
                         Return _VariableInitializer(_left)
 
-                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                        Return _VariableInitializer(_left)
-
                 End Select
                 Return _VariableInitializer(_left)
             End Function
+            Public Function _AssignmentExpression(ByRef _left As AstExpression) As AstExpression
+                Lookahead = Tokenizer.ViewNext
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Select Case toktype
 
+
+                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
+                        'Complex Assignments are 
+                        Dim _operator = _GetAssignmentOperator()
+
+                        Dim x = New AstBinaryExpression(AST_NODE._assignExpression, _left, _operator, _LeftHandExpression)
+                        x._TypeStr = "_COMPLEX_ASSIGN"
+                        Return x
+                End Select
+                Return _left
+            End Function
 
             ''' <summary>
             ''' 
