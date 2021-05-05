@@ -1495,13 +1495,7 @@ Namespace SmallProgLang
 
 
 
-                If toktype = GrammarFactory.Grammar.Type_Id._WHITESPACE Then
-                    Do Until toktype <> GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        _WhitespaceNode()
-                        Lookahead = Tokenizer.ViewNext
-                        toktype = Tokenizer.IdentifiyToken(Lookahead)
-                    Loop
-                End If
+
 
 
                 'Check Function Comand
@@ -1511,7 +1505,13 @@ Namespace SmallProgLang
                         Lookahead = Tokenizer.ViewNext
                         toktype = Tokenizer.IdentifiyToken(Lookahead)
 
-
+                If toktype = GrammarFactory.Grammar.Type_Id._WHITESPACE Then
+                    Do Until toktype <> GrammarFactory.Grammar.Type_Id._WHITESPACE
+                        _WhitespaceNode()
+                        Lookahead = Tokenizer.ViewNext
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+                    Loop
+                End If
                 'if the next operation is here then do it
                 Select Case toktype
 
