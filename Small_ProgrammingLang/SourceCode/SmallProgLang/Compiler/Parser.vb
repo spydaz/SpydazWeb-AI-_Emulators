@@ -1540,12 +1540,24 @@ Namespace SmallProgLang
             Public Function _VariableDeclaration(ByRef _left As Ast_Identifier) As Ast_VariableDeclarationExpression
 
                 Lookahead = Tokenizer.ViewNext
-                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+                'SELECT lITERAL TYPE
+                Select Case _left._Type
+                    Case AST_NODE._string
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "STRING")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                    Case AST_NODE._array
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "ARRAY")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
+                    Case AST_NODE._integer
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Lookahead = Tokenizer.ViewNext
+                        Return X
 
-
-
-                toktype = Tokenizer.IdentifiyToken(Lookahead)
-                Select Case toktype
 
 
                     Case Else
