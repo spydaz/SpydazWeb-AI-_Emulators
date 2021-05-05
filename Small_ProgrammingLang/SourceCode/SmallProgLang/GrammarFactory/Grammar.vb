@@ -7,7 +7,7 @@ Namespace SmallProgLang
         ''' <summary>
         ''' Simple Gramar object (Expected token Shape or from)
         ''' </summary>
-        Public Structure Grammar
+        Public Class Grammar
             ''' <summary>
             ''' GRAMMAR OBJECT ID
             ''' </summary>
@@ -20,12 +20,6 @@ Namespace SmallProgLang
                 ''' Literal
                 ''' </summary>
                 _STRING
-                ''' <summary>
-                ''' Literal
-                ''' </summary>
-                _VARIABLE
-                _WHITESPACE
-                _COMMENTS
                 ''' <summary>
                 ''' Print Literal/Value/String
                 ''' </summary>
@@ -240,6 +234,17 @@ Namespace SmallProgLang
                 _JSON_frac
                 _FUNCTION_DECLARE
                 _DOT
+                _OBJ_string
+                _OBJ_integer
+                _OBJ_boolean
+                _OBJ_array
+                _OBJ_null
+                ''' <summary>
+                ''' Literal
+                ''' </summary>
+                _VARIABLE
+                _WHITESPACE
+                _COMMENTS
             End Enum
             ''' <summary>
             ''' Identifier
@@ -307,11 +312,11 @@ Namespace SmallProgLang
                 'Reconsidered Using Dim (Could Still Implement by changing Assignment handler/Generator)
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._VARIABLE_DECLARE
-                NewGram.Exp = "^\bdim\b"
+                NewGram.Exp = "^\bdim\b\s"
                 iSpec.Add(NewGram)
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._VARIABLE_DECLARE
-                NewGram.Exp = "^\blet\b"
+                NewGram.Exp = "^\blet\s\b"
                 iSpec.Add(NewGram)
                 'Assignment operators: xLeft assigns output of right (9+4) (+= 9) (-=2) (3) (true)
 #End Region
@@ -385,8 +390,8 @@ Namespace SmallProgLang
 
 
                 iSpec.AddRange(GetLogicGrammar)
-                iSpec.AddRange(GetLiteralsGrammar)
                 iSpec.AddRange(GetSymbolsGrammar)
+                iSpec.AddRange(GetLiteralsGrammar)
                 'ARGS LIST: RIGHT BOUNDRY
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._EOF
@@ -553,11 +558,57 @@ Namespace SmallProgLang
                 'Variable
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._VARIABLE
-                NewGram.Exp = "^[a-z][a-z0-9]+"
+                NewGram.Exp = "^\b[a-z][a-z0-9]+\b"
+                iSpec.Add(NewGram)
+#Region "literal Object types"
+#Region "ARRAY"
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_array
+                NewGram.Exp = "\blist\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_array
+                NewGram.Exp = "\barray\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_array
+                NewGram.Exp = "\barraylist\b"
+                iSpec.Add(NewGram)
+#End Region
+#Region "boolean"
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_boolean
+                NewGram.Exp = "\bbool\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_boolean
+                NewGram.Exp = "\bboolean\b"
+                iSpec.Add(NewGram)
+#End Region
+#Region "NULL"
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_null
+                NewGram.Exp = "\bnothing\b"
+                iSpec.Add(NewGram)
+#End Region
+#Region "integer"
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_integer
+                NewGram.Exp = "\bint\b"
+                iSpec.Add(NewGram)
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_integer
+                NewGram.Exp = "\binteger\b"
+                iSpec.Add(NewGram)
+#End Region
+#Region "string"
+                NewGram = New Grammar
+                NewGram.ID = Type_Id._OBJ_string
+                NewGram.Exp = "\bstring\b"
                 iSpec.Add(NewGram)
 
-
-
+#End Region
+#End Region
                 Return iSpec
             End Function
             Public Shared Function GetSALGrammar() As List(Of Grammar)
@@ -755,8 +806,8 @@ Namespace SmallProgLang
 #End Region
 
                 iSpec.AddRange(GetLogicGrammar)
-                iSpec.AddRange(GetLiteralsGrammar)
                 iSpec.AddRange(GetSymbolsGrammar)
+                iSpec.AddRange(GetLiteralsGrammar)
 
                 NewGram = New Grammar
                 NewGram.ID = Type_Id._EOF
@@ -857,6 +908,6 @@ Namespace SmallProgLang
                 Return iSpec
             End Function
 
-        End Structure
+        End Class
     End Namespace
 End Namespace

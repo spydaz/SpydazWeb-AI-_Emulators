@@ -63,6 +63,7 @@ Namespace SmallProgLang
             ''' </summary>
             ''' <param name="nScript">Script to be compiled </param>
             ''' <returns>AST PROGRAM</returns>
+            <System.ComponentModel.Description("Main Parser Function Parses whole Script into a AST tree ; Which can be used later for evaluation to be run on a vm or to generate code for a different language (interpretor) or (evaluator - Compiler(Executor)")>
             Public Function _Parse(ByRef nScript As String) As AstProgram
                 Dim Body As New List(Of Ast_ExpressionStatement)
                 Me.ParserErrors = New List(Of String)
@@ -767,8 +768,8 @@ Namespace SmallProgLang
             ''' Syntax
             ''' 
             ''' -Literal => (_PrimaryExpression)
-            ''' 
-            ''' 
+            ''' -EatExtra WhiteSpace
+            ''' -EatExtra ";"
             ''' </summary>
             ''' <returns></returns>
             Public Function _PrimaryExpression() As AstExpression
@@ -776,19 +777,11 @@ Namespace SmallProgLang
                 Select Case tok
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
                         _WhitespaceNode()
-                    Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
-                        Return _LeftHandExpression()
-                    Case GrammarFactory.Grammar.Type_Id._FUNCTION_DECLARE
+
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
-                        __EmptyStatementNode()
-                    Case Grammar.Type_Id._COMMENTS
-                        Return _CommentsListExpression()
-                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
-                        Return _LeftHandExpression()
-                    Case GrammarFactory.Grammar.Type_Id._VARIABLE
-                        Return _LeftHandExpression()
-                    Case GrammarFactory.Grammar.Type_Id._SAL_EXPRESSION_BEGIN
-                        Return _LeftHandExpression()
+                        __EndStatementNode()
+
+
                     Case Else
                         'Literal - Node!
                         Dim Expr As Ast_ExpressionStatement
@@ -801,7 +794,8 @@ Namespace SmallProgLang
                         Else
                             'Technically badtoken try capture
                             Dim etok = __UnknownStatementNode()
-                            ParserErrors.Add("Unknown Statement/Expression Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
+                            Lookahead = "EOF"
+                            ParserErrors.Add("Unknown Statement/Expression/Function Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
                             Return New Ast_ExpressionStatement(etok)
                         End If
                         Exit Select
@@ -809,25 +803,52 @@ Namespace SmallProgLang
                 End Select
                 'Technically badtoken try capture
                 Dim ertok = __UnknownStatementNode()
-                ParserErrors.Add("Unknown Statement/Expression Uncountered" & vbNewLine & ertok.ToJson.FormatJsonOutput & vbNewLine)
+                Lookahead = "EOF"
+                ParserErrors.Add("Unknown Statement/Expression Uncountered" & vbNewLine & ertok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
                 Return New Ast_ExpressionStatement(ertok)
             End Function
-
-
+            ''' <summary>
+            ''' 
+            ''' Syntax:
+            ''' -EatWhiteSpace
+            ''' -DIM_Function
+            ''' -SalExpression
+            ''' -ParenthesizedExpresion
+            ''' -_VariableExpression
+            ''' -_COMMENTS
+            ''' 
+            ''' </summary>
+            ''' <returns></returns>
             Public Function _LeftHandExpression() As AstExpression
                 Lookahead = Tokenizer.ViewNext
-                Dim tok = Tokenizer.IdentifiyToken(Lookahead)
-                Select Case tok
-                    Case GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        _WhitespaceNode()
-                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
-                        Return _VariableExpression()
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+
+
+                Select Case toktype
+                        'due to most tokens detecting as variable (they can also be function names)
+                        'we must check if is a fucntion command
+                    Case Grammar.Type_Id._VARIABLE
+
+                        Dim iTok As Token = Tokenizer.CheckIdentifiedToken(Lookahead)
+
+                        'Search in upper case due to a string search
+                        Select Case UCase(iTok.Value)
+                            'Check Fucntion name
+                            Case "DIM"
+                                Return _DimFunction()
+                            Case Else
+                                'Do Variable Expression
+                                Return _VariableExpression()
+                        End Select
+
+                    Case Grammar.Type_Id._COMMENTS
+                        Return _CommentsListExpression()
                     Case GrammarFactory.Grammar.Type_Id._SAL_EXPRESSION_BEGIN
                         Return _SAL_Expression()
                     Case GrammarFactory.Grammar.Type_Id._CONDITIONAL_BEGIN
                         Return _ParenthesizedExpression()
                     Case Else
-                        Return _VariableExpression()
+                        Return _PrimaryExpression()
                 End Select
 
                 'Technically badtoken try capture
@@ -837,6 +858,19 @@ Namespace SmallProgLang
             End Function
 
 
+            Public Function _DimFunction() As AstExpression
+                Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Lookahead = Tokenizer.ViewNext
+                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                'GET the identified token as it is a command but detected as variable
+                Tokenizer.GetIdentifiedToken(Lookahead)
+                Lookahead = Tokenizer.ViewNext
+                _WhitespaceNode()
+                'View next (for next function)
+                Lookahead = Tokenizer.ViewNext
+                Return _VariableDeclaration(_VariableInitializer(_IdentifierLiteralNode))
+            End Function
+
             ''' <summary>
             ''' -Literals
             ''' Syntax:
@@ -845,6 +879,10 @@ Namespace SmallProgLang
             '''     -String Literal
             '''     -Comments
             '''     -Nullable
+            '''     -BooleanLiteral
+            '''     -ArrayLiteral
+            '''     -EatWhiteSpace
+            '''     -EatEmptyStatment
             ''' </summary>
             ''' <returns></returns>
             Public Function _literalNode() As Ast_Literal
@@ -866,9 +904,9 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._FALSE
                         Return _BooleanNode()
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        Return _WhitespaceNode()
+                        _WhitespaceNode()
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
-                        Return __EmptyStatementNode()
+                        __EmptyStatementNode()
                     Case Grammar.Type_Id.SAL_HALT
                         Dim nTok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
                         Dim fnd = New Ast_SAL_Literal(AST_NODE.SAL_HALT, nTok.Value)
@@ -884,10 +922,15 @@ Namespace SmallProgLang
                     Case Else
                         'Technically badtoken try capture
                         Dim etok = __UnknownStatementNode()
-                        ParserErrors.Add("Unknown TOKEN Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
+                        ParserErrors.Add("Unknown Literal Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
+                        Lookahead = "EOF"
                         Return etok
                 End Select
-                Return Nothing
+                'Technically badtoken try capture
+                Dim itok = __UnknownStatementNode()
+                Lookahead = "EOF"
+                ParserErrors.Add("Unknown Literal Uncountered" & vbNewLine & itok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
+                Return itok
             End Function
             ''' <summary>
             ''' Syntax:
@@ -1050,6 +1093,9 @@ Namespace SmallProgLang
                 'nde._TypeStr = "_Code_End"
                 'Lookahead = Tokenizer.ViewNext
                 Dim xDC = New Ast_Literal(AST_NODE._ListEnd)
+                xDC._Start = x._start
+                xDC._End = x._End
+                xDC._Raw = x.Value
                 Lookahead = Tokenizer.ViewNext
                 Return xDC
             End Function
@@ -1064,7 +1110,10 @@ Namespace SmallProgLang
                 'nde._Raw = tok.Value
                 'nde._TypeStr = "_Code_End"
                 'Lookahead = Tokenizer.ViewNext
-                Dim xDC = New Ast_Literal(AST_NODE._ListBegin)
+                Dim xDC = New Ast_Literal(AST_NODE._ListEnd)
+                xDC._Start = x._start
+                xDC._End = x._End
+                xDC._Raw = x.Value
                 Lookahead = Tokenizer.ViewNext
                 Return xDC
             End Function
@@ -1083,7 +1132,12 @@ Namespace SmallProgLang
                 'nde._Raw = tok.Value
                 'nde._TypeStr = "_Code_End"
                 'Lookahead = Tokenizer.ViewNext
-                Return New Ast_Literal(AST_NODE._Code_End)
+                Dim xDC = New Ast_Literal(AST_NODE._Code_End)
+                xDC._Start = x._start
+                xDC._End = x._End
+                xDC._Raw = x.Value
+                Lookahead = Tokenizer.ViewNext
+                Return xDC
             End Function
             Public Function _ConditionalEndNode() As Ast_Literal
                 '   Dim tok As Token = Tokenizer.Eat(GrammarFactory.Grammar.Type_Id._NULL)
@@ -1141,7 +1195,6 @@ Namespace SmallProgLang
                 Lookahead = Tokenizer.ViewNext
                 Return nde
             End Function
-
             Public Function _CommentsListExpression() As AstExpression
                 Dim Body As New List(Of Ast_Literal)
                 Lookahead = Tokenizer.ViewNext
@@ -1149,7 +1202,9 @@ Namespace SmallProgLang
                 Do While tok = Grammar.Type_Id._COMMENTS
                     Body.Add(_CommentsNode)
                 Loop
-                Return New Ast_ExpressionStatement(New Ast_Literal(AST_NODE._comments, Body))
+                Dim x = New Ast_ExpressionStatement(New Ast_Literal(AST_NODE._comments, Body))
+                x._TypeStr = "_CommentsExpression"
+                Return x
             End Function
             ''' <summary>
             ''' Syntax:
@@ -1234,7 +1289,7 @@ Namespace SmallProgLang
                 Return New Ast_ExpressionStatement(etok)
             End Function
             ''' <summary>
-            ''' Gets Expression Statement
+            ''' Gets Expression Statement All functions etc are some form of Expression
             ''' Syntax
             ''' -Expression ";"
             ''' 
@@ -1250,13 +1305,13 @@ Namespace SmallProgLang
             '''  -_PrimaryExpression(literal)
             '''  -_MultiplicativeExpression
             '''  -_AddativeExpression
-            ''' 
+            '''  -_RelationalExpression
             ''' 
             ''' </summary>
             ''' <returns></returns>
             Public Function _Expression() As AstExpression
 
-                Return _BinaryExpression()
+                Return _LeftHandExpression()
 
 
             End Function
@@ -1306,7 +1361,7 @@ Namespace SmallProgLang
                             Lookahead = Tokenizer.ViewNext
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Case GrammarFactory.Grammar.Type_Id._VARIABLE
-                            Body.Add(_IdentifierLiteralNode())
+                            Body.Add(_VariableInitializer(_IdentifierLiteralNode))
                             Lookahead = Tokenizer.ViewNext
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Case GrammarFactory.Grammar.Type_Id._LIST_END
@@ -1419,22 +1474,32 @@ Namespace SmallProgLang
             ''' <returns></returns>
             Public Function _VariableExpression() As AstExpression
                 Dim toktype As GrammarFactory.Grammar.Type_Id
+                Dim _left As Ast_Identifier = Nothing
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
-                Dim Tok As Ast_Identifier = Nothing
+
+
+
+                If toktype = GrammarFactory.Grammar.Type_Id._WHITESPACE Then
+                    Do Until toktype <> GrammarFactory.Grammar.Type_Id._WHITESPACE
+                        _WhitespaceNode()
+                        Lookahead = Tokenizer.ViewNext
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+                    Loop
+                End If
+
+
+                'Check Function Comand
+
                 'Get Identifier (All Variable statements start with a Left)
-                Dim _left As Ast_Identifier = _IdentifierLiteralNode()
-                Lookahead = Tokenizer.ViewNext
-                toktype = Tokenizer.IdentifiyToken(Lookahead)
+                _left = _IdentifierLiteralNode()
+                        Lookahead = Tokenizer.ViewNext
+                        toktype = Tokenizer.IdentifiyToken(Lookahead)
+
 
                 'if the next operation is here then do it
                 Select Case toktype
-                    'DETECT DIM fIRST
-                    Case GrammarFactory.Grammar.Type_Id._VARIABLE_DECLARE
-                        'GET DIM fIRST(DISPOSE OF)
-                        Tokenizer.GetIdentifiedToken(Lookahead)
-                        Lookahead = Tokenizer.ViewNext
-                        toktype = Tokenizer.IdentifiyToken(Lookahead)
-                        Return _VariableDeclaration(_left)
+
+
                     Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
                         Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
                         nde._TypeStr = "_AssignmentExpression"
@@ -1444,8 +1509,6 @@ Namespace SmallProgLang
                         Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
                         nde._TypeStr = "_AssignmentExpression"
                         Return nde
-
-
                     Case Else
                         'Return normal Variable expression simple(HERE)
                         Return New Ast_VariableExpressionStatement(_left)
@@ -1470,54 +1533,40 @@ Namespace SmallProgLang
             '''  Variable declaration, no init:OR INIT
             '''  DIM A 
             '''  DIM A AS STRING / INTEGER / BOOLEAN / LIST
+            '''  let a as string
+            '''  
             ''' </summary>
             ''' <param name="_left">IDENTIFIER</param>
             ''' <returns></returns>
             Public Function _VariableDeclaration(ByRef _left As Ast_Identifier) As Ast_VariableDeclarationExpression
+
                 Lookahead = Tokenizer.ViewNext
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
 
-                'As (CHECK)
-                Dim _Operator = Tokenizer.GetIdentifiedToken(Lookahead)
-                Lookahead = Tokenizer.ViewNext
-                toktype = Tokenizer.IdentifiyToken(Lookahead)
-                'NEED GRAMMAR DESCRIPTORS ...ETC (rougH setup right now will test later)
-                Dim ObjType As String = Tokenizer.IdentifiyToken(Lookahead)
+
 
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
-                Select Case Lookahead
-                    Case GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        _WhitespaceNode()
-                    Case "STRING"
-                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
-                        Tokenizer.GetIdentifiedToken(Lookahead)
-                        Lookahead = Tokenizer.ViewNext
-                        Return X
-                    Case "BOOLEAN"
-                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
-                        Tokenizer.GetIdentifiedToken(Lookahead)
-                        Lookahead = Tokenizer.ViewNext
+                Select Case toktype
 
-                        Return X
-                    Case "LIST"
-                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
-                        Tokenizer.GetIdentifiedToken(Lookahead)
-                        Lookahead = Tokenizer.ViewNext
-                        Return X
-                    Case "INTEGER"
 
-                        Dim X = New Ast_VariableDeclarationExpression(_left, ObjType)
-                        Tokenizer.GetIdentifiedToken(Lookahead)
-                        Lookahead = Tokenizer.ViewNext
-                        Return X
                     Case Else
                         Dim X = New Ast_VariableDeclarationExpression(_left, "NULL")
                         Tokenizer.GetIdentifiedToken(Lookahead)
                         Lookahead = Tokenizer.ViewNext
                         Return X
                 End Select
-                Return New Ast_VariableDeclarationExpression(_left, ObjType)
+                Dim xy = New Ast_VariableDeclarationExpression(_left, "NULL")
+                xy._End = _left._End
+
+                Return xy
             End Function
+            ''' <summary>
+            ''' _Simple Assign (variable)
+            ''' _Complex Assign (variable)
+            ''' 
+            ''' </summary>
+            ''' <param name="_left"></param>
+            ''' <returns></returns>
             Public Function _AssignmentExpression(ByRef _left As Ast_Identifier) As Ast_UnaryExpression
                 Lookahead = Tokenizer.ViewNext
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
@@ -1545,6 +1594,8 @@ Namespace SmallProgLang
             Public Function _ParenthesizedExpression() As Ast_ParenthesizedExpresion
                 Dim toktype As GrammarFactory.Grammar.Type_Id
                 Dim Body As New List(Of AstExpression)
+
+
                 _ConditionalBeginNode()
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
                 'Detect Empty List
@@ -1560,6 +1611,7 @@ Namespace SmallProgLang
                     Loop
                     _ConditionalEndNode()
                 End If
+
                 Return New Ast_ParenthesizedExpresion(Body)
             End Function
 #Region "Binary Operations/Expressions"
@@ -1583,9 +1635,8 @@ Namespace SmallProgLang
             End Function
             ''' <summary>
             ''' Syntax: 
-            ''' Literal Operator Literal
             ''' 
-            ''' _BinaryExpression RelationalOperator _BinaryExpression .. 
+            ''' _RelationalExpression
             ''' </summary>
             ''' <returns></returns>
             Public Function _RelationalExpression()
@@ -1600,8 +1651,8 @@ Namespace SmallProgLang
             ''' -Multiplicative Expression
             ''' -Addative Expression
             ''' -ConditionalExpression(OperationalExpression)
-            ''' -Assignment Expression
-            ''' 
+            ''' _LeftHandExpression
+            ''' __BinaryExpression
             ''' </summary>
             ''' <param name="NType"></param>
             ''' <param name="AstType"></param>
@@ -1624,7 +1675,7 @@ Namespace SmallProgLang
 
                 End If
 
-                _left = _PrimaryExpression()
+                _left = _LeftHandExpression()
                 Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
                 Select Case toktype
@@ -1697,7 +1748,7 @@ Namespace SmallProgLang
 
                 End If
 
-                _left = _PrimaryExpression()
+                _left = _LeftHandExpression()
                 Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
 

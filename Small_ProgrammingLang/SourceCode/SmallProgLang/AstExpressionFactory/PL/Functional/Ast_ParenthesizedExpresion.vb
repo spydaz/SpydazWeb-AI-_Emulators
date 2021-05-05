@@ -2,15 +2,18 @@
 
     Namespace Ast_ExpressionFactory
         ''' <summary>
-        ''' Used for Operational Expression
+        ''' syntax:
+        ''' -_ParenthesizedExpresion
+        ''' 
+        ''' 
         ''' </summary>
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_ParenthesizedExpresion
             Inherits AstExpression
             Public Body As List(Of AstExpression)
             Public Sub New(ByRef iBody As List(Of AstExpression))
-                MyBase.New(AST_NODE._OperationalExpression)
-                Me._TypeStr = "_OperationalExpression"
+                MyBase.New(AST_NODE._ParenthesizedExpresion)
+                Me._TypeStr = "_ParenthesizedExpresion"
                 Body = iBody
                 Me._Start = iBody(0)._Start
                 For Each item In iBody

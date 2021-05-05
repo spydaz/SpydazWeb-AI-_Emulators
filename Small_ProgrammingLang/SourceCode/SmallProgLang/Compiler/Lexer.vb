@@ -164,7 +164,8 @@ Namespace SmallProgLang
 
             End Function
             ''' <summary>
-            ''' Identifys token
+            ''' Identifys token but due to some tokens maybe cross identifying 
+            ''' CheckIdentifiedToken will return the full token without moving the cursor
             ''' </summary>
             ''' <param name="CurrentTok"></param>
             ''' <returns></returns>
@@ -212,6 +213,32 @@ Namespace SmallProgLang
                 btok._start = Cursor
                 btok._End = Cursor + CurrentScript.Length
                 Cursor = EoFCursor
+                Return btok
+
+            End Function
+            Public Function CheckIdentifiedToken(ByRef CurrentTok As String) As Token
+
+                For Each item In CurrentGrammar
+                    Dim matches = RegExSearch(CurrentTok, item.Exp)
+                    If matches IsNot Nothing And matches.Count > 0 Then
+                        Dim tok As New Token
+                        tok.ID = item.ID
+                        tok.Value = matches(0)
+                        tok._start = Cursor
+                        tok._End = Cursor + tok.Value.Length
+                        ' Cursor = tok._End
+                        Return tok
+                    Else
+                        'Check next
+                    End If
+                Next
+                'Match not found bad token
+                Dim btok As New Token
+                btok.ID = Type_Id._BAD_TOKEN
+                btok.Value = CurrentTok
+                btok._start = Cursor
+                btok._End = Cursor + CurrentScript.Length
+
                 Return btok
 
             End Function
