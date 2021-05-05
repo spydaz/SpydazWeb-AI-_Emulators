@@ -777,7 +777,8 @@ Namespace SmallProgLang
                 Select Case tok
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
                         _WhitespaceNode()
-
+                    Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
+                        Return _AssignmentExpression(_IdentifierLiteralNode)
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
                         Return New Ast_ExpressionStatement(__EndStatementNode)
                     Case Grammar.Type_Id._VARIABLE
@@ -876,7 +877,7 @@ Namespace SmallProgLang
                 _WhitespaceNode()
                 'View next (for next function)
                 Lookahead = Tokenizer.ViewNext
-                Return _VariableDeclaration(_VariableInitializer(_IdentifierLiteralNode))
+                Return _VariableInitializer(_IdentifierLiteralNode)
             End Function
             ''' <summary>
             ''' -Literals
@@ -899,6 +900,7 @@ Namespace SmallProgLang
                         Return _NumericLiteralNode()
                     Case GrammarFactory.Grammar.Type_Id._STRING
                         Return _StringLiteralNode()
+
                     'Case GrammarFactory.Grammar.Type_Id._VARIABLE
                     '    Dim ntok = Tokenizer.GetIdentifiedToken(Lookahead)
                     '    Dim xc = New Ast_Literal(AST_NODE._variable, ntok.Value)
@@ -1493,11 +1495,6 @@ Namespace SmallProgLang
                 Dim _left As Ast_Identifier = Nothing
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
 
-
-
-
-
-
                 'Check Function Comand
 
                 'Get Identifier (All Variable statements start with a Left)
@@ -1517,17 +1514,17 @@ Namespace SmallProgLang
 
 
                     Case GrammarFactory.Grammar.Type_Id._COMPLEX_ASSIGN
-                        Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
+                        Dim nde = _AssignmentExpression(_left)
                         nde._TypeStr = "_AssignmentExpression"
                         Return nde
                     Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
 
-                        Dim nde = New Ast_VariableExpressionStatement(_AssignmentExpression(_left))
+                        Dim nde = _AssignmentExpression(_left)
                         nde._TypeStr = "_AssignmentExpression"
                         Return nde
                     Case Else
 
-                        Return New Ast_VariableExpressionStatement(_left)
+                        Return _BinaryExpression(New Ast_VariableExpressionStatement(_left))
                 End Select
                 'Return Error(HERE - Unimplemented Function)
                 Return New Ast_VariableExpressionStatement(_left)
@@ -1541,8 +1538,8 @@ Namespace SmallProgLang
                 ''Temp
                 '  Dim _Right As AstExpression = _BinaryExpression()
                 Dim _Right As Ast_Literal = New Ast_Literal(AST_NODE._assignExpression, _BinaryExpression)
-                Dim unry As New Ast_UnaryExpression(_left._Name, _Right)
-                unry._TypeStr = "_VariableInitializer"
+                Dim unry As New Ast_UnaryExpression(_left, _Right)
+                unry._TypeStr = "_assignExpression"
                 Lookahead = Tokenizer.ViewNext
                 Return unry
             End Function
@@ -1608,7 +1605,7 @@ Namespace SmallProgLang
                         Return _VariableInitializer(_left)
 
                 End Select
-                Return _left
+                Return _VariableInitializer(_left)
             End Function
 
 
