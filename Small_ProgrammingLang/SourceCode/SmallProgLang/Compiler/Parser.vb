@@ -853,11 +853,9 @@ Namespace SmallProgLang
 
                 'Technically badtoken try capture
                 Dim etok = __UnknownStatementNode()
-                ParserErrors.Add("Unknown Statement/Expression Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
+                ParserErrors.Add("Unknown Statement/_LeftHandExpression Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
                 Return New Ast_ExpressionStatement(etok)
             End Function
-
-
             Public Function _DimFunction() As AstExpression
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
                 Lookahead = Tokenizer.ViewNext
