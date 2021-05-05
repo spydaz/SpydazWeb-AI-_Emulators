@@ -4,8 +4,9 @@
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_UnaryExpression
             Inherits Ast_Identifier
-            Public _Value As AstExpression
-            Public Sub New(ByRef nName As String, ByRef nValue As AstExpression)
+            Public _Value As Ast_Literal
+            ' Public _Value As AstExpression
+            Public Sub New(ByRef nName As String, ByRef nValue As Ast_Literal)
                 MyBase.New(nName)
                 Me._Value = nValue
             End Sub

@@ -1522,7 +1522,8 @@ Namespace SmallProgLang
                 Dim _Operator As String = _GetAssignmentOperator()
                 Lookahead = Tokenizer.ViewNext
                 ''Temp
-                Dim _Right As AstExpression = _BinaryExpression()
+                '  Dim _Right As AstExpression = _BinaryExpression()
+                Dim _Right As Ast_Literal = New Ast_Literal(AST_NODE._assignExpression, _BinaryExpression)
                 Dim unry As New Ast_UnaryExpression(_left._Name, _Right)
                 unry._TypeStr = "_VariableInitializer"
                 Lookahead = Tokenizer.ViewNext

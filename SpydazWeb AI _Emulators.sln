@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicTests", "BasicTests", 
 		Scripts\Ast_tests\member-test.js = Scripts\Ast_tests\member-test.js
 		Scripts\Ast_tests\unary-test.js = Scripts\Ast_tests\unary-test.js
 		Scripts\Ast_tests\variable-test.js = Scripts\Ast_tests\variable-test.js
+		VariableTest1.js = VariableTest1.js
 		Scripts\Ast_tests\while-test.js = Scripts\Ast_tests\while-test.js
 	EndProjectSection
 EndProject
