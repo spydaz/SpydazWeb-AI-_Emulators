@@ -28,9 +28,9 @@ The program has been designed in stages ;
 
 
 ``
-# Small Programming Language
-This is the Current Syntax (Valid) - 
-- The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
+### Small Programming Language
+This is the Current Syntax (Valid)  
+The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
 SemiColons are used to denote the end of a Expression 
 Although they are not always needed by the compiler 
 
@@ -57,12 +57,12 @@ Basic Expressions - Constantly updated
 	<Identifier> + Value * Value + <Identifier> - (Value + Value);
 	<Identifier> = Value + <Identifier> * Value + Value - (<Identifier> + Value);
 	<Identifier> = ( <Identifier> = value );
-	'''Used For Functions/Lambdas
+	
+# Used For Functions/Lambdas
 	<Identifier>( <Identifier> = value );
 	<Identifier> = ( <Identifier> = value );
 
-
-	Combination Expressions : 
+# Combination Expressions : 
 	(i have not gone inot depth explaining here yet as there are too many to document due to the nesting)
 
 	Expression + - / * Expression;
