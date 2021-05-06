@@ -779,9 +779,9 @@ Namespace SmallProgLang
                         _WhitespaceNode()
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
                         '  __EmptyStatementNode()
-                        Dim vd = New Ast_ExpressionStatement(__EmptyStatementNode)
-
-                        Return vd
+                        Dim temp = New Ast_ExpressionStatement(__EmptyStatementNode)
+                        temp._TypeStr = "_PrimaryExpression"
+                        Return temp
 
                     Case Else
                         'Literal - Node!
@@ -791,13 +791,15 @@ Namespace SmallProgLang
                             Expr = New Ast_ExpressionStatement(nde)
                             'Advances to the next cursor
                             Lookahead = Tokenizer.ViewNext
+                            Expr._TypeStr = "_PrimaryExpression"
                             Return Expr
                         Else
                             'Technically badtoken try capture
                             Dim etok = __UnknownStatementNode()
                             Lookahead = "EOF"
                             ParserErrors.Add("Unknown Statement/Expression/Function Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
-                            Return New Ast_ExpressionStatement(etok)
+                            Dim Lit = New Ast_ExpressionStatement(etok)
+                            Lit._TypeStr = "_PrimaryExpression"
                         End If
                         Exit Select
 
@@ -805,7 +807,7 @@ Namespace SmallProgLang
                 'Technically badtoken try capture
                 Dim ertok = __UnknownStatementNode()
                 Lookahead = "EOF"
-                ParserErrors.Add("Unknown Statement/Expression Uncountered" & vbNewLine & ertok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
+                ParserErrors.Add("Unknown Statement/LiteralExpression Uncountered" & vbNewLine & ertok.ToJson.FormatJsonOutput.Replace("  ", "") & vbNewLine)
                 Return New Ast_ExpressionStatement(ertok)
             End Function
             ''' <summary>
@@ -853,7 +855,6 @@ Namespace SmallProgLang
                 ParserErrors.Add("Unknown Statement/_LeftHandExpression Uncountered" & vbNewLine & etok.ToJson.FormatJsonOutput & vbNewLine)
                 Return New Ast_ExpressionStatement(etok)
             End Function
-
             ''' <summary>
             ''' -Literals
             ''' Syntax:
@@ -1770,7 +1771,7 @@ Namespace SmallProgLang
                             Lookahead = Tokenizer.ViewNext
                             _Right = _LeftHandExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_SIMPLE_ASSIGN"
+                            _left._TypeStr = "AssignmentExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
@@ -1781,7 +1782,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_AddativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
@@ -1794,7 +1795,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_MultiplicativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
                         Do While ((toktype) = GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR)
@@ -1806,7 +1807,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_ConditionalExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
 
@@ -1854,7 +1855,7 @@ Namespace SmallProgLang
                             Lookahead = Tokenizer.ViewNext
                             _Right = _LeftHandExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_SIMPLE_ASSIGN"
+                            _left._TypeStr = "AssignmentExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
@@ -1865,7 +1866,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_AddativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
@@ -1878,7 +1879,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_MultiplicativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
@@ -1890,7 +1891,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_ConditionalExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
 
@@ -1937,7 +1938,7 @@ Namespace SmallProgLang
                             Lookahead = Tokenizer.ViewNext
                             _Right = _LeftHandExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_COMPLEX_ASSIGN"
+                            _left._TypeStr = "AssignmentExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._SIMPLE_ASSIGN
@@ -1947,7 +1948,7 @@ Namespace SmallProgLang
                             Lookahead = Tokenizer.ViewNext
                             _Right = _LeftHandExpression()
                             _left = New AstBinaryExpression(AST_NODE._assignExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_SIMPLE_ASSIGN"
+                            _left._TypeStr = "AssignmentExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._ADDITIVE_OPERATOR
@@ -1958,7 +1959,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._AddativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_AddativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._MULTIPLICATIVE_OPERATOR
@@ -1971,7 +1972,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._MultiplicativeExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_MultiplicativeExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
                     Case GrammarFactory.Grammar.Type_Id._RELATIONAL_OPERATOR
@@ -1983,7 +1984,7 @@ Namespace SmallProgLang
                             _Right = _LeftHandExpression()
 
                             _left = New AstBinaryExpression(AST_NODE._ConditionalExpression, _left, _Operator, _Right)
-                            _left._TypeStr = "_ConditionalExpression"
+                            _left._TypeStr = "BinaryExpression"
                             toktype = Tokenizer.IdentifiyToken(Lookahead)
                         Loop
 
@@ -2087,14 +2088,14 @@ Namespace SmallProgLang
                     Lookahead = Tokenizer.ViewNext
                     'GetVar
                     nde = _VariableDeclaration(_left)
-                    nde._TypeStr = "_DeclareVariable"
+                    nde._TypeStr = "_VariableDeclaration"
                     nde._Type = AST_NODE._DeclareVariable
                 Else
                     'Complex
                     'View next (for next function)
                     Lookahead = Tokenizer.ViewNext
                     nde = _VariableInitializer(_IdentifierLiteralNode)
-                    nde._TypeStr = "_DeclareVariable"
+                    nde._TypeStr = "_VariableDeclaration"
                     nde._Type = AST_NODE._DeclareVariable
                 End If
 

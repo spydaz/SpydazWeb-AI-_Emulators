@@ -21,7 +21,7 @@
             Public Sub New(ByRef nValue As Ast_Literal)
                 MyBase.New(AST_NODE._ExpressionStatement)
                 Me._Expression = nValue
-                Me._TypeStr = "_ExpressionStatement"
+                Me._TypeStr = "_PrimaryExpression"
                 Me._Start = _Expression._Start
                 Me._End = _Expression._End
                 Me._Raw = nValue._Raw
