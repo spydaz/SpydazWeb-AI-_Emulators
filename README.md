@@ -112,19 +112,19 @@ Again as they are developed the function syntax will be displayed below; Current
 
 ## DESCRIPTION:
 The program has been designed in stages ;
-
-# The Lexer 
+`
+### The Lexer 
     This is a tokenizer which basically takes each token by using a grammar model to be used by the RegEx Searcher; These token produced give the position and the string that they have defined. 
     A lookAhead Function has been added to preview the token to be consumed next.  A record of tokens collected is also stored enabling for look back as well as Stepping backwards if required.
-    
-# The Parser
+ `   
+### The Parser
     This Parser consumes the tokens produced by the tokenizer and attempts to construct Abstract Syntax Tokens Which enable for the Interpreter to Evaluate or Transpile the code to another Programming language such as Assembly language to be run on a virtual CPU. 
-    
-# The Interpreter
+ ` `  
+### The Interpreter
     This component Takes the Abstract Syntax tokens produced and evaluates(Executes) the Code. Here the decision is made to execute on the virtual hardware or evaluate in memory to produce a result.
 
 
-``
+`
 ### Small Programming Language
 This is the Current Syntax (Valid)  
 The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
@@ -154,11 +154,11 @@ Although they are not always needed by the compiler
 	<Identifier> + Value * Value + <Identifier> - (Value + Value);
 	<Identifier> = Value + <Identifier> * Value + Value - (<Identifier> + Value);
 	<Identifier> = ( <Identifier> = value );
-	
+'	
 # Used For Functions/Lambdas
 	<Identifier>( <Identifier> = value );
 	<Identifier> = ( <Identifier> = value );
-
+'
 # Combination Expressions : 
 	(i have not gone inot depth explaining here yet as there are too many to document due to the nesting)
 
