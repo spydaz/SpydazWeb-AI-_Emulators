@@ -1,0 +1,3544 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="Small_ProgrammingLang" Title="Small_ProgrammingLang Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AST_NODE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000080.html" LinkGroup="Small_ProgrammingLang">AST_NODE Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022B.html" LinkGroup="Small_ProgrammingLang">AST_TREE Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.AddVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000079.html" LinkGroup="Small_ProgrammingLang">AddVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000177.html" LinkGroup="Small_ProgrammingLang">AddativeOperation Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000178_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.AssignValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021D.html" LinkGroup="Small_ProgrammingLang">AssignValue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000EF.html" LinkGroup="Small_ProgrammingLang">AstBinaryExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F3_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007E.html" LinkGroup="Small_ProgrammingLang">AstExpression Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007F.html" LinkGroup="Small_ProgrammingLang">AstExpression Constructor {SDK.SmallProgLang.Ast_ExpressionFactory.AstExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000CF.html" LinkGroup="Small_ProgrammingLang">AstNode Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D5.html" LinkGroup="Small_ProgrammingLang">AstNode Constructor {SDK.SmallProgLang.Ast_ExpressionFactory.AstNode}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D7.html" LinkGroup="Small_ProgrammingLang">AstProgram Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D9_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F5.html" LinkGroup="Small_ProgrammingLang">Ast_AssignmentExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F9_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DF_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E0_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DB.html" LinkGroup="Small_ProgrammingLang">Ast_BlockExpression Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E2.html" LinkGroup="Small_ProgrammingLang">Ast_ExpressionStatement Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E4_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E6.html" LinkGroup="Small_ProgrammingLang">Ast_Identifier Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E8_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000EC_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000ED_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000EA.html" LinkGroup="Small_ProgrammingLang">Ast_Literal Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ParenthesizedExpresion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FB.html" LinkGroup="Small_ProgrammingLang">Ast_ParenthesizedExpresion Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ParenthesizedExpresion.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FD_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SAL_Literal.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010A_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SAL_Literal.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010B_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SAL_Literal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000109.html" LinkGroup="Small_ProgrammingLang">Ast_SAL_Literal Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SalExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010C.html" LinkGroup="Small_ProgrammingLang">Ast_SalExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SalExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010E_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_UnaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FE.html" LinkGroup="Small_ProgrammingLang">Ast_UnaryExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_UnaryExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000101_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableDeclarationExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000102.html" LinkGroup="Small_ProgrammingLang">Ast_VariableDeclarationExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableDeclarationExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000104_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000105.html" LinkGroup="Small_ProgrammingLang">Ast_VariableExpressionStatement Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000107_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.BinaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000160.html" LinkGroup="Small_ProgrammingLang">BinaryExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.BinaryExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000164_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Body.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000167_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Body.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000168_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Body" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000165.html" LinkGroup="Small_ProgrammingLang">Body Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram.Body" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D8.html" LinkGroup="Small_ProgrammingLang">Body Field {SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression.Body" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DC.html" LinkGroup="Small_ProgrammingLang">Body Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ParenthesizedExpresion.Body" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FC.html" LinkGroup="Small_ProgrammingLang">Body Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ParenthesizedExpresion}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.FormDisplayConsole.CLS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000008.html" LinkGroup="Small_ProgrammingLang">CLS Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.CheckFunction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015C.html" LinkGroup="Small_ProgrammingLang">CheckFunction Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.CheckIdentifiedToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011B.html" LinkGroup="Small_ProgrammingLang">CheckIdentifiedToken Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.CheckVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007A.html" LinkGroup="Small_ProgrammingLang">CheckVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE.ClearText" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022C.html" LinkGroup="Small_ProgrammingLang">ClearText Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017B.html" LinkGroup="Small_ProgrammingLang">ConditionalOperation Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017C_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_GPU.ConsolePrint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000006E.html" LinkGroup="Small_ProgrammingLang">ConsolePrint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_GPU.Console_CLS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000006F.html" LinkGroup="Small_ProgrammingLang">Console_CLS Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016F_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016E_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000169.html" LinkGroup="Small_ProgrammingLang">ConstantExpression Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.CurrentGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011C.html" LinkGroup="Small_ProgrammingLang">CurrentGrammar Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.CurrentVars" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000075.html" LinkGroup="Small_ProgrammingLang">CurrentVars Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.DECODE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000033.html" LinkGroup="Small_ProgrammingLang">DECODE Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.VM_MachineUI.DISPLAY_TEXT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000D.html" LinkGroup="Small_ProgrammingLang">DISPLAY_TEXT Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Define" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021C.html" LinkGroup="Small_ProgrammingLang">Define Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL.DisplayError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000235.html" LinkGroup="Small_ProgrammingLang">DisplayError Method {SDK.Multi_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Repl.PL_ReplErrorSystem.DisplayError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023D.html" LinkGroup="Small_ProgrammingLang">DisplayError Method {SDK.Repl.PL_ReplErrorSystem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Repl.SAL_ReplErrorSystem.DisplayError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023F.html" LinkGroup="Small_ProgrammingLang">DisplayError Method {SDK.Repl.SAL_ReplErrorSystem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Sal_Repl.DisplayError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000242.html" LinkGroup="Small_ProgrammingLang">DisplayError Method {SDK.Sal_Repl}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL.DisplayOutput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000234.html" LinkGroup="Small_ProgrammingLang">DisplayOutput Method {SDK.Multi_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Sal_Repl.DisplayOutput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000241.html" LinkGroup="Small_ProgrammingLang">DisplayOutput Method {SDK.Sal_Repl}</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000230_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.EMU_MachineUI.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000005_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.FormDisplayConsole.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000A_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000236_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.PL_REPL.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023A_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Sal_Repl.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000244_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.VM_MachineUI.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000E_overloads--.html" LinkGroup="Small_ProgrammingLang">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.EMU_MachineUI" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000002.html" LinkGroup="Small_ProgrammingLang">EMU_MachineUI Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.EXECUTE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000032.html" LinkGroup="Small_ProgrammingLang">EXECUTE Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000194.html" LinkGroup="Small_ProgrammingLang">EXT Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.Eat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000118.html" LinkGroup="Small_ProgrammingLang">Eat Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.EndOfFile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000114.html" LinkGroup="Small_ProgrammingLang">EndOfFile Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021B_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021A_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000214.html" LinkGroup="Small_ProgrammingLang">EnvironmentalMemory Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.Eval" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000221.html" LinkGroup="Small_ProgrammingLang">Eval Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.EvalBlock" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000222.html" LinkGroup="Small_ProgrammingLang">EvalBlock Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016D.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000172.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.Expression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017A.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017E.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000182.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018C.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.Evaluate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000191.html" LinkGroup="Small_ProgrammingLang">Evaluate Method {SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.VM_MachineUI.ExecuteCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000C.html" LinkGroup="Small_ProgrammingLang">ExecuteCode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.Exp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000205.html" LinkGroup="Small_ProgrammingLang">Exp Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression.Expr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000171.html" LinkGroup="Small_ProgrammingLang">Expr Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000170.html" LinkGroup="Small_ProgrammingLang">Expression Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000175.html" LinkGroup="Small_ProgrammingLang">Expression Constructor {SDK.SmallProgLang.ExpressionEvaluators.Expression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.Ext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000010.html" LinkGroup="Small_ProgrammingLang">Ext Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.Ext.ExtractFirstChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000013.html" LinkGroup="Small_ProgrammingLang">ExtractFirstChar Method {SDK.SAL.Ext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT.ExtractFirstChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000199.html" LinkGroup="Small_ProgrammingLang">ExtractFirstChar Method {SDK.SmallProgLang.EXT}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.Ext.ExtractLastChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000012.html" LinkGroup="Small_ProgrammingLang">ExtractLastChar Method {SDK.SAL.Ext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT.ExtractLastChar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000198.html" LinkGroup="Small_ProgrammingLang">ExtractLastChar Method {SDK.SmallProgLang.EXT}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.FormDisplayConsole" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000006.html" LinkGroup="Small_ProgrammingLang">FormDisplayConsole Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE.FormatJsonOutput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022F.html" LinkGroup="Small_ProgrammingLang">FormatJsonOutput Method {SDK.AST_TREE}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT.FormatJsonOutput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000195.html" LinkGroup="Small_ProgrammingLang">FormatJsonOutput Method {SDK.SmallProgLang.EXT}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.GPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000023.html" LinkGroup="Small_ProgrammingLang">GPU Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.GetCurrentFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000034.html" LinkGroup="Small_ProgrammingLang">GetCurrentFrame Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression.GetExpr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000173.html" LinkGroup="Small_ProgrammingLang">GetExpr Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetExtendedGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020B.html" LinkGroup="Small_ProgrammingLang">GetExtendedGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.GetIdentifiedToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011A.html" LinkGroup="Small_ProgrammingLang">GetIdentifiedToken Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetJsonGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020C.html" LinkGroup="Small_ProgrammingLang">GetJsonGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.GetLastToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000112.html" LinkGroup="Small_ProgrammingLang">GetLastToken Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetLiteralsGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000209.html" LinkGroup="Small_ProgrammingLang">GetLiteralsGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetLogicGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000208.html" LinkGroup="Small_ProgrammingLang">GetLogicGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.GetName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000193.html" LinkGroup="Small_ProgrammingLang">GetName Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.GetNext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000115.html" LinkGroup="Small_ProgrammingLang">GetNext Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetPLGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000206.html" LinkGroup="Small_ProgrammingLang">GetPLGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.GetReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001C.html" LinkGroup="Small_ProgrammingLang">GetReturnAddress Method {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.GetReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003E.html" LinkGroup="Small_ProgrammingLang">GetReturnAddress Method {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetSALGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020A.html" LinkGroup="Small_ProgrammingLang">GetSALGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.GetSlice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000113.html" LinkGroup="Small_ProgrammingLang">GetSlice Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.GetStackData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000035.html" LinkGroup="Small_ProgrammingLang">GetStackData Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.GetSymbolsGrammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000207.html" LinkGroup="Small_ProgrammingLang">GetSymbolsGrammar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.EMU_MachineUI.GetUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000004.html" LinkGroup="Small_ProgrammingLang">GetUrl Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.GetValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016C.html" LinkGroup="Small_ProgrammingLang">GetValue Method {SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation.GetValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000179.html" LinkGroup="Small_ProgrammingLang">GetValue Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.AddativeOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation.GetValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017D.html" LinkGroup="Small_ProgrammingLang">GetValue Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.ConditionalOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation.GetValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000181.html" LinkGroup="Small_ProgrammingLang">GetValue Method {SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.GetValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000192.html" LinkGroup="Small_ProgrammingLang">GetValue Method {SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001D.html" LinkGroup="Small_ProgrammingLang">GetVar Method {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003F.html" LinkGroup="Small_ProgrammingLang">GetVar Method {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007B.html" LinkGroup="Small_ProgrammingLang">GetVar Method {SDK.SAL.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.GetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021E.html" LinkGroup="Small_ProgrammingLang">GetVar Method {SDK.SmallProgLang.Evaluator.EnvironmentalMemory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.Get_Current_Stack_Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000026.html" LinkGroup="Small_ProgrammingLang">Get_Current_Stack_Data Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.Get_Current_Stack_Item" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000028.html" LinkGroup="Small_ProgrammingLang">Get_Current_Stack_Item Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.Get_Instruction_Pointer_Position" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000025.html" LinkGroup="Small_ProgrammingLang">Get_Instruction_Pointer_Position Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.GlobalMemory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000219.html" LinkGroup="Small_ProgrammingLang">GlobalMemory Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.EMU_MachineUI.GoUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000003.html" LinkGroup="Small_ProgrammingLang">GoUrl Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000019B.html" LinkGroup="Small_ProgrammingLang">Grammar Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.ID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000204.html" LinkGroup="Small_ProgrammingLang">ID Field {SDK.SmallProgLang.GrammarFactory.Grammar}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token.ID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020E.html" LinkGroup="Small_ProgrammingLang">ID Field {SDK.SmallProgLang.GrammarFactory.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.Identifier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018E.html" LinkGroup="Small_ProgrammingLang">Identifier Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.IdentifiyToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000119.html" LinkGroup="Small_ProgrammingLang">IdentifiyToken Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.FormDisplayConsole.Input" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000009.html" LinkGroup="Small_ProgrammingLang">Input Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.IsArray" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000227.html" LinkGroup="Small_ProgrammingLang">IsArray Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.IsBoolean" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000226.html" LinkGroup="Small_ProgrammingLang">IsBoolean Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.IsHalted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000030.html" LinkGroup="Small_ProgrammingLang">IsHalted Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.IsNumberInt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000223.html" LinkGroup="Small_ProgrammingLang">IsNumberInt Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.IsString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000224.html" LinkGroup="Small_ProgrammingLang">IsString Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.IsVariableName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000225.html" LinkGroup="Small_ProgrammingLang">IsVariableName Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.IsWait" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000031.html" LinkGroup="Small_ProgrammingLang">IsWait Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.BinaryExpression.Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000162.html" LinkGroup="Small_ProgrammingLang">Left Field</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011D_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011E_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000110.html" LinkGroup="Small_ProgrammingLang">Lexer Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.LoadProgram" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002E_overloads--.html" LinkGroup="Small_ProgrammingLang">LoadProgram Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.LoadProgram" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002D_overloads--.html" LinkGroup="Small_ProgrammingLang">LoadProgram Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.Lookahead" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000126.html" LinkGroup="Small_ProgrammingLang">Lookahead Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000231.html" LinkGroup="Small_ProgrammingLang">Multi_REPL Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000017F.html" LinkGroup="Small_ProgrammingLang">MultiplicativeOperation Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.MultiplicativeOperation.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000180_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Variable.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000216.html" LinkGroup="Small_ProgrammingLang">Name Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Expression.NodeType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000174.html" LinkGroup="Small_ProgrammingLang">NodeType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.PL_REPL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000237.html" LinkGroup="Small_ProgrammingLang">PL_REPL Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Repl.PL_ReplErrorSystem" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023C.html" LinkGroup="Small_ProgrammingLang">PL_ReplErrorSystem Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.PROCESS_NAME" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000029.html" LinkGroup="Small_ProgrammingLang">PROCESS_NAME Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.ParentEnv" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000185.html" LinkGroup="Small_ProgrammingLang">ParentEnv Field {SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.ParentEnv" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018F.html" LinkGroup="Small_ProgrammingLang">ParentEnv Field {SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.ParseFactory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012A.html" LinkGroup="Small_ProgrammingLang">ParseFactory Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE.ParseTokens" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022E.html" LinkGroup="Small_ProgrammingLang">ParseTokens Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000123.html" LinkGroup="Small_ProgrammingLang">Parser Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.ParserErrors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000124.html" LinkGroup="Small_ProgrammingLang">ParserErrors Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.PastTokens" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000111.html" LinkGroup="Small_ProgrammingLang">PastTokens Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.Peek" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000036.html" LinkGroup="Small_ProgrammingLang">Peek Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.FormDisplayConsole.Print" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000007.html" LinkGroup="Small_ProgrammingLang">Print Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018B_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000188_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000189_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000187_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018A_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000186_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000183.html" LinkGroup="Small_ProgrammingLang">PrintFunction Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.AST_TREE.ProgText" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022D.html" LinkGroup="Small_ProgrammingLang">ProgText Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_SalExpression.Program" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010D.html" LinkGroup="Small_ProgrammingLang">Program Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.Program" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000127.html" LinkGroup="Small_ProgrammingLang">Program Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.ProgramLangs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000011F.html" LinkGroup="Small_ProgrammingLang">ProgramLangs Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.RUN" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002F.html" LinkGroup="Small_ProgrammingLang">RUN Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.VM_ERR.RaiseErr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000044.html" LinkGroup="Small_ProgrammingLang">RaiseErr Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.RemoveVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000041.html" LinkGroup="Small_ProgrammingLang">RemoveVar Method {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.RemoveVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000078.html" LinkGroup="Small_ProgrammingLang">RemoveVar Method {SDK.SAL.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.ReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000019.html" LinkGroup="Small_ProgrammingLang">ReturnAddress Field {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.ReturnAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003B.html" LinkGroup="Small_ProgrammingLang">ReturnAddress Field {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.BinaryExpression.Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000163.html" LinkGroup="Small_ProgrammingLang">Right Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.X86API.RunMachineCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000020.html" LinkGroup="Small_ProgrammingLang">RunMachineCode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.RunningState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000024.html" LinkGroup="Small_ProgrammingLang">RunningState Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Repl.SAL_ReplErrorSystem" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023E.html" LinkGroup="Small_ProgrammingLang">SAL_ReplErrorSystem Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000246.html" LinkGroup="Small_ProgrammingLang">SDK Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Repl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000023B.html" LinkGroup="Small_ProgrammingLang">SDK.Repl Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000F.html" LinkGroup="Small_ProgrammingLang">SDK.SAL Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007C.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000007D.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.Ast_ExpressionFactory Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000010F.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.Compiler Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000213.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.Evaluator Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015F.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.ExpressionEvaluators Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000176.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.ExpressionEvaluators.Operations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000019A.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.GrammarFactory Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Transpiler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000228.html" LinkGroup="Small_ProgrammingLang">SDK.SmallProgLang.Transpiler Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000021F.html" LinkGroup="Small_ProgrammingLang">S_Expression_Evaluator Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.S_Expression_Evaluator.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000220.html" LinkGroup="Small_ProgrammingLang">S_Expression_Evaluator Constructor {SDK.SmallProgLang.Evaluator.S_Expression_Evaluator}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.SalCode_Helpers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000014.html" LinkGroup="Small_ProgrammingLang">SalCode_Helpers Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Sal_Repl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000240.html" LinkGroup="Small_ProgrammingLang">Sal_Repl Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Transpiler.Sal_Transpiler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000229.html" LinkGroup="Small_ProgrammingLang">Sal_Transpiler Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.SetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001E.html" LinkGroup="Small_ProgrammingLang">SetVar Method {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.SetVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000040.html" LinkGroup="Small_ProgrammingLang">SetVar Method {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Small_ProgrammingLang Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000245.html" LinkGroup="Small_ProgrammingLang">Small_ProgrammingLang Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.Ext.SplitAtNewLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000011.html" LinkGroup="Small_ProgrammingLang">SplitAtNewLine Method {SDK.SAL.Ext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT.SplitAtNewLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000197.html" LinkGroup="Small_ProgrammingLang">SplitAtNewLine Method {SDK.SmallProgLang.EXT}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000037.html" LinkGroup="Small_ProgrammingLang">StackMemoryFrame Class {SDK.SAL.ZX81_CPU}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000015.html" LinkGroup="Small_ProgrammingLang">StackMemoryFrame Class {SDK.SAL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001B.html" LinkGroup="Small_ProgrammingLang">StackMemoryFrame Constructor {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003D.html" LinkGroup="Small_ProgrammingLang">StackMemoryFrame Constructor {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Body.Statements" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000166.html" LinkGroup="Small_ProgrammingLang">Statements Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.StepBack" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000117.html" LinkGroup="Small_ProgrammingLang">StepBack Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression.ToArrayList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FA.html" LinkGroup="Small_ProgrammingLang">ToArrayList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F4.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D6.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.AstNode}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DA.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.AstProgram}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E1.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E5.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E9.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000EE.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement.ToArraylist" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000108.html" LinkGroup="Small_ProgrammingLang">ToArraylist Method {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.EXT.ToJson" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000196.html" LinkGroup="Small_ProgrammingLang">ToJson Method {SDK.SmallProgLang.EXT}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token.ToJson" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000212.html" LinkGroup="Small_ProgrammingLang">ToJson Method {SDK.SmallProgLang.GrammarFactory.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.Operations.PrintFunction.ToPrint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000184.html" LinkGroup="Small_ProgrammingLang">ToPrint Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020D.html" LinkGroup="Small_ProgrammingLang">Token Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Transpiler.Sal_Transpiler.Transpile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000022A.html" LinkGroup="Small_ProgrammingLang">Transpile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.X86API.Tree" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000021.html" LinkGroup="Small_ProgrammingLang">Tree Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Variable.Type" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000218.html" LinkGroup="Small_ProgrammingLang">Type Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Grammar.Type_Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000019C.html" LinkGroup="Small_ProgrammingLang">Type_Id Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000018D.html" LinkGroup="Small_ProgrammingLang">UnaryExpression Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.UnaryExpression.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000190_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.UpdateVar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000077.html" LinkGroup="Small_ProgrammingLang">UpdateVar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL.VM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000233.html" LinkGroup="Small_ProgrammingLang">VM Field {SDK.Multi_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.PL_REPL.VM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000239.html" LinkGroup="Small_ProgrammingLang">VM Field {SDK.PL_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Sal_Repl.VM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000243.html" LinkGroup="Small_ProgrammingLang">VM Field {SDK.Sal_Repl}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.VM_ERR" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000042.html" LinkGroup="Small_ProgrammingLang">VM_ERR Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.VM_ERR.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000043.html" LinkGroup="Small_ProgrammingLang">VM_ERR Constructor {SDK.SAL.ZX81_CPU.VM_ERR}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.VM_MachineUI" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000000B.html" LinkGroup="Small_ProgrammingLang">VM_MachineUI Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.VM_x86_Cmds" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000045.html" LinkGroup="Small_ProgrammingLang">VM_x86_Cmds Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.Var.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000017.html" LinkGroup="Small_ProgrammingLang">Value Field {SDK.SAL.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.Var.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000039.html" LinkGroup="Small_ProgrammingLang">Value Field {SDK.SAL.ZX81_CPU.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Variable.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000217.html" LinkGroup="Small_ProgrammingLang">Value Field {SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Variable}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000020F.html" LinkGroup="Small_ProgrammingLang">Value Field {SDK.SmallProgLang.GrammarFactory.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.Var" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000016.html" LinkGroup="Small_ProgrammingLang">Var Structure {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.Var" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000038.html" LinkGroup="Small_ProgrammingLang">Var Structure {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.Var.VarNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000018.html" LinkGroup="Small_ProgrammingLang">VarNumber Field {SDK.SAL.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.Var.VarNumber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003A.html" LinkGroup="Small_ProgrammingLang">VarNumber Field {SDK.SAL.ZX81_CPU.StackMemoryFrame.Var}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.VarType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016B.html" LinkGroup="Small_ProgrammingLang">VarType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.Variable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000071.html" LinkGroup="Small_ProgrammingLang">Variable Structure {SDK.SAL.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Evaluator.EnvironmentalMemory.Variable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000215.html" LinkGroup="Small_ProgrammingLang">Variable Structure {SDK.SmallProgLang.Evaluator.EnvironmentalMemory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.StackMemoryFrame.Variables" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001A.html" LinkGroup="Small_ProgrammingLang">Variables Field {SDK.SAL.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.StackMemoryFrame.Variables" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000003C.html" LinkGroup="Small_ProgrammingLang">Variables Field {SDK.SAL.ZX81_CPU.StackMemoryFrame}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Lexer.ViewNext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000116.html" LinkGroup="Small_ProgrammingLang">ViewNext Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.View_C_P_U" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000027.html" LinkGroup="Small_ProgrammingLang">View_C_P_U Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.View_R_A_M" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002A.html" LinkGroup="Small_ProgrammingLang">View_R_A_M Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.X86API" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000001F.html" LinkGroup="Small_ProgrammingLang">X86API Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002B_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000002C_overloads--.html" LinkGroup="Small_ProgrammingLang">New Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_CPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000022.html" LinkGroup="Small_ProgrammingLang">ZX81_CPU Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_GPU" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000006C.html" LinkGroup="Small_ProgrammingLang">ZX81_GPU Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_GPU.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000006D.html" LinkGroup="Small_ProgrammingLang">ZX81_GPU Constructor {SDK.SAL.ZX81_GPU}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000070.html" LinkGroup="Small_ProgrammingLang">ZX81_RAM Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.New" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000076.html" LinkGroup="Small_ProgrammingLang">ZX81_RAM Constructor {SDK.SAL.ZX81_RAM}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._AddativeExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000155.html" LinkGroup="Small_ProgrammingLang">_AddativeExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ArrayListLiteral" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014B.html" LinkGroup="Small_ProgrammingLang">_ArrayListLiteral Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._AssignmentExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000152_overloads--.html" LinkGroup="Small_ProgrammingLang">_AssignmentExpression Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._AssignmentExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000151_overloads--.html" LinkGroup="Small_ProgrammingLang">_AssignmentExpression Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._BinaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000158_overloads--.html" LinkGroup="Small_ProgrammingLang">_BinaryExpression Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._BinaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000159_overloads--.html" LinkGroup="Small_ProgrammingLang">_BinaryExpression Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._BinaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000157_overloads--.html" LinkGroup="Small_ProgrammingLang">_BinaryExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._BlockStatement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014A.html" LinkGroup="Small_ProgrammingLang">_BlockStatement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._BooleanNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000142.html" LinkGroup="Small_ProgrammingLang">_BooleanNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._CodeBeginNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013C.html" LinkGroup="Small_ProgrammingLang">_CodeBeginNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._CodeEndNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000140.html" LinkGroup="Small_ProgrammingLang">_CodeEndNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._CommandFunction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015B.html" LinkGroup="Small_ProgrammingLang">_CommandFunction Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._CommentsListExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000144.html" LinkGroup="Small_ProgrammingLang">_CommentsListExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._CommentsNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000143.html" LinkGroup="Small_ProgrammingLang">_CommentsNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ConditionalBeginNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013D.html" LinkGroup="Small_ProgrammingLang">_ConditionalBeginNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ConditionalEndNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000141.html" LinkGroup="Small_ProgrammingLang">_ConditionalEndNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._DimFunction" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015D.html" LinkGroup="Small_ProgrammingLang">_DimFunction Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode._End" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D3.html" LinkGroup="Small_ProgrammingLang">_End Field {SDK.SmallProgLang.Ast_ExpressionFactory.AstNode}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token._End" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000211.html" LinkGroup="Small_ProgrammingLang">_End Field {SDK.SmallProgLang.GrammarFactory.Token}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement._Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E3.html" LinkGroup="Small_ProgrammingLang">_Expression Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_ExpressionStatement}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement._Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000106.html" LinkGroup="Small_ProgrammingLang">_Expression Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableExpressionStatement}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000149.html" LinkGroup="Small_ProgrammingLang">_Expression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ExpressionStatement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000148.html" LinkGroup="Small_ProgrammingLang">_ExpressionStatement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._GetAssignmentOperator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015A.html" LinkGroup="Small_ProgrammingLang">_GetAssignmentOperator Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._IdentifierList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014C.html" LinkGroup="Small_ProgrammingLang">_IdentifierList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._IdentifierLiteralNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000146.html" LinkGroup="Small_ProgrammingLang">_IdentifierLiteralNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._IterationStatment" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000015E.html" LinkGroup="Small_ProgrammingLang">_IterationStatment Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression._Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F0.html" LinkGroup="Small_ProgrammingLang">_Left Field {SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression._Left" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F6.html" LinkGroup="Small_ProgrammingLang">_Left Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._LeftHandExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000133.html" LinkGroup="Small_ProgrammingLang">_LeftHandExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ListBeginNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013F.html" LinkGroup="Small_ProgrammingLang">_ListBeginNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ListEndNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013E.html" LinkGroup="Small_ProgrammingLang">_ListEndNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_VariableDeclarationExpression._LiteralType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000103.html" LinkGroup="Small_ProgrammingLang">_LiteralType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._MultiplicativeExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000154.html" LinkGroup="Small_ProgrammingLang">_MultiplicativeExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Identifier._Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000E7.html" LinkGroup="Small_ProgrammingLang">_Name Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._NullableNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000136.html" LinkGroup="Small_ProgrammingLang">_NullableNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._NumericLiteralNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000135.html" LinkGroup="Small_ProgrammingLang">_NumericLiteralNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression._Operator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F2.html" LinkGroup="Small_ProgrammingLang">_Operator Field {SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression._Operator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F8.html" LinkGroup="Small_ProgrammingLang">_Operator Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ParenthesizedExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000153.html" LinkGroup="Small_ProgrammingLang">_ParenthesizedExpression Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._Parse" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000128_overloads--.html" LinkGroup="Small_ProgrammingLang">_Parse Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._Parse" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000129_overloads--.html" LinkGroup="Small_ProgrammingLang">_Parse Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ParsePL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012B.html" LinkGroup="Small_ProgrammingLang">_ParsePL Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ParseSAL" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012C.html" LinkGroup="Small_ProgrammingLang">_ParseSAL Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._PrimaryExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000132.html" LinkGroup="Small_ProgrammingLang">_PrimaryExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._ProgramNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012D.html" LinkGroup="Small_ProgrammingLang">_ProgramNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode._Raw" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D4.html" LinkGroup="Small_ProgrammingLang">_Raw Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._RelationalExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000156.html" LinkGroup="Small_ProgrammingLang">_RelationalExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression._ReturnValues" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DD.html" LinkGroup="Small_ProgrammingLang">_ReturnValues Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression._Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F1.html" LinkGroup="Small_ProgrammingLang">_Right Field {SDK.SmallProgLang.Ast_ExpressionFactory.AstBinaryExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression._Right" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000F7.html" LinkGroup="Small_ProgrammingLang">_Right Field {SDK.SmallProgLang.Ast_ExpressionFactory.Ast_AssignmentExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._SAL_Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000130.html" LinkGroup="Small_ProgrammingLang">_SAL_Expression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._SAL_ProgramNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012E.html" LinkGroup="Small_ProgrammingLang">_SAL_ProgramNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._SAL_StatementList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000131.html" LinkGroup="Small_ProgrammingLang">_SAL_StatementList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode._Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D2.html" LinkGroup="Small_ProgrammingLang">_Start Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._Statement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000147.html" LinkGroup="Small_ProgrammingLang">_Statement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._StatementList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000012F.html" LinkGroup="Small_ProgrammingLang">_StatementList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._StringLiteralNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000145.html" LinkGroup="Small_ProgrammingLang">_StringLiteralNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode._Type" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D0.html" LinkGroup="Small_ProgrammingLang">_Type Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.AstNode._TypeStr" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000D1.html" LinkGroup="Small_ProgrammingLang">_TypeStr Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_UnaryExpression._Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000FF.html" LinkGroup="Small_ProgrammingLang">_Value Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._VariableDeclaration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000150.html" LinkGroup="Small_ProgrammingLang">_VariableDeclaration Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._VariableDeclarationList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014D.html" LinkGroup="Small_ProgrammingLang">_VariableDeclarationList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._VariableExpression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014E.html" LinkGroup="Small_ProgrammingLang">_VariableExpression Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._VariableInitializer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000014F.html" LinkGroup="Small_ProgrammingLang">_VariableInitializer Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._WhitespaceNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013B.html" LinkGroup="Small_ProgrammingLang">_WhitespaceNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.__EmptyStatementNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000137.html" LinkGroup="Small_ProgrammingLang">__EmptyStatementNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.__EndStatementNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000138.html" LinkGroup="Small_ProgrammingLang">__EndStatementNode Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.__UnknownStatementNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000139_overloads--.html" LinkGroup="Small_ProgrammingLang">__UnknownStatementNode Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.__UnknownStatementNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000013A_overloads--.html" LinkGroup="Small_ProgrammingLang">__UnknownStatementNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_BlockExpression._hasReturn" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000DE.html" LinkGroup="Small_ProgrammingLang">_hasReturn Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser._literalNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000134.html" LinkGroup="Small_ProgrammingLang">_literalNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_UnaryExpression._name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000100.html" LinkGroup="Small_ProgrammingLang">_name Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.GrammarFactory.Token._start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000210.html" LinkGroup="Small_ProgrammingLang">_start Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Ast_ExpressionFactory.Ast_Literal.iLiteral" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_00000000000000EB.html" LinkGroup="Small_ProgrammingLang">iLiteral Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.Variable.iName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000072.html" LinkGroup="Small_ProgrammingLang">iName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.BinaryExpression.iOperator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000161.html" LinkGroup="Small_ProgrammingLang">iOperator Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.Compiler.Parser.iScript" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000125.html" LinkGroup="Small_ProgrammingLang">iScript Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.Variable.iType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000074.html" LinkGroup="Small_ProgrammingLang">iType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SAL.ZX81_RAM.Variable.iValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000073.html" LinkGroup="Small_ProgrammingLang">iValue Field {SDK.SAL.ZX81_RAM.Variable}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression.iValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_000000000000016A.html" LinkGroup="Small_ProgrammingLang">iValue Field {SDK.SmallProgLang.ExpressionEvaluators.ConstantExpression}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.Multi_REPL.loadTree" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000232.html" LinkGroup="Small_ProgrammingLang">loadTree Method {SDK.Multi_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SDK.PL_REPL.loadTree" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:Small_ProgrammingLang.chm::/topic_0000000000000238.html" LinkGroup="Small_ProgrammingLang">loadTree Method {SDK.PL_REPL}</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

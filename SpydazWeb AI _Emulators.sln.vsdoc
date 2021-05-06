@@ -44,7 +44,7 @@
       <add key="VBdocman_comObject"><![CDATA[-1]]></add>
       <add key="VBdocman_comDelegate"><![CDATA[-1]]></add>
       <add key="VBdocman_supportedXnaFramework"><![CDATA[]]></add>
-      <add key="VBdocman_emptyOutputFolder"><![CDATA[0]]></add>
+      <add key="VBdocman_emptyOutputFolder"><![CDATA[-1]]></add>
       <add key="VBdocman_rootNamespaceCommentStyle"><![CDATA[2]]></add>
       <add key="VBdocman_comEnumeration"><![CDATA[-1]]></add>
       <add key="VBdocman_comMethod"><![CDATA[-1]]></add>
@@ -113,9 +113,7 @@
       <add key="VBdocman_comModulesSaveExcluded"><![CDATA[-1]]></add>
       <add key="VBdocman_fileNamingConvention"><![CDATA[0]]></add>
     </SettingsGroup>
-    <add key="VBdocman_AI_VMx86"><![CDATA[default]]></add>
-    <add key="VBdocman_AI_ZX81"><![CDATA[default]]></add>
-    <add key="VBdocman_Ast_JsonGenerator"><![CDATA[default]]></add>
-    <add key="VBdocman_LexParseEval"><![CDATA[default]]></add>
+    <add key="VBdocman_SAL_VM"><![CDATA[default]]></add>
+    <add key="VBdocman_Small_ProgrammingLang"><![CDATA[default]]></add>
   </appSettings>
 </configuration>

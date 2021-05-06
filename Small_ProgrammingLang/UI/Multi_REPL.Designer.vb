@@ -60,6 +60,8 @@ Partial Class Multi_REPL
         Me.Small_PL_TabControl_Repl_ErrorOutput = New System.Windows.Forms.TabControl()
         Me.TabPageReplErrors = New System.Windows.Forms.TabPage()
         Me.Small_PL_TextboxErrors = New System.Windows.Forms.RichTextBox()
+        Me.TabPagePl_Help = New System.Windows.Forms.TabPage()
+        Me.RichTextBoxPL_Help = New System.Windows.Forms.RichTextBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Small_PL_AstTreeView = New System.Windows.Forms.TreeView()
         Me.TabPageSAL_REPL = New System.Windows.Forms.TabPage()
@@ -104,8 +106,6 @@ Partial Class Multi_REPL
         Me.OpenTextFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveTextFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TabPagePl_Help = New System.Windows.Forms.TabPage()
-        Me.RichTextBoxPL_Help = New System.Windows.Forms.RichTextBox()
         Me.TabControl_ProgrammingLang_Repl.SuspendLayout()
         Me.TabPageSpydaz_PL.SuspendLayout()
         Me.TabControlRepl_Inner.SuspendLayout()
@@ -130,6 +130,7 @@ Partial Class Multi_REPL
         Me.GroupBox9.SuspendLayout()
         Me.Small_PL_TabControl_Repl_ErrorOutput.SuspendLayout()
         Me.TabPageReplErrors.SuspendLayout()
+        Me.TabPagePl_Help.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.TabPageSAL_REPL.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +153,6 @@ Partial Class Multi_REPL
         Me.TabControl_REPL_INPUT.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.SAL_ToolStripRepl.SuspendLayout()
-        Me.TabPagePl_Help.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl_ProgrammingLang_Repl
@@ -530,7 +530,7 @@ Partial Class Multi_REPL
         Me.TabPageReplErrors.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.TabPageReplErrors.Name = "TabPageReplErrors"
         Me.TabPageReplErrors.Padding = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.TabPageReplErrors.Size = New System.Drawing.Size(529, 150)
+        Me.TabPageReplErrors.Size = New System.Drawing.Size(529, 180)
         Me.TabPageReplErrors.TabIndex = 0
         Me.TabPageReplErrors.Text = "Errors"
         Me.TabPageReplErrors.UseVisualStyleBackColor = True
@@ -543,9 +543,29 @@ Partial Class Multi_REPL
         Me.Small_PL_TextboxErrors.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Small_PL_TextboxErrors.Name = "Small_PL_TextboxErrors"
         Me.Small_PL_TextboxErrors.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
-        Me.Small_PL_TextboxErrors.Size = New System.Drawing.Size(519, 138)
+        Me.Small_PL_TextboxErrors.Size = New System.Drawing.Size(519, 168)
         Me.Small_PL_TextboxErrors.TabIndex = 0
         Me.Small_PL_TextboxErrors.Text = ""
+        '
+        'TabPagePl_Help
+        '
+        Me.TabPagePl_Help.Controls.Add(Me.RichTextBoxPL_Help)
+        Me.TabPagePl_Help.Location = New System.Drawing.Point(4, 31)
+        Me.TabPagePl_Help.Name = "TabPagePl_Help"
+        Me.TabPagePl_Help.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPagePl_Help.Size = New System.Drawing.Size(529, 180)
+        Me.TabPagePl_Help.TabIndex = 1
+        Me.TabPagePl_Help.Text = "Syntax"
+        Me.TabPagePl_Help.UseVisualStyleBackColor = True
+        '
+        'RichTextBoxPL_Help
+        '
+        Me.RichTextBoxPL_Help.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBoxPL_Help.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBoxPL_Help.Name = "RichTextBoxPL_Help"
+        Me.RichTextBoxPL_Help.Size = New System.Drawing.Size(523, 174)
+        Me.RichTextBoxPL_Help.TabIndex = 0
+        Me.RichTextBoxPL_Help.Text = resources.GetString("RichTextBoxPL_Help.Text")
         '
         'GroupBox10
         '
@@ -1023,26 +1043,6 @@ Partial Class Multi_REPL
         '
         Me.ToolTip1.IsBalloon = True
         '
-        'TabPagePl_Help
-        '
-        Me.TabPagePl_Help.Controls.Add(Me.RichTextBoxPL_Help)
-        Me.TabPagePl_Help.Location = New System.Drawing.Point(4, 31)
-        Me.TabPagePl_Help.Name = "TabPagePl_Help"
-        Me.TabPagePl_Help.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPagePl_Help.Size = New System.Drawing.Size(529, 180)
-        Me.TabPagePl_Help.TabIndex = 1
-        Me.TabPagePl_Help.Text = "Syntax"
-        Me.TabPagePl_Help.UseVisualStyleBackColor = True
-        '
-        'RichTextBoxPL_Help
-        '
-        Me.RichTextBoxPL_Help.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBoxPL_Help.Location = New System.Drawing.Point(3, 3)
-        Me.RichTextBoxPL_Help.Name = "RichTextBoxPL_Help"
-        Me.RichTextBoxPL_Help.Size = New System.Drawing.Size(523, 174)
-        Me.RichTextBoxPL_Help.TabIndex = 0
-        Me.RichTextBoxPL_Help.Text = resources.GetString("RichTextBoxPL_Help.Text")
-        '
         'Multi_REPL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
@@ -1084,6 +1084,7 @@ Partial Class Multi_REPL
         Me.GroupBox9.ResumeLayout(False)
         Me.Small_PL_TabControl_Repl_ErrorOutput.ResumeLayout(False)
         Me.TabPageReplErrors.ResumeLayout(False)
+        Me.TabPagePl_Help.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
         Me.TabPageSAL_REPL.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
@@ -1111,7 +1112,6 @@ Partial Class Multi_REPL
         Me.TabPage2.PerformLayout()
         Me.SAL_ToolStripRepl.ResumeLayout(False)
         Me.SAL_ToolStripRepl.PerformLayout()
-        Me.TabPagePl_Help.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

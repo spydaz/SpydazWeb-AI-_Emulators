@@ -183,27 +183,45 @@
     <value>Small Programming Language
 This is the Current Syntax (Valid) - 
 - The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
+SemiColons are used to denote the end of a Expression 
+Although they are not always needed by the compiler 
 
 Basic Expressions - Constantly updated
 
 DIM &lt;Identifier&gt; = String Integer Array boolean
 
-&lt;Identifier&gt; = Value "Value" true/false [Value,Value,Value] ["Value","Value","Value"] [true,False,true] []
-&lt;Identifier&gt; += *= -= /= Value
-&lt;Identifier&gt; &lt; &gt; &lt;= &gt;= Value
-Value + Value * Value + Value - (Value + Value)
-&lt;Identifier&gt; = Value + &lt;Identifier&gt; * Value + Value - (&lt;Identifier&gt; + Value)
-&lt;Identifier&gt; = "Value"
-&lt;Identifier&gt; = ( &lt;Identifier&gt; = value )
-&lt;Identifier&gt;( &lt;Identifier&gt; = value )
-&lt;Identifier&gt; = ( &lt;Identifier&gt; = value )
+&lt;Identifier&gt; =	Value 
+				"Value" 
+				true/false 
+				[Value,Value,Value] 
+				["Value","Value","Value"] 
+				[true,False,true] 
+				[]
+&lt;Identifier&gt;	+= Value
+				*= Value
+				-= Value
+				/= Value
+&lt;Identifier&gt;	&lt;  Value
+				&gt;  Value
+				&lt;= Value
+				&gt;= Value
+
+&lt;Identifier&gt; + Value * Value + &lt;Identifier&gt; - (Value + Value);
+&lt;Identifier&gt; = Value + &lt;Identifier&gt; * Value + Value - (&lt;Identifier&gt; + Value);
+&lt;Identifier&gt; = ( &lt;Identifier&gt; = value );
+'''Used For Functions/Lambdas
+&lt;Identifier&gt;( &lt;Identifier&gt; = value );
+&lt;Identifier&gt; = ( &lt;Identifier&gt; = value );
 
 
-Combination Expressions : (i have not gone inot depth here yet)
+Combination Expressions : 
+(i have not gone inot depth explaining here yet as there are too many to document due to the nesting)
 
 Expression + - / * Expression;
 Expression &gt; &lt; &lt;= &gt;= Expression;
-{Expression;}
+''CodeBlock With Return Values
+{Expression; &lt;RETURN&gt;[Value,Value,Value];}
+
 {Expression;
 Expression;
 Expression;}</value>

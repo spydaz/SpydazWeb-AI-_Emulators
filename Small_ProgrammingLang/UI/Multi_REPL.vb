@@ -232,7 +232,7 @@ Public Class Multi_REPL
         Dim help As New Process
         help.StartInfo.UseShellExecute = True
         help.StartInfo.FileName = "c:\windows\hh.exe"
-        help.StartInfo.Arguments = Application.StartupPath & "\help\LexParseEval.chm"
+        help.StartInfo.Arguments = Application.StartupPath & "\help\SpydazWeb AI _Emulators.chm"
         help.Start()
     End Sub
 

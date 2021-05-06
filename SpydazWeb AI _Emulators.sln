@@ -65,7 +65,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Langs", "Langs", "{27B78179
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Progs", "Progs", "{617738BF-D655-4265-BABE-78BEEC0FD773}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\Basic Program Langugae GRAMMAR.txt = Scripts\Basic Program Langugae GRAMMAR.txt
 		Scripts\Basic Tests.txt = Scripts\Basic Tests.txt
 		Scripts\IF.txt = Scripts\IF.txt
 		Scripts\MaxFunct.txt = Scripts\MaxFunct.txt
