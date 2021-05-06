@@ -27,8 +27,8 @@ The program has been designed in stages ;
     This component Takes the Abstract Syntax tokens produced and evaluates(Executes) the Code. Here the decision is made to execute on the virtual hardware or evaluate in memory to produce a result.
 
 
-
-### Small Programming Language
+``
+# Small Programming Language
 This is the Current Syntax (Valid) - 
 - The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
 SemiColons are used to denote the end of a Expression 
