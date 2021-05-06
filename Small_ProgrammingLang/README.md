@@ -36,41 +36,41 @@ Although they are not always needed by the compiler
 
 Basic Expressions - Constantly updated
 
-DIM <Identifier> = String Integer Array boolean
+	DIM <Identifier> = String Integer Array boolean
 
-<Identifier> =	Value 
-				"Value" 
-				true/false 
-				[Value,Value,Value] 
-				["Value","Value","Value"] 
-				[true,False,true] 
-				[]
-<Identifier>	+= Value
-				*= Value
-				-= Value
-				/= Value
-<Identifier>	<  Value
-				>  Value
-				<= Value
-				>= Value
+	<Identifier> =	Value 
+					"Value" 
+					true/false 
+					[Value,Value,Value] 
+					["Value","Value","Value"] 
+					[true,False,true] 
+					[]
+	<Identifier>	+= Value
+					*= Value
+					-= Value
+					/= Value
+	<Identifier>	<  Value
+					>  Value
+					<= Value
+					>= Value
 
-<Identifier> + Value * Value + <Identifier> - (Value + Value);
-<Identifier> = Value + <Identifier> * Value + Value - (<Identifier> + Value);
-<Identifier> = ( <Identifier> = value );
-'''Used For Functions/Lambdas
-<Identifier>( <Identifier> = value );
-<Identifier> = ( <Identifier> = value );
+	<Identifier> + Value * Value + <Identifier> - (Value + Value);
+	<Identifier> = Value + <Identifier> * Value + Value - (<Identifier> + Value);
+	<Identifier> = ( <Identifier> = value );
+	'''Used For Functions/Lambdas
+	<Identifier>( <Identifier> = value );
+	<Identifier> = ( <Identifier> = value );
 
 
-Combination Expressions : 
-(i have not gone inot depth explaining here yet as there are too many to document due to the nesting)
+	Combination Expressions : 
+	(i have not gone inot depth explaining here yet as there are too many to document due to the nesting)
 
-Expression + - / * Expression;
-Expression > < <= >= Expression;
-''CodeBlock With Return Values
-{Expression; <RETURN>[Value,Value,Value];}
+	Expression + - / * Expression;
+	Expression > < <= >= Expression;
+	''CodeBlock With Return Values
+	{Expression; <RETURN>[Value,Value,Value];}
 
-{Expression;
-Expression;
-Expression;}
+	{Expression;
+	Expression;
+	Expression;}
 
