@@ -85,10 +85,16 @@
     <Compile Include="UI\AST_TREE.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\REPL\FrmSal_Repl.Designer.vb">
-      <DependentUpon>FrmSal_Repl.vb</DependentUpon>
+    <Compile Include="UI\Multi_REPL.Designer.vb">
+      <DependentUpon>Multi_REPL.vb</DependentUpon>
     </Compile>
-    <Compile Include="UI\REPL\FrmSal_Repl.vb">
+    <Compile Include="UI\Multi_REPL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\REPL\Sal_Repl.Designer.vb">
+      <DependentUpon>Sal_Repl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\REPL\Sal_Repl.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SourceCode\SAL_VM\MachineUI\EMU_MachineUI.designer.vb">
@@ -130,10 +136,10 @@
     <Compile Include="UI\REPL\ReplErrorSystem.vb" />
     <Compile Include="SourceCode\SmallProgLang\GrammarFactory\Token.vb" />
     <Compile Include="SourceCode\SmallProgLang\Compiler\Parser.vb" />
-    <Compile Include="UI\REPL\FrmPL_REPL.designer.vb">
-      <DependentUpon>FrmPL_REPL.vb</DependentUpon>
+    <Compile Include="UI\REPL\PL_REPL.designer.vb">
+      <DependentUpon>PL_REPL.vb</DependentUpon>
     </Compile>
-    <Compile Include="UI\REPL\FrmPL_REPL.vb">
+    <Compile Include="UI\REPL\PL_REPL.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SourceCode\SmallProgLang\GrammarFactory\Grammar.vb" />
@@ -176,11 +182,14 @@
     <EmbeddedResource Include="UI\AST_TREE.resx">
       <DependentUpon>AST_TREE.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\REPL\FrmSal_Repl.resx">
-      <DependentUpon>FrmSal_Repl.vb</DependentUpon>
+    <EmbeddedResource Include="UI\Multi_REPL.resx">
+      <DependentUpon>Multi_REPL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\REPL\FrmPL_REPL.resx">
-      <DependentUpon>FrmPL_REPL.vb</DependentUpon>
+    <EmbeddedResource Include="UI\REPL\Sal_Repl.resx">
+      <DependentUpon>Sal_Repl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\REPL\PL_REPL.resx">
+      <DependentUpon>PL_REPL.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -215,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="OldProgrammingLanguageSyntax.PL" />
     <None Include="Resources\Arrow_Right.png" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +236,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="COM.ICO" />
+    <Content Include="Help\SPL.txt" />
     <None Include="Resources\ipad-mockup-hands.png" />
     <None Include="Resources\Console A.jpg" />
     <None Include="Resources\SERIES 1 sal9000.bmp" />

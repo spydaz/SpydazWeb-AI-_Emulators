@@ -1,0 +1,27 @@
+﻿Small Programming Language
+This is the Current Syntax (Valid) - 
+- The parser may accept other complexed combinations Which may not be valid evaluation arguments.(yet)
+
+Basic Expressions - Constantly updated
+
+DIM <Identifier> = String Integer Array boolean
+
+<Identifier> = Value "Value" true/false [Value,Value,Value] ["Value","Value","Value"] [true,False,true] []
+<Identifier> += *= -= /= Value
+<Identifier> < > <= >= Value
+Value + Value * Value + Value - (Value + Value)
+<Identifier> = Value + <Identifier> * Value + Value - (<Identifier> + Value)
+<Identifier> = "Value"
+<Identifier> = ( <Identifier> = value )
+<Identifier>( <Identifier> = value )
+<Identifier> = ( <Identifier> = value )
+
+
+Combination Expressions : (i have not gone inot depth here yet)
+
+Expression + - / * Expression;
+Expression > < <= >= Expression;
+{Expression;}
+{Expression;
+Expression;
+Expression;}
