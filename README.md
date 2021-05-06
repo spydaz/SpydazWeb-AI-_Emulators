@@ -131,7 +131,7 @@ The parser may accept other complexed combinations Which may not be valid evalua
 SemiColons are used to denote the end of a Expression 
 Although they are not always needed by the compiler 
 
-Basic Expressions - Constantly updated
+# Basic Expressions - Constantly updated
 
 	DIM <Identifier> = String Integer Array boolean
 
