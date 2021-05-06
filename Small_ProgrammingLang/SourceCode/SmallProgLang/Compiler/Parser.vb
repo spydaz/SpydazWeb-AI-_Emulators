@@ -778,8 +778,10 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
                         _WhitespaceNode()
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
-                        Return New Ast_ExpressionStatement(__EndStatementNode)
+                        '  __EmptyStatementNode()
+                        Dim vd = New Ast_ExpressionStatement(__EmptyStatementNode)
 
+                        Return vd
 
                     Case Else
                         'Literal - Node!
@@ -1503,38 +1505,131 @@ Namespace SmallProgLang
             ''' <param name="_left">IDENTIFIER</param>
             ''' <returns></returns>
             Public Function _VariableDeclaration(ByRef _left As Ast_Identifier) As Ast_VariableDeclarationExpression
-
+                _WhitespaceNode()
                 Lookahead = Tokenizer.ViewNext
+                Dim Tok = Tokenizer.CheckIdentifiedToken(Lookahead)
                 'SELECT lITERAL TYPE
-                Select Case _left._Type
-                    Case AST_NODE._string
+                Select Case UCase(Tok.Value)
+                    Case UCase("STRING")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Dim X = New Ast_VariableDeclarationExpression(_left, "STRING")
-                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Lookahead = Tokenizer.ViewNext
-                        Return X
-                    Case AST_NODE._array
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("ARRAY")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Dim X = New Ast_VariableDeclarationExpression(_left, "ARRAY")
-                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Lookahead = Tokenizer.ViewNext
-                        Return X
-                    Case AST_NODE._integer
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("LIST")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "ARRAY")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("INTEGER")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
-                        Tokenizer.GetIdentifiedToken(Lookahead)
                         Lookahead = Tokenizer.ViewNext
-                        Return X
-
-
-
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("NUMBER")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("INT")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("BOOLEAN")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("BOOL")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        End If
+                    Case UCase("BOOLE")
+                        Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Lookahead = Tokenizer.ViewNext
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Return X
+                        End If
                     Case Else
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "NULL")
                         Tokenizer.GetIdentifiedToken(Lookahead)
+                        Dim X = New Ast_VariableDeclarationExpression(_left, "NULL")
                         Lookahead = Tokenizer.ViewNext
-                        Return X
+                        If Lookahead = ";" = True Then
+                            __EndStatementNode()
+                            Lookahead = Tokenizer.ViewNext
+                            Return X
+                        Else
+                            Return X
+                        End If
                 End Select
-                Dim xy = New Ast_VariableDeclarationExpression(_left, "NULL")
-                xy._End = _left._End
 
-                Return xy
             End Function
 
             ''' <summary>
@@ -1973,17 +2068,38 @@ Namespace SmallProgLang
             End Function
             Public Function _DimFunction() As AstExpression
                 Dim toktype = Tokenizer.IdentifiyToken(Lookahead)
+                Dim nde As AstExpression
                 Lookahead = Tokenizer.ViewNext
                 toktype = Tokenizer.IdentifiyToken(Lookahead)
                 'GET the identified token as it is a command but detected as variable
+                'DIM
                 Tokenizer.GetIdentifiedToken(Lookahead)
                 Lookahead = Tokenizer.ViewNext
+                '_
                 _WhitespaceNode()
-                'View next (for next function)
+                Dim _left = _IdentifierLiteralNode()
+                _WhitespaceNode()
                 Lookahead = Tokenizer.ViewNext
-                Dim nde = _VariableInitializer(_IdentifierLiteralNode)
-                nde._TypeStr = "_DeclareVariable"
-                nde._Type = AST_NODE._DeclareVariable
+                Dim tok = Tokenizer.CheckIdentifiedToken(Lookahead)
+                If UCase(tok.Value) = UCase("AS") Then
+                    'Eat as
+                    Tokenizer.GetIdentifiedToken(Lookahead)
+                    Lookahead = Tokenizer.ViewNext
+                    'GetVar
+                    nde = _VariableDeclaration(_left)
+                    nde._TypeStr = "_DeclareVariable"
+                    nde._Type = AST_NODE._DeclareVariable
+                Else
+                    'Complex
+                    'View next (for next function)
+                    Lookahead = Tokenizer.ViewNext
+                    nde = _VariableInitializer(_IdentifierLiteralNode)
+                    nde._TypeStr = "_DeclareVariable"
+                    nde._Type = AST_NODE._DeclareVariable
+                End If
+
+
+
                 Return nde
             End Function
             ''' <summary>
