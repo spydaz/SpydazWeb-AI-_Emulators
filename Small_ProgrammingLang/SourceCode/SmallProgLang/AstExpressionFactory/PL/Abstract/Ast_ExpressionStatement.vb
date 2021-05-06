@@ -1,4 +1,7 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SAL
+Imports SDK.SmallProgLang.Evaluator
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
         ''' <summary>
@@ -13,23 +16,31 @@
             ''' <summary>
             ''' Literal Value
             ''' </summary>
-            Public _Expression As Ast_Literal
+            Public _iLiteral As Ast_Literal
             ''' <summary>
             ''' 
             ''' </summary>
             ''' <param name="nValue">Literal Value to be stored </param>
             Public Sub New(ByRef nValue As Ast_Literal)
                 MyBase.New(AST_NODE._ExpressionStatement)
-                Me._Expression = nValue
+                Me._iLiteral = nValue
                 Me._TypeStr = "_PrimaryExpression"
-                Me._Start = _Expression._Start
-                Me._End = _Expression._End
+                Me._Start = _iLiteral._Start
+                Me._End = _iLiteral._End
                 Me._Raw = nValue._Raw
             End Sub
             Public Overrides Function ToArraylist() As List(Of String)
                 Dim lst As List(Of String) = MyBase.ToArraylist()
-                lst.AddRange(_Expression.iLiteral.toarraylist)
+                lst.AddRange(_iLiteral.iLiteral.toarraylist)
                 Return lst
+            End Function
+
+            Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Throw New NotImplementedException()
+            End Function
+
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Throw New NotImplementedException()
             End Function
 
             Private Function GetDebuggerDisplay() As String

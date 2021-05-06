@@ -16,6 +16,7 @@ Namespace SmallProgLang
             Public Sub New(ByRef ntype As AST_NODE, ByRef nValue As Object)
                 MyBase.New(ntype, nValue)
             End Sub
+
         End Class
     End Namespace
 End Namespace

@@ -125,7 +125,13 @@
                 lst.Add(_TypeStr)
                 Return lst
             End Function
-
+            ''' <summary>
+            ''' get raw expression
+            ''' </summary>
+            ''' <returns></returns>
+            Public Function GetExpr() As String
+                Return _Raw
+            End Function
             Private Function GetDebuggerDisplay() As String
                 Return ToString()
             End Function

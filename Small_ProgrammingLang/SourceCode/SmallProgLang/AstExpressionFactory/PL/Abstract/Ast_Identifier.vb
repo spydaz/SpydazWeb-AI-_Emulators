@@ -1,4 +1,6 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SAL
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
 
@@ -11,7 +13,7 @@
         ''' </summary>
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public Class Ast_Identifier
-            Inherits AstNode
+            Inherits Ast_Literal
             Public _Name As String
             Public Sub New(ByRef nName As String)
                 MyBase.New(AST_NODE._variable)
@@ -22,6 +24,12 @@
                 Dim lst = MyBase.ToArraylist()
                 lst.Add(_Name)
                 Return lst
+            End Function
+            Public Function GetVar() As ZX81_RAM.Variable
+                Dim nvar = New ZX81_RAM.Variable
+                nvar.iName = _Name
+
+                Return nvar
             End Function
 
             Private Function GetDebuggerDisplay() As String

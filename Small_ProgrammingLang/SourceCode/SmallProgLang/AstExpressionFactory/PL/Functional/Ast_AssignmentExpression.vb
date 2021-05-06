@@ -1,4 +1,7 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SAL
+Imports SDK.SmallProgLang.Evaluator
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
@@ -28,6 +31,30 @@
                 lst.Add(_Left._Name.ToString)
                 lst.AddRange(_Right.ToArraylist)
                 Return lst
+            End Function
+
+            Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Return GetValue(ParentEnv)
+            End Function
+
+            Public Function GetVar(ByRef ParentEnv As EnvironmentalMemory) As EnvironmentalMemory.Variable
+                Dim nvar As New EnvironmentalMemory.Variable
+                nvar.Value = _Right.Evaluate(ParentEnv)
+                nvar.Name = _Left._Name
+                nvar.Type = Me._Type
+                Return nvar
+            End Function
+
+
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Dim nvar As New EnvironmentalMemory.Variable
+                nvar.Value = _Right.Evaluate(ParentEnv)
+                nvar.Name = _Left._Name
+                nvar.Type = Me._Type
+                If ParentEnv.CheckVar(nvar.Name) = True Then
+                    Return _Right.Evaluate(ParentEnv)
+                End If
+                Return Nothing
             End Function
 
             Private Function GetDebuggerDisplay() As String

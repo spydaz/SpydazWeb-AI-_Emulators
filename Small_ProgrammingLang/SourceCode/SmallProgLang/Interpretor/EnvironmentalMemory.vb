@@ -16,7 +16,7 @@
                 ''' <summary>
                 ''' Type ass string identifier
                 ''' </summary>
-                Public Type As String
+                Public Type As Ast_ExpressionFactory.AST_NODE
             End Structure
             ''' <summary>
             ''' Memory for variables
@@ -33,18 +33,41 @@
                 End Get
             End Property
             ''' <summary>
-            ''' A global memeory is contained within environemt for referencing
+            ''' A global memeory is contained within environmemt for referencing
             ''' </summary>
             ''' <param name="GlobalMemory"></param>
             Public Sub New(ByRef GlobalMemory As EnvironmentalMemory)
                 LocalMemory = New List(Of Variable)
                 Me.mGlobalMemory = GlobalMemory
+
             End Sub
+            Private Function _AddInternalLiterals() As List(Of Variable)
+                Dim Lst As New List(Of Variable)
+                Dim BTrue As New Variable
+                BTrue.Name = "TRUE"
+                BTrue.Value = True
+                BTrue.Type = Ast_ExpressionFactory.AST_NODE._boolean
+                Lst.Add(BTrue)
+                Dim BFalse As New Variable
+                BFalse.Name = "FALSE"
+                BFalse.Value = False
+                BFalse.Type = Ast_ExpressionFactory.AST_NODE._boolean
+                Lst.Add(BFalse)
+                Dim BNull As New Variable
+                BNull.Name = "NULL"
+                BNull.Value = Nothing
+                BNull.Type = Ast_ExpressionFactory.AST_NODE._null
+                Lst.Add(BNull)
+                Return Lst
+            End Function
             ''' <summary>
             ''' Has no Global Memory
             ''' </summary>
             Public Sub New()
-                LocalMemory = New List(Of Variable)
+                LocalMemory = _AddInternalLiterals()
+                '  mGlobalMemory = New EnvironmentalMemory
+
+
                 '  Me.GlobalMemory = GlobalMemory
             End Sub
             ''' <summary>
@@ -113,6 +136,15 @@
                     'THIS IS THE GLOBAL MEMORY
                 End If
                 Return "NULL"
+
+            End Function
+            Public Function CheckVar(ByRef VarName As String) As Boolean
+                For Each item In LocalMemory
+                    If item.Name = VarName Then
+                        Return True
+                    End If
+                Next
+                CheckVar = False
             End Function
         End Class
     End Namespace

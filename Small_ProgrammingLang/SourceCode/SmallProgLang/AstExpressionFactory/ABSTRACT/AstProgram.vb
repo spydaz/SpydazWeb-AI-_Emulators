@@ -1,4 +1,6 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SAL
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
         ''' <summary>
@@ -34,6 +36,7 @@
             ''' Expression List
             ''' </summary>
             Public Body As List(Of AstExpression)
+
             ''' <summary>
             ''' Instanciate Expression
             ''' </summary>
@@ -42,6 +45,7 @@
                 MyBase.New(AST_NODE._Program)
                 Me.Body = nBody
                 Me._TypeStr = "_Program"
+
             End Sub
             Public Overrides Function ToArraylist() As List(Of String)
                 Dim lst = MyBase.ToArraylist()

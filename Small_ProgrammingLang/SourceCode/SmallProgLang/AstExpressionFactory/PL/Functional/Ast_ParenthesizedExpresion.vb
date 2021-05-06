@@ -1,4 +1,7 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SAL
+Imports SDK.SmallProgLang.Evaluator
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
         ''' <summary>
@@ -21,6 +24,20 @@
                 Next
                 Me._End = iBody(iBody.Count - 1)._End
             End Sub
+
+            Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Me.LocalEnvironmentMemory = ParentEnv
+                For Each item In Body
+                    LocalEnvironmentMemory = item.Evaluate(LocalEnvironmentMemory)
+                Next
+
+                Return LocalEnvironmentMemory
+            End Function
+
+
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Throw New NotImplementedException()
+            End Function
 
             Private Function GetDebuggerDisplay() As String
                 Return ToString()

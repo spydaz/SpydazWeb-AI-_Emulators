@@ -29,7 +29,21 @@
                 lst.Add(iLiteral.ToString)
                 Return lst
             End Function
+            Public Function GetValue() As Object
 
+                Select Case Me._Type
+                    Case AST_NODE._integer
+                        Return Integer.Parse(iLiteral)
+                    Case AST_NODE._string
+                        Return iLiteral.ToString
+                    Case AST_NODE._array
+                        Return iLiteral
+                    Case AST_NODE._boolean
+                        Return Boolean.Parse(iLiteral)
+                    Case Else
+                        Return iLiteral
+                End Select
+            End Function
             Private Function GetDebuggerDisplay() As String
                 Return ToString()
             End Function

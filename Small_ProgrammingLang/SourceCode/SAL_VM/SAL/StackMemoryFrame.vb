@@ -18,18 +18,18 @@
 
             Return ReturnAddress
         End Function
-        Public Function GetVar(ByRef VarNumber As String) As Integer
+        Public Function GetVar(ByRef VarName As String) As Integer
             For Each item In Variables
-                If item.VarNumber = VarNumber Then
+                If item.VarNumber = VarName Then
                     Return item.Value
 
                 End If
             Next
             Return 0
         End Function
-        Public Sub SetVar(ByRef VarNumber As String, ByRef value As Integer)
+        Public Sub SetVar(ByRef VarName As String, ByRef value As Object)
             Dim item As New Var
-            item.VarNumber = VarNumber
+            item.VarNumber = VarName
             item.Value = value
 
             Variables.Add(item)
