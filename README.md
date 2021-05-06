@@ -1,4 +1,4 @@
-# SpydazWeb-AI-_Emulators
+# LexParseEval
 SpydazWeb Program languges and virtual machines, Parser/Compiler/Interpretor. AST Creator... Experiments in developing compilers and programing langugages . Using Mini Basic language to Tokenizer to AST to Assembly code 
 
 https://spydaz.github.io/SpydazWeb-AI-_Emulators/
@@ -91,12 +91,11 @@ AST => TreeView as well as AST => JSON View
 	
 The Current instruction Set Will Later include a memory register location system ; (after researching different models and implementations)( a vitual machine model based on this was created using a stack machine style. this will form the basis of my (Virtual Machine) - to be developed over time (maybe even format a virtual disk in the future)
 
-### Small Programming Language
 
-My Personal choice is BASIC as it has always been a favorite of mine ; as the psudeo code is basically the same as the real code which makes it very readable without the flurishing of mulitple brackets. Although there will be brackets for code boundrys as well as semi colons as end markers when required. 
-Currently My older versions seem to be a bit more advanced (still primative) but the newest version (lexParseEval) will be a more correct model ; again only having the basics of the basic language; (not highly useful)- but still a learning tool(journey/Experience). 
 
 # Small Programming Language
+My Personal choice is BASIC as it has always been a favorite of mine ; as the psudeo code is basically the same as the real code which makes it very readable without the flurishing of mulitple brackets. Although there will be brackets for code boundrys as well as semi colons as end markers when required. 
+Currently My older versions seem to be a bit more advanced (still primative) but the newest version (lexParseEval) will be a more correct model ; again only having the basics of the basic language; (not highly useful)- but still a learning tool(journey/Experience). 
 
 https://spydaz.github.io/SpydazWeb-AI-_Emulators/
 
