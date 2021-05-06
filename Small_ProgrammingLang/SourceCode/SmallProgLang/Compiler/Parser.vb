@@ -892,9 +892,9 @@ Namespace SmallProgLang
                     Case GrammarFactory.Grammar.Type_Id._FALSE
                         Return _BooleanNode()
                     Case GrammarFactory.Grammar.Type_Id._WHITESPACE
-                        _WhitespaceNode()
+                        Return _WhitespaceNode()
                     Case GrammarFactory.Grammar.Type_Id._STATEMENT_END
-                        __EmptyStatementNode()
+                        Return __EmptyStatementNode()
                     Case Grammar.Type_Id.SAL_HALT
                         Dim nTok As Token = Tokenizer.GetIdentifiedToken(Lookahead)
                         Dim fnd = New Ast_SAL_Literal(AST_NODE.SAL_HALT, nTok.Value)
