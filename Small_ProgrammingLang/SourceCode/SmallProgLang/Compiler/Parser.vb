@@ -1513,7 +1513,7 @@ Namespace SmallProgLang
                 Select Case UCase(Tok.Value)
                     Case UCase("STRING")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "STRING")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._string)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1525,7 +1525,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("ARRAY")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "ARRAY")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._array)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1537,7 +1537,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("LIST")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "ARRAY")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._array)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1549,7 +1549,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("INTEGER")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._integer)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1561,7 +1561,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("NUMBER")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._integer)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1573,7 +1573,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("INT")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "INTEGER")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._integer)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1585,7 +1585,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("BOOLEAN")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._boolean)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1597,7 +1597,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("BOOL")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._boolean)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1609,7 +1609,7 @@ Namespace SmallProgLang
                         End If
                     Case UCase("BOOLE")
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "BOOLEAN")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._boolean)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
@@ -1620,7 +1620,7 @@ Namespace SmallProgLang
                         End If
                     Case Else
                         Tokenizer.GetIdentifiedToken(Lookahead)
-                        Dim X = New Ast_VariableDeclarationExpression(_left, "NULL")
+                        Dim X = New Ast_VariableDeclarationExpression(_left, AST_NODE._null)
                         Lookahead = Tokenizer.ViewNext
                         If Lookahead = ";" = True Then
                             __EndStatementNode()
