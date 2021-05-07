@@ -1,4 +1,6 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SmallProgLang.Evaluator
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
         ''' <summary>
@@ -92,7 +94,7 @@
         ''' 
         ''' </summary>
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
-        Public Class AstNode
+        Public MustInherit Class AstNode
             ''' <summary>
             ''' Type Of Node
             ''' </summary>
@@ -113,6 +115,7 @@
             ''' Raw data of token
             ''' </summary>
             Public _Raw As String
+            Public MustOverride Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
             ''' <summary>
             ''' Instanciate
             ''' </summary>

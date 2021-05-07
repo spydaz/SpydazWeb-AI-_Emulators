@@ -36,11 +36,11 @@ Namespace SmallProgLang
             End Function
 
             Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Throw New NotImplementedException()
+                Return GetValue(ParentEnv)
             End Function
 
             Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Throw New NotImplementedException()
+                Return _iLiteral.GetValue(ParentEnv)
             End Function
 
             Private Function GetDebuggerDisplay() As String

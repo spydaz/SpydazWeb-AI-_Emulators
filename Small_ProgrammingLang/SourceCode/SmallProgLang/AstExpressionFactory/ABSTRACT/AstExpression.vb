@@ -14,11 +14,7 @@ Namespace SmallProgLang
         <DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
         Public MustInherit Class AstExpression
             Inherits AstNode
-            ''' <summary>
-            ''' Memory for function; Contains curent record used for variables in the global scope, 
-            ''' This is the local scope
-            ''' </summary>
-            Public LocalEnvironmentMemory As New EnvironmentalMemory
+
             Public Sub New(ByRef ntype As AST_NODE)
                 MyBase.New(ntype)
             End Sub
@@ -33,7 +29,7 @@ Namespace SmallProgLang
             ''' the environment contains the current record of variables in use by the global script </param>
             ''' <returns></returns>
             Public MustOverride Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
-            Public MustOverride Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+
 
             Private Function GetDebuggerDisplay() As String
                 Return ToString()

@@ -30,12 +30,12 @@ Namespace SmallProgLang
             End Function
 
             Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
-                LocalEnvironmentMemory = ParentEnv
-                Return LocalEnvironmentMemory
+
+                Return GetValue(ParentEnv)
             End Function
 
             Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Return _iLiteral.GetValue
+                Return _iLiteral.GetValue(ParentEnv)
             End Function
 
             Private Function GetDebuggerDisplay() As String

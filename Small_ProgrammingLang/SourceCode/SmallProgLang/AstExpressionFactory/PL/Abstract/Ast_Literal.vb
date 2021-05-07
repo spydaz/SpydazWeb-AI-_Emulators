@@ -1,4 +1,6 @@
-﻿Namespace SmallProgLang
+﻿Imports SDK.SmallProgLang.Evaluator
+
+Namespace SmallProgLang
 
     Namespace Ast_ExpressionFactory
 
@@ -29,21 +31,29 @@
                 lst.Add(iLiteral.ToString)
                 Return lst
             End Function
-            Public Function GetValue() As Object
+
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
 
                 Select Case Me._Type
                     Case AST_NODE._integer
-                        Return Integer.Parse(iLiteral)
+                        Dim Obj As Integer = 0
+                        Obj = Integer.Parse(iLiteral)
+                        Return Obj
                     Case AST_NODE._string
-                        Return iLiteral.ToString
+                        Dim Obj As String = ""
+                        Obj = iLiteral.ToString
+                        Return Obj
                     Case AST_NODE._array
                         Return iLiteral
                     Case AST_NODE._boolean
-                        Return Boolean.Parse(iLiteral)
+                        Dim Obj As Boolean = False
+                        Obj = Boolean.Parse(iLiteral)
+                        Return Obj
                     Case Else
                         Return iLiteral
                 End Select
             End Function
+
             Private Function GetDebuggerDisplay() As String
                 Return ToString()
             End Function

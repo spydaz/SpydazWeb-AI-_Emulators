@@ -1,4 +1,5 @@
 ﻿Imports SDK.SAL
+Imports SDK.SmallProgLang.Evaluator
 
 Namespace SmallProgLang
 
@@ -25,11 +26,19 @@ Namespace SmallProgLang
                 lst.Add(_Name)
                 Return lst
             End Function
-            Public Function GetVar() As ZX81_RAM.Variable
-                Dim nvar = New ZX81_RAM.Variable
-                nvar.iName = _Name
+            Public Function CheckVar(ByRef ParentEnv As EnvironmentalMemory) As Boolean
 
-                Return nvar
+
+                Return ParentEnv.CheckVar(_Name)
+            End Function
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+                If ParentEnv.CheckVar(_Name) = True Then
+                    Return ParentEnv.GetVar(_Name)
+                Else
+                    Return Nothing
+                End If
+
+
             End Function
 
             Private Function GetDebuggerDisplay() As String

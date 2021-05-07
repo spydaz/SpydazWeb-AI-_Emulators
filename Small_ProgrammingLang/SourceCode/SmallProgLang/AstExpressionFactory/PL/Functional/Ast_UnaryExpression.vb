@@ -16,18 +16,11 @@ Namespace SmallProgLang
             End Sub
 
             Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Throw New NotImplementedException()
+                Return GetValue(ParentEnv)
             End Function
-            Public Function GetVar(ByRef ParentEnv As EnvironmentalMemory) As EnvironmentalMemory.Variable
-                LocalEnvironmentMemory = ParentEnv
-                Dim nvar As New EnvironmentalMemory.Variable
-                nvar.Value = _Value
-                nvar.Name = _name.GetValue
-                nvar.Type = Me._Type
-                Return nvar
-            End Function
+
             Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Return _Value.GetValue
+                Return ParentEnv
             End Function
 
             Private Function GetDebuggerDisplay() As String

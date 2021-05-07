@@ -1,4 +1,5 @@
 ﻿Imports SDK.SAL
+Imports SDK.SmallProgLang.Evaluator
 
 Namespace SmallProgLang
 
@@ -53,6 +54,11 @@ Namespace SmallProgLang
                     lst.AddRange(item.ToArraylist)
                 Next
                 Return lst
+            End Function
+
+
+            Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
+                Throw New NotImplementedException()
             End Function
 
             Private Function GetDebuggerDisplay() As String

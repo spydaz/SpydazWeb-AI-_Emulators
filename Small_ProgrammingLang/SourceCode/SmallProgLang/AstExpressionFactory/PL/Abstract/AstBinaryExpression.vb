@@ -1,4 +1,5 @@
-﻿Imports SDK.SAL
+﻿Imports Microsoft.VisualBasic.CompilerServices
+Imports SDK.SAL
 Imports SDK.SmallProgLang.Evaluator
 
 Namespace SmallProgLang
@@ -34,12 +35,57 @@ Namespace SmallProgLang
 
 
             Public Overrides Function GetValue(ByRef ParentEnv As EnvironmentalMemory) As Object
-                Throw New NotImplementedException()
+                Select Case _Operator
+'Mathmatical
+                    Case "+"
+                        Return EvaluateAddative(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+                    Case "-"
+                        Return EvaluateAddative(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+                    Case "*"
+                        Return EvaluateMultiplicative(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+                    Case "/"
+                        Return EvaluateMultiplicative(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+'Relational
+
+                    Case ">="
+                        Return EvaluateBoolean(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "<="
+                        Return EvaluateBoolean(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case ">"
+                        Return EvaluateBoolean(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "<"
+                        Return EvaluateBoolean(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "="
+                        Return EvaluateBoolean(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+'Complex assign
+                    Case "+="
+                        Return EvaluateComplex(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "-="
+                        Return EvaluateComplex(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "*="
+                        Return EvaluateComplex(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+                    Case "/="
+                        Return EvaluateComplex(_Left.GetValue(ParentEnv), _Operator, _Right.GetValue(ParentEnv), ParentEnv)
+
+
+                End Select
+                Return ParentEnv
             End Function
 
             Public Overrides Function Evaluate(ByRef ParentEnv As EnvironmentalMemory) As Object
                 Me.LocalEnvironment = ParentEnv
-                Return Me.LocalEnvironment
+
+                Return GetValue(ParentEnv)
+
+
             End Function
             ''' <summary>
             ''' Allows for evaluation of the node : Imeadialty invoked expression
@@ -48,28 +94,28 @@ Namespace SmallProgLang
             ''' <param name="iOperator"></param>
             ''' <param name="Right"></param>
             ''' <returns></returns>
-            Private Function EvaluateMultiplicative(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal) As Integer
+            Private Function EvaluateMultiplicative(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal, ByRef ParentEnv As EnvironmentalMemory) As Integer
 
                 If Left._Type = AST_NODE._integer And Right._Type = AST_NODE._integer Then
                     Select Case iOperator
                         Case "*"
-                            Return (Integer.Parse(Left.iLiteral) * Integer.Parse(Right.iLiteral)).ToString
+                            Return (Left.GetValue(ParentEnv) * Right.GetValue(ParentEnv))
                         Case "/"
-                            Return (Integer.Parse(Left.iLiteral) / Integer.Parse(Right.iLiteral)).ToString
+                            Return (Left.GetValue(ParentEnv) / Right.GetValue(ParentEnv))
                     End Select
 
 
                 End If
                 Return 0
             End Function
-            Private Function EvaluateAddative(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal) As Integer
+            Private Function EvaluateAddative(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal, ByRef ParentEnv As EnvironmentalMemory) As Integer
 
                 If Left._Type = AST_NODE._integer And Right._Type = AST_NODE._integer Then
                     Select Case iOperator
                         Case "+"
-                            Return (Integer.Parse(Left.iLiteral) * Integer.Parse(Right.iLiteral))
+                            Return (Left.GetValue(ParentEnv) + Right.GetValue(ParentEnv))
                         Case "-"
-                            Return (Integer.Parse(Left.iLiteral) / Integer.Parse(Right.iLiteral))
+                            Return (Left.GetValue(ParentEnv) - Right.GetValue(ParentEnv))
                     End Select
 
 
@@ -83,27 +129,58 @@ Namespace SmallProgLang
             ''' <param name="iOperator"></param>
             ''' <param name="Right"></param>
             ''' <returns></returns>
-            Private Function EvaluateBoolean(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal) As Boolean
+            Private Function EvaluateBoolean(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal, ByRef ParentEnv As EnvironmentalMemory) As Boolean
 
+
+                Select Case iOperator
+                        Case ">="
+                            Return (Left.GetValue(ParentEnv) >= Right.GetValue(ParentEnv))
+                        Case "<="
+                            Return (Left.GetValue(ParentEnv) <= Right.GetValue(ParentEnv))
+                        Case ">"
+                            Return (Left.GetValue(ParentEnv) > Right.GetValue(ParentEnv))
+                        Case "<"
+                            Return (Left.GetValue(ParentEnv) < Right.GetValue(ParentEnv))
+                        Case "="
+                            Return (Left.GetValue(ParentEnv) = Right.GetValue(ParentEnv))
+
+                    End Select
+
+
+
+                Return False
+            End Function
+            Private Function EvaluateComplex(ByRef Left As Ast_Literal, ByRef iOperator As String, ByRef Right As Ast_Literal, ByRef ParentEnv As EnvironmentalMemory) As Integer
                 If Left._Type = AST_NODE._integer And Right._Type = AST_NODE._integer Then
                     Select Case iOperator
-                        Case ">="
-                            Return (Integer.Parse(Left.iLiteral) >= Integer.Parse(Left.iLiteral))
-                        Case "<="
-                            Return (Integer.Parse(Left.iLiteral) <= Integer.Parse(Left.iLiteral))
-                        Case ">"
-                            Return (Integer.Parse(Left.iLiteral) > Integer.Parse(Left.iLiteral))
-                        Case "<"
-                            Return (Integer.Parse(Left.iLiteral) < Integer.Parse(Left.iLiteral))
-                        Case "="
-                            Return (Integer.Parse(Left.iLiteral) = Integer.Parse(Left.iLiteral))
+                        Case "+="
+                            Dim lf = Integer.Parse(((Left.GetValue(ParentEnv))))
+                            Dim rt = Integer.Parse(((Right.GetValue(ParentEnv))))
+                            lf += rt
+                            Return lf
+                        Case "-="
+                            Dim lf = Integer.Parse(((Left.GetValue(ParentEnv))))
+                            Dim rt = Integer.Parse(((Right.GetValue(ParentEnv))))
+                            lf -= rt
+                            Return lf
+                        Case "*="
+                            Dim lf = Integer.Parse(((Left.GetValue(ParentEnv))))
+                            Dim rt = Integer.Parse(((Right.GetValue(ParentEnv))))
+                            lf *= rt
+                            Return lf
+                        Case "/="
+                            Dim lf = Integer.Parse(((Left.GetValue(ParentEnv))))
+                            Dim rt = Integer.Parse(((Right.GetValue(ParentEnv))))
+                            lf /= rt
+                            Return lf
+
 
                     End Select
 
 
                 End If
-                Return False
             End Function
+
             Private Function GetDebuggerDisplay() As String
                 Return ToString()
             End Function
